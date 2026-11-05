@@ -39,7 +39,7 @@ def validate_card_role(card_facts):
     - Disruption: Counterspells, removal, board wipes, stax effects, or direct disruption of opponents.
     - Ramp: Mana acceleration, extra lands, treasures, or cost reduction of spells (making spells cost less).
     - Win Condition: Anything that ends the game. Direct damage/disruption/drain to life totals, explicit combo pieces, or heavy combat finishers.
-    - Misc. Value Engine: Value engines, Trigger ability doublers, recursion spells (that move creatures from the graveyard to the battlefield), lifegain effects.
+    - Value Engine: Value engines, Trigger ability doublers, recursion spells (that move creatures from the graveyard to the battlefield), lifegain effects.
 
     Rules:
     1. Do not invent non-existent mechanics.
@@ -52,7 +52,7 @@ def validate_card_role(card_facts):
     - Ramp: Cards that include the keyword "Add", cards that either individually generate one of either colourless ({{1}}+), or coloured mana ({{W}}/{{U}}/{{B}}/{{R}}/{{G}}, etc) or generate objects that can create mana (e.g. a creature that with a tap cost that adds {{G}}, or a spell that creates Treasure Tokens/allows the user to play more lands), cards that decrease the cost of other cards
     - Disruption: Cards that target/disrupt with specifically a permanent or spell an opponent controls, e.g. removal spells (Destroy target creature), counterspells (Counter target spell), etc
     - Win Conditions: Cards that can convert any boardstate into a win. Combat win conditions include cards that add to creature power and or toughness, increase the number of combat phases, etc. Non-combat win conditions include oracle texts with "You win the game", spells that actively decrease the health of the opponent by a large amount (e.g. >= 10), or synergies between cards that loop infinitely.
-    - Misc. Value Engine: Cards that do not fit the above categories, and can consistently (i.e. repeatedly) provide some sort of resource advantage, e.g. consistently draws cards, consistently generates mana, consistently provides card information (e.g. playing with a top card of library revealed, scry (allows the player to look at the top card of their library once, then allows them to choose to leave it on top (as known information), or move it to the bottom of their library)), consistent small (i.e. < 5) amounts of damage from a triggered ability.
+    - Value Engine: Cards that do not fit the above categories, and can consistently (i.e. repeatedly) provide some sort of resource advantage, e.g. consistently draws cards, consistently generates mana, consistently provides card information (e.g. playing with a top card of library revealed, scry (allows the player to look at the top card of their library once, then allows them to choose to leave it on top (as known information), or move it to the bottom of their library)), consistent small (i.e. < 5) amounts of damage from a triggered ability.
     """
     
     user_prompt = f"""
