@@ -73,7 +73,8 @@ def validate_card_role(card_facts):
     """
 
   response = ollama.chat(
-      model="llama3.1:8b",
+      #model="llama3.1:8b",
+      model="qwen2.5:14b",
       format="json",
       messages=[
           {"role": "system", "content": system_prompt},
