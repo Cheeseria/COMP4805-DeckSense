@@ -1,0 +1,2503 @@
+[
+  {
+    "primary_role": "Value Engine",
+    "summary": "Haze of Rage grants creatures a +1/+0 boost until end of turn and has the Storm mechanic, which can copy itself for each spell cast before it this turn, and can be put back into your hand for an additional {2} if Buyback is paid.",
+    "justification": "The card has a Storm ability, which can create multiple copies of itself, and the Buyback ability allows for card retention, both of which contribute to value generation.",
+    "synergy_hooks": [
+      "Buyback",
+      "Storm",
+      "Spell Copier",
+      "Additional Cost: Buyback",
+      "Creatures you control get +1/+0 until end of turn"
+    ],
+    "secondary_role": [
+      "Disruption"
+    ],
+    "justification_secondary": [
+      "The copies created by Storm can potentially disrupt the opponent's board by boosting your creatures."
+    ],
+    "name": "Haze of Rage",
+    "type": "Sorcery",
+    "cost": "{1}{R}",
+    "text": "Buyback {2} (You may pay an additional {2} as you cast this spell. If you do, put this card into your hand as it resolves.)\nCreatures you control get +1/+0 until end of turn.\nStorm (When you cast this spell, copy it for each spell cast before it this turn.)"
+  },
+  {
+    "primary_role": "Disruption",
+    "summary": "Temporal Fissure returns a targeted permanent to its owner's hand and can copy itself for each spell cast before it this turn, creating multiple copies that can target different permanents.",
+    "justification": "The card explicitly returns a targeted permanent to its owner's hand, which is a form of disruption.",
+    "synergy_hooks": [
+      "Spell Copier",
+      "Whenever you cast"
+    ],
+    "secondary_role": [
+      "Value Engine"
+    ],
+    "justification_secondary": [
+      "The Storm ability can create multiple copies of the spell, providing a way to repeatedly return permanents to their owners' hands, which can be used to generate value through repeated disruption."
+    ],
+    "name": "Temporal Fissure",
+    "type": "Sorcery",
+    "cost": "{4}{U}",
+    "text": "Return target permanent to its owner's hand.\nStorm (When you cast this spell, copy it for each spell cast before it this turn. You may choose new targets for the copies.)"
+  },
+  {
+    "primary_role": "Ramp",
+    "summary": "Goblin Electromancer reduces the cost of instant and sorcery spells by {1}.",
+    "justification": "The Oracle text specifies that instant and sorcery spells you cast cost {1} less to cast, which qualifies as cost reduction, a form of ramp.",
+    "synergy_hooks": [
+      "Cost Reducer (Static)"
+    ],
+    "secondary_role": [],
+    "justification_secondary": [],
+    "name": "Goblin Electromancer",
+    "type": "Creature \u2014 Goblin Wizard",
+    "cost": "{U}{R}",
+    "text": "Instant and sorcery spells you cast cost {1} less to cast."
+  },
+  {
+    "primary_role": "Card Advantage",
+    "summary": "Archmage Emeritus draws a card whenever you cast or copy an instant or sorcery spell, providing card advantage through a triggered ability.",
+    "justification": "The card has a Magecraft ability that allows drawing a card whenever you cast or copy an instant or sorcery spell.",
+    "synergy_hooks": [
+      "Zone: Library -> Hand",
+      "Whenever you cast",
+      "Instant and Sorcery Synergy"
+    ],
+    "secondary_role": [],
+    "justification_secondary": [],
+    "name": "Archmage Emeritus",
+    "type": "Creature \u2014 Human Wizard",
+    "cost": "{2}{U}{U}",
+    "text": "Magecraft \u2014 Whenever you cast or copy an instant or sorcery spell, draw a card."
+  },
+  {
+    "primary_role": "Win Condition",
+    "summary": "Chandra's Ignition deals damage to all other creatures and opponents equal to the power of a targeted creature, potentially creating a significant advantage in combat or directly reducing opponents' life totals.",
+    "justification": "The card allows the targeted creature to deal damage to each other creature and each opponent, which can lead to reducing opponents' life totals to zero.",
+    "synergy_hooks": [
+      "Target creature you control",
+      "Damage equal to its power",
+      "Deal damage to each other creature",
+      "Deal damage to each opponent"
+    ],
+    "secondary_role": [],
+    "justification_secondary": [],
+    "name": "Chandra's Ignition",
+    "type": "Sorcery",
+    "cost": "{3}{R}{R}",
+    "text": "Target creature you control deals damage equal to its power to each other creature and each opponent."
+  },
+  {
+    "primary_role": "Value Engine",
+    "summary": "Swiftfoot Boots provides hexproof and haste to the equipped creature, making it a strong defensive and offensive value engine.",
+    "justification": "The Oracle text specifies that equipped creature gains hexproof and haste, providing continuous value in both defense and offense.",
+    "synergy_hooks": [
+      "hexproof",
+      "haste",
+      "Equipped creature",
+      "Equip {1}"
+    ],
+    "secondary_role": [],
+    "justification_secondary": [],
+    "name": "Swiftfoot Boots",
+    "type": "Artifact \u2014 Equipment",
+    "cost": "{2}",
+    "text": "Equipped creature has hexproof and haste. (It can't be the target of spells or abilities your opponents control. It can attack and {T} no matter when it came under your control.)\nEquip {1} ({1}: Attach to target creature you control. Equip only as a sorcery.)"
+  },
+  {
+    "primary_role": "Value Engine",
+    "summary": "Treasonous Ogre can gain a +1/+1 counter when attacking the player with the most life, and allows the player to pay 3 life to add {R}, offering a value engine through its triggered ability and alternative cost effect.",
+    "justification": "The card has a triggered ability that provides a value benefit and an alternative cost effect for adding {R} to the mana pool.",
+    "synergy_hooks": [
+      "triggered ability",
+      "Zone: Battlefield -> Battlefield (+1/+1 counter)",
+      "Cost Reducer: Alternative Cost (3 life to add {R})"
+    ],
+    "secondary_role": [
+      "Ramp"
+    ],
+    "justification_secondary": [
+      "The ability to add {R} by paying 3 life is a form of ramp."
+    ],
+    "name": "Treasonous Ogre",
+    "type": "Creature \u2014 Ogre Shaman",
+    "cost": "{3}{R}",
+    "text": "Dethrone (Whenever this creature attacks the player with the most life or tied for most life, put a +1/+1 counter on it.)\nPay 3 life: Add {R}."
+  },
+  {
+    "primary_role": "Disruption",
+    "summary": "Searing Touch deals 1 damage to any target and can be returned to hand with buyback for an additional cost.",
+    "justification": "The card deals damage to any target, which is a form of disruption.",
+    "synergy_hooks": [
+      "Alternative Cost: Buyback",
+      "Additional Cost: Buyback",
+      "Zone: Stack -> Hand",
+      "Cost: {R}",
+      "Cost: {4}"
+    ],
+    "secondary_role": [
+      "Ramp"
+    ],
+    "justification_secondary": [
+      "The buyback ability allows the card to be returned to hand, potentially reducing the cost of future plays."
+    ],
+    "name": "Searing Touch",
+    "type": "Instant",
+    "cost": "{R}",
+    "text": "Buyback {4} (You may pay an additional {4} as you cast this spell. If you do, put this card into your hand as it resolves.)\nSearing Touch deals 1 damage to any target."
+  },
+  {
+    "primary_role": "Card Advantage",
+    "summary": "Exiles a target instant or sorcery from the graveyard, copies it, and allows casting the copy without paying its mana cost. The overload ability allows casting for each instant or sorcery in the graveyard.",
+    "justification": "The card exiles a target instant or sorcery from the graveyard and allows you to cast a copy without paying its mana cost, providing card advantage.",
+    "synergy_hooks": [
+      "Exile",
+      "Copy",
+      "Alternative Cost: Overload",
+      "Graveyard",
+      "Instant",
+      "Sorcery"
+    ],
+    "secondary_role": [
+      "Disruption"
+    ],
+    "justification_secondary": [
+      "The card can be used to disrupt opponents by exiling key instants or sorceries from the graveyard, thereby limiting their options."
+    ],
+    "name": "Mizzix's Mastery",
+    "type": "Sorcery",
+    "cost": "{3}{R}",
+    "text": "Exile target card that's an instant or sorcery from your graveyard. For each card exiled this way, copy it, and you may cast the copy without paying its mana cost. Exile Mizzix's Mastery.\nOverload {5}{R}{R}{R} (You may cast this spell for its overload cost. If you do, change \"target\" in its text to \"each.\")"
+  },
+  {
+    "primary_role": "Ramp",
+    "summary": "The Celestus provides mana generation and the ability to change day/night phases for additional benefits like gaining life and potentially drawing a card.",
+    "justification": "The Celestus allows adding one mana of any color with its first ability.",
+    "synergy_hooks": [
+      "Mana Generator (e.g. Mana rock, Ritual)",
+      "Triggered Ability: Whenever day becomes night or night becomes day",
+      "Zone: Library -> Hand (Drawing a card)",
+      "Zone: Hand -> Graveyard (Discarding a card)"
+    ],
+    "secondary_role": [
+      "Value Engine"
+    ],
+    "justification_secondary": [
+      "The Celestus allows gaining 1 life and the option to draw a card whenever the day/night phase changes."
+    ],
+    "name": "The Celestus",
+    "type": "Legendary Artifact",
+    "cost": "{3}",
+    "text": "If it's neither day nor night, it becomes day as The Celestus enters.\n{T}: Add one mana of any color.\n{3}, {T}: If it's night, it becomes day. Otherwise, it becomes night. Activate only as a sorcery.\nWhenever day becomes night or night becomes day, you gain 1 life. You may draw a card. If you do, discard a card."
+  },
+  {
+    "primary_role": "Ramp",
+    "summary": "Mindsplice Apparatus reduces the cost of instant and sorcery spells based on the number of oil counters it accumulates each upkeep.",
+    "justification": "The card reduces the cost of instant and sorcery spells, which falls under the definition of ramp as it makes spells cost less.",
+    "synergy_hooks": [
+      "Cost Reducer (Variable)",
+      "At the beginning of your upkeep"
+    ],
+    "secondary_role": [],
+    "justification_secondary": [],
+    "name": "Mindsplice Apparatus",
+    "type": "Artifact",
+    "cost": "{3}{U}",
+    "text": "Flash\nAt the beginning of your upkeep, put an oil counter on this artifact.\nInstant and sorcery spells you cast cost {1} less to cast for each oil counter on this artifact."
+  },
+  {
+    "primary_role": "Ramp",
+    "summary": "Coalition Relic provides flexible mana production and can store charge counters to produce additional mana at the beginning of the first main phase.",
+    "justification": "The artifact adds mana of any color and can store charge counters to produce additional mana, fitting the definition of a mana acceleration artifact.",
+    "synergy_hooks": [
+      "Mana Generator (e.g. Mana rock, Ritual)",
+      "T: Add any color mana",
+      "Charge Counter"
+    ],
+    "secondary_role": [],
+    "justification_secondary": [],
+    "name": "Coalition Relic",
+    "type": "Artifact",
+    "cost": "{3}",
+    "text": "{T}: Add one mana of any color.\n{T}: Put a charge counter on this artifact.\nAt the beginning of your first main phase, remove all charge counters from this artifact. Add one mana of any color for each charge counter removed this way."
+  },
+  {
+    "primary_role": "Card Advantage",
+    "summary": "Faithless Looting allows the player to draw two cards and discard two cards, providing opportunities for card cycling and flashback synergies.",
+    "justification": "The card explicitly involves drawing cards and discarding cards, which is a form of card cycling and potential card advantage.",
+    "synergy_hooks": [
+      "Zone: Library -> Hand",
+      "Zone: Hand -> Graveyard",
+      "Flashback"
+    ],
+    "secondary_role": [
+      "Value Engine"
+    ],
+    "justification_secondary": [
+      "The card can be cast from the graveyard, providing consistent value through its Flashback ability."
+    ],
+    "name": "Faithless Looting",
+    "type": "Sorcery",
+    "cost": "{R}",
+    "text": "Draw two cards, then discard two cards.\nFlashback {2}{R} (You may cast this card from your graveyard for its flashback cost. Then exile it.)"
+  },
+  {
+    "primary_role": "Card Advantage",
+    "summary": "Enables casting spells with flash this turn and allows the player to draw a card.",
+    "justification": "The card explicitly allows drawing a card, which falls under the Card Advantage definition.",
+    "synergy_hooks": [
+      "Alternative Cost: Flash",
+      "Zone: Library -> Hand"
+    ],
+    "secondary_role": [
+      "Ramp"
+    ],
+    "justification_secondary": [
+      "Allows casting spells with flash this turn, which can indirectly enable faster spellcasting and ramping."
+    ],
+    "name": "Borne Upon a Wind",
+    "type": "Instant",
+    "cost": "{1}{U}",
+    "text": "You may cast spells this turn as though they had flash.\nDraw a card."
+  },
+  {
+    "primary_role": "Value Engine",
+    "summary": "Haze of Rage grants creatures you control a +1/+0 boost, copies itself for each spell cast before it this turn due to Storm, and allows you to put it back into your hand with Buyback, providing a series of value-generating effects.",
+    "justification": "The card provides multiple effects, including a boost to creatures, Storm copies for each spell cast before it, and the ability to return to hand via Buyback, which collectively make it a value engine.",
+    "synergy_hooks": [
+      "Buyback",
+      "Storm",
+      "Creatures you control get +1/+0 until end of turn",
+      "Zone: Stack -> Hand"
+    ],
+    "secondary_role": [
+      "Ramp"
+    ],
+    "justification_secondary": [
+      "The Storm mechanic can potentially generate multiple instances of the spell effect, indirectly contributing to a ramp-like effect by increasing the power of creatures."
+    ],
+    "name": "Haze of Rage",
+    "type": "Sorcery",
+    "cost": "{1}{R}",
+    "text": "Buyback {2} (You may pay an additional {2} as you cast this spell. If you do, put this card into your hand as it resolves.)\nCreatures you control get +1/+0 until end of turn.\nStorm (When you cast this spell, copy it for each spell cast before it this turn.)"
+  },
+  {
+    "primary_role": "Value Engine",
+    "summary": "Clout of the Dominus is an enchantment aura that provides a +1/+1 boost and beneficial abilities (shroud or haste) to the enchanted creature based on its color, potentially creating a stronger creature with unique attributes.",
+    "justification": "The card enhances the enchanted creature with beneficial traits, such as shroud or haste, depending on its color, providing continuous value and flexibility.",
+    "synergy_hooks": [
+      "As long as enchanted creature is blue",
+      "As long as enchanted creature is red",
+      "Enchanted creature gets +1/+1",
+      "Shroud",
+      "Haste"
+    ],
+    "secondary_role": [
+      "Disruption"
+    ],
+    "justification_secondary": [
+      "The shroud ability can disrupt opponents' spells and abilities targeting the enchanted creature."
+    ],
+    "name": "Clout of the Dominus",
+    "type": "Enchantment \u2014 Aura",
+    "cost": "{U/R}",
+    "text": "Enchant creature\nAs long as enchanted creature is blue, it gets +1/+1 and has shroud. (It can't be the target of spells or abilities.)\nAs long as enchanted creature is red, it gets +1/+1 and has haste."
+  },
+  {
+    "primary_role": "Card Advantage",
+    "summary": "Draws X cards and allows for additional effects if X is 10 or more, including shuffling the graveyard into the library and untapping lands.",
+    "justification": "The card explicitly includes drawing X cards and shuffling the graveyard into the library to draw more cards, which are clear card advantage mechanics.",
+    "synergy_hooks": [
+      "Draw X cards",
+      "X >= 10: Shuffle graveyard into library",
+      "X >= 10: Untap up to five lands",
+      "X >= 10: No maximum hand size",
+      "Zone: Graveyard -> Library",
+      "Variable X Scaling"
+    ],
+    "secondary_role": [
+      "Ramp"
+    ],
+    "justification_secondary": [
+      "Untapping up to five lands when X is 10 or more provides additional mana for future turns."
+    ],
+    "name": "Finale of Revelation",
+    "type": "Sorcery",
+    "cost": "{X}{U}{U}",
+    "text": "Draw X cards. If X is 10 or more, instead shuffle your graveyard into your library, draw X cards, untap up to five lands, and you have no maximum hand size for the rest of the game.\nExile Finale of Revelation."
+  },
+  {
+    "primary_role": "Disruption",
+    "summary": "This instant exiles blue cards from hand to reduce its cost and phases out target creatures, temporarily removing them from play.",
+    "justification": "The card phases out target creatures, effectively removing them from play, which is a form of disruption.",
+    "synergy_hooks": [
+      "Cost Reducer (Variable)",
+      "Alternative Cost: Exiling blue cards",
+      "Zone: Hand -> Exile"
+    ],
+    "secondary_role": [
+      "Ramp"
+    ],
+    "justification_secondary": [
+      "The card allows a cost reduction by exiling blue cards from hand, which can be seen as a form of ramp in terms of reducing spell costs."
+    ],
+    "name": "March of Swirling Mist",
+    "type": "Instant",
+    "cost": "{X}{U}",
+    "text": "As an additional cost to cast this spell, you may exile any number of blue cards from your hand. This spell costs {2} less to cast for each card exiled this way.\nUp to X target creatures phase out. (While they're phased out, they're treated as though they don't exist. Each one phases in before its controller untaps during their next untap step.)"
+  },
+  {
+    "primary_role": "Card Advantage",
+    "summary": "Merchant Scroll allows the player to search their library for a blue instant card and put it into their hand, providing card advantage by giving the player an additional card.",
+    "justification": "The card explicitly allows the player to search their library for a blue instant card and put it into their hand, which fits the definition of card advantage.",
+    "synergy_hooks": [
+      "Zone: Library -> Hand",
+      "Search: Blue Instant"
+    ],
+    "secondary_role": [],
+    "justification_secondary": [],
+    "name": "Merchant Scroll",
+    "type": "Sorcery",
+    "cost": "{1}{U}",
+    "text": "Search your library for a blue instant card, reveal that card, put it into your hand, then shuffle."
+  },
+  {
+    "primary_role": "Disruption",
+    "summary": "Invert switches the power and toughness of up to two target creatures, creating potential disruption by altering creature combat capabilities.",
+    "justification": "The card alters the power and toughness of target creatures, which can disrupt the opponent's plans and creature interactions.",
+    "synergy_hooks": [
+      "Alternative Cost: {U/R}",
+      "Trigger: Switch power and toughness",
+      "Zone: Battlefield"
+    ],
+    "secondary_role": [],
+    "justification_secondary": [],
+    "name": "Invert",
+    "type": "Instant",
+    "cost": "{U/R}",
+    "text": "Switch the power and toughness of each of up to two target creatures until end of turn."
+  },
+  {
+    "primary_role": "Card Advantage",
+    "summary": "The card allows you to search your library for an instant and/or sorcery card, put them into your hand, and then shuffle the library, providing card advantage.",
+    "justification": "The card allows you to search your library for an instant and/or sorcery card and put them into your hand, which is a form of card advantage.",
+    "synergy_hooks": [
+      "Zone: Library -> Hand",
+      "Search"
+    ],
+    "secondary_role": [],
+    "justification_secondary": [],
+    "name": "Invent",
+    "type": "Instant",
+    "cost": "{4}{U}{R}",
+    "text": "Search your library for an instant card and/or a sorcery card, reveal them, put them into your hand, then shuffle."
+  },
+  {
+    "primary_role": "Disruption",
+    "summary": "Searing Touch deals 1 damage to any target and can be put into your hand when played for an additional cost.",
+    "justification": "The card deals damage to any target, which disrupts the opponent.",
+    "synergy_hooks": [
+      "Alternative Cost: Buyback",
+      "Zone: Graveyard -> Hand"
+    ],
+    "secondary_role": [
+      "Ramp"
+    ],
+    "justification_secondary": [
+      "The buyback ability allows for a cost reduction and returns the card to the hand, creating a potential ramp effect."
+    ],
+    "name": "Searing Touch",
+    "type": "Instant",
+    "cost": "{R}",
+    "text": "Buyback {4} (You may pay an additional {4} as you cast this spell. If you do, put this card into your hand as it resolves.)\nSearing Touch deals 1 damage to any target."
+  },
+  {
+    "primary_role": "Disruption",
+    "summary": "Perplexing Test allows the player to return all creature tokens or all nontoken creatures to their owners' hands, effectively clearing the board of creatures.",
+    "justification": "The card allows returning creatures to their owners' hands, which is a form of disruption.",
+    "synergy_hooks": [
+      "Zone: Battlefield -> Hand",
+      "Return creatures",
+      "Disruption"
+    ],
+    "secondary_role": [],
+    "justification_secondary": [],
+    "name": "Perplexing Test",
+    "type": "Instant",
+    "cost": "{3}{U}{U}",
+    "text": "Choose one \u2014\n\u2022 Return all creature tokens to their owners' hands.\n\u2022 Return all nontoken creatures to their owners' hands."
+  },
+  {
+    "primary_role": "Value Engine",
+    "summary": "Ashling, Flame Dancer provides the ability to discard and draw a card whenever an instant or sorcery spell is cast or copied, deals damage or generates mana if the ability resolves for the second or third time this turn.",
+    "justification": "Ashling, Flame Dancer creates a consistent cycle of discarding and drawing cards, with additional effects like damage or mana generation when the ability triggers multiple times in a turn.",
+    "synergy_hooks": [
+      "Whenever you cast or copy an instant or sorcery spell",
+      "Discard a card",
+      "Draw a card",
+      "Zone: Hand -> Graveyard",
+      "Zone: Library -> Hand",
+      "If this is the second time this ability has resolved this turn",
+      "If it's the third time",
+      "Mana Generator",
+      "Damage to opponents and creatures"
+    ],
+    "secondary_role": [
+      "Card Advantage",
+      "Ramp"
+    ],
+    "justification_secondary": [
+      "The card allows drawing a card, contributing to card advantage.",
+      "The ability to add {R}{R}{R}{R} serves as ramp when the trigger condition is met."
+    ],
+    "name": "Ashling, Flame Dancer",
+    "type": "Legendary Creature \u2014 Elemental Shaman",
+    "cost": "{2}{R}{R}",
+    "text": "You don't lose unspent red mana as steps and phases end.\nMagecraft \u2014 Whenever you cast or copy an instant or sorcery spell, discard a card, then draw a card. If this is the second time this ability has resolved this turn, Ashling deals 2 damage to each opponent and each creature they control. If it's the third time, add {R}{R}{R}{R}."
+  },
+  {
+    "primary_role": "Ramp",
+    "summary": "Honored Heirloom provides a way to add colored mana and exile a card from a graveyard, potentially enabling ramp and card manipulation.",
+    "justification": "The card adds any color of mana when tapped, which fits the Ramp role.",
+    "synergy_hooks": [
+      "Mana Generator (e.g. Mana rock, Ritual)",
+      "Zone: Graveyard -> Exile"
+    ],
+    "secondary_role": [
+      "Card Advantage"
+    ],
+    "justification_secondary": [
+      "The ability to exile target card from a graveyard can be used to remove threats or to recover cards for advantage."
+    ],
+    "name": "Honored Heirloom",
+    "type": "Artifact",
+    "cost": "{3}",
+    "text": "{T}: Add one mana of any color.\n{2}, {T}: Exile target card from a graveyard."
+  },
+  {
+    "primary_role": "Card Advantage",
+    "summary": "Serum Visions draws a card and allows the player to look at the top two cards of their library and rearrange them, providing card advantage and information.",
+    "justification": "The card explicitly allows the player to draw a card, which is a clear indication of card advantage.",
+    "synergy_hooks": [
+      "Zone: Library -> Hand",
+      "Scry 2"
+    ],
+    "secondary_role": [],
+    "justification_secondary": [],
+    "name": "Serum Visions",
+    "type": "Sorcery",
+    "cost": "{U}",
+    "text": "Draw a card. Scry 2."
+  },
+  {
+    "primary_role": "Card Advantage",
+    "summary": "Preordain allows the player to draw a card and rearrange the top two cards of their library, providing both card advantage and deck manipulation.",
+    "justification": "The card explicitly allows the player to draw a card, which falls under the Card Advantage category.",
+    "synergy_hooks": [
+      "Zone: Library -> Hand",
+      "Scry 2"
+    ],
+    "secondary_role": [
+      "Value Engine"
+    ],
+    "justification_secondary": [
+      "The card provides card advantage through drawing and rearranges the top cards of the library, contributing to long-term strategic advantage."
+    ],
+    "name": "Preordain",
+    "type": "Sorcery",
+    "cost": "{U}",
+    "text": "Scry 2, then draw a card. (To scry 2, look at the top two cards of your library, then put any number of them on the bottom and the rest on top in any order.)"
+  },
+  {
+    "primary_role": "Card Advantage",
+    "summary": "Anticipate allows the player to draw one card from the top three cards of their library and rearrange the other two.",
+    "justification": "The card allows the player to put one card from the top three of their library into their hand, which provides card advantage.",
+    "synergy_hooks": [
+      "Zone: Library -> Hand",
+      "Zone: Library -> Library"
+    ],
+    "secondary_role": [],
+    "justification_secondary": [],
+    "name": "Anticipate",
+    "type": "Instant",
+    "cost": "{1}{U}",
+    "text": "Look at the top three cards of your library. Put one of them into your hand and the rest on the bottom of your library in any order."
+  },
+  {
+    "primary_role": "Card Advantage",
+    "summary": "This card surveils the top card of your library and allows you to draw a card, providing card advantage.",
+    "justification": "The card explicitly surveils the top card of the library and allows you to draw a card.",
+    "synergy_hooks": [
+      "Zone: Library -> Graveyard",
+      "Zone: Library -> Hand",
+      "Surveil"
+    ],
+    "secondary_role": [],
+    "justification_secondary": [],
+    "name": "Consider",
+    "type": "Instant",
+    "cost": "{U}",
+    "text": "Surveil 1. (Look at the top card of your library. You may put it into your graveyard.)\nDraw a card."
+  },
+  {
+    "primary_role": "Disruption",
+    "summary": "This instant counters all opposing spells and abilities unless their controllers pay a {4} cost, creating a powerful disruption effect.",
+    "justification": "The card explicitly counters spells and abilities controlled by opponents unless a cost is paid, which is a direct form of disruption.",
+    "synergy_hooks": [
+      "Cost Reducer (Static/Variable)",
+      "Alternative Cost: Counter"
+    ],
+    "secondary_role": [],
+    "justification_secondary": [],
+    "name": "Whirlwind Denial",
+    "type": "Instant",
+    "cost": "{2}{U}",
+    "text": "For each spell and ability your opponents control, counter it unless its controller pays {4}."
+  },
+  {
+    "primary_role": "Disruption",
+    "summary": "Counters a noncreature spell and creates two Treasure tokens, providing mana generation as a side effect.",
+    "justification": "The card's Oracle text explicitly counters a noncreature spell.",
+    "synergy_hooks": [
+      "Counter target noncreature spell",
+      "Zone: Battlefield -> Hand (Treasure tokens can be sacrificed)",
+      "Mana Generator (Treasure tokens add mana)"
+    ],
+    "secondary_role": [
+      "Ramp"
+    ],
+    "justification_secondary": [
+      "The card generates two Treasure tokens that can add mana, which can serve as a ramp effect."
+    ],
+    "name": "An Offer You Can't Refuse",
+    "type": "Instant",
+    "cost": "{U}",
+    "text": "Counter target noncreature spell. Its controller creates two Treasure tokens. (They're artifacts with \"{T}, Sacrifice this token: Add one mana of any color.\")"
+  },
+  {
+    "primary_role": "Disruption",
+    "summary": "Mana Drain counters a target spell and generates colorless mana equal to the spell's mana value during the player's next main phase.",
+    "justification": "The card has the primary function to counter a target spell, which fits the Disruption category.",
+    "synergy_hooks": [
+      "Counter target spell",
+      "Mana Generator (e.g. Mana rock, Ritual)",
+      "Zone: Stack -> Hand"
+    ],
+    "secondary_role": [
+      "Ramp"
+    ],
+    "justification_secondary": [
+      "The card generates colorless mana equal to the spell's mana value, which is a form of ramp."
+    ],
+    "name": "Mana Drain",
+    "type": "Instant",
+    "cost": "{U}{U}",
+    "text": "Counter target spell. At the beginning of your next main phase, add an amount of {C} equal to that spell's mana value."
+  },
+  {
+    "primary_role": "Card Advantage",
+    "summary": "Sleight of Hand allows the player to draw one card from the top two cards of their library while the other goes to the bottom of the library, providing a net gain of one card.",
+    "justification": "The card allows the player to put one of the top two cards of their library into their hand, which is a form of card drawing.",
+    "synergy_hooks": [
+      "Zone: Library -> Hand",
+      "Zone: Library -> Bottom of Library"
+    ],
+    "secondary_role": [],
+    "justification_secondary": [],
+    "name": "Sleight of Hand",
+    "type": "Sorcery",
+    "cost": "{U}",
+    "text": "Look at the top two cards of your library. Put one of them into your hand and the other on the bottom of your library."
+  },
+  {
+    "primary_role": "Ramp",
+    "summary": "Vadrik, Astral Archmage reduces the cost of instant and sorcery spells based on his power and gains +1/+1 counters whenever day becomes night or night becomes day, providing ongoing cost reduction for instants and sorceries.",
+    "justification": "The card's oracle text states that instant and sorcery spells you cast cost {X} less to cast, where X is Vadrik's power, which constitutes a cost reduction effect.",
+    "synergy_hooks": [
+      "Cost Reducer (Variable)",
+      "Whenever day becomes night or night becomes day"
+    ],
+    "secondary_role": [
+      "Disruption"
+    ],
+    "justification_secondary": [
+      "Vadrik can enable the casting of disruptive instants and sorceries at a reduced cost, making it easier to counter or remove threats."
+    ],
+    "name": "Vadrik, Astral Archmage",
+    "type": "Legendary Creature \u2014 Human Wizard",
+    "cost": "{1}{U}{R}",
+    "text": "If it's neither day nor night, it becomes day as Vadrik enters.\nInstant and sorcery spells you cast cost {X} less to cast, where X is Vadrik's power.\nWhenever day becomes night or night becomes day, put a +1/+1 counter on Vadrik."
+  },
+  {
+    "primary_role": "Ramp",
+    "summary": "Mizzix of the Izmagnus provides a reduction in the cost of instant and sorcery spells based on the number of experience counters you have, and you gain experience counters by casting instant or sorcery spells with mana value greater than the number of experience counters you have.",
+    "justification": "The card provides a cost reduction for instant and sorcery spells based on experience counters, which is a form of ramp.",
+    "synergy_hooks": [
+      "Cost Reducer (Variable)",
+      "Whenever you cast",
+      "Zone: Experience Counters"
+    ],
+    "secondary_role": [
+      "Value Engine"
+    ],
+    "justification_secondary": [
+      "Gaining experience counters from casting spells with higher mana value than the current counter count can provide a recurring value engine effect."
+    ],
+    "name": "Mizzix of the Izmagnus",
+    "type": "Legendary Creature \u2014 Goblin Wizard",
+    "cost": "{2}{U}{R}",
+    "text": "Whenever you cast an instant or sorcery spell with mana value greater than the number of experience counters you have, you get an experience counter.\nInstant and sorcery spells you cast cost {1} less to cast for each experience counter you have."
+  },
+  {
+    "primary_role": "Win Condition",
+    "summary": "Runaway Steam-Kin can become a powerful combat finisher by gaining +1/+1 counters whenever you cast red spells and can generate {R}{R}{R} by removing three +1/+1 counters, enabling it to both grow in size and produce mana for further aggression.",
+    "justification": "The card can grow in size and deal damage in combat, and can also produce mana to fuel other red spells, supporting a win condition through combat or enabling further spells that can end the game.",
+    "synergy_hooks": [
+      "Cost Reducer (Variable)",
+      "Zone: Battlefield -> Hand",
+      "Whenever you cast",
+      "red spell",
+      "Triggered ability"
+    ],
+    "secondary_role": [
+      "Ramp"
+    ],
+    "justification_secondary": [
+      "The ability to add {R}{R}{R} by removing three +1/+1 counters from Runaway Steam-Kin supports mana acceleration."
+    ],
+    "name": "Runaway Steam-Kin",
+    "type": "Creature \u2014 Elemental",
+    "cost": "{1}{R}",
+    "text": "Whenever you cast a red spell, if this creature has fewer than three +1/+1 counters on it, put a +1/+1 counter on this creature.\nRemove three +1/+1 counters from this creature: Add {R}{R}{R}."
+  },
+  {
+    "primary_role": "Ramp",
+    "summary": "Sudden Breakthrough enhances a target creature's power and grants first strike until end of turn, and creates a Treasure token that can be sacrificed for any color of mana.",
+    "justification": "The card creates a Treasure token that can add one mana of any color when sacrificed, which provides mana acceleration.",
+    "synergy_hooks": [
+      "Zone: Battlefield -> Hand",
+      "Mana Generator (e.g. Mana rock, Ritual)",
+      "Cost: Sacrifice"
+    ],
+    "secondary_role": [
+      "Disruption"
+    ],
+    "justification_secondary": [
+      "The card can disrupt an opponent's strategy by enhancing a creature's power and granting first strike, potentially making the creature a more formidable combat threat."
+    ],
+    "name": "Sudden Breakthrough",
+    "type": "Instant",
+    "cost": "{1}{R}",
+    "text": "Target creature gets +2/+0 and gains first strike until end of turn.\nCreate a Treasure token. (It's an artifact with \"{T}, Sacrifice this token: Add one mana of any color.\")"
+  },
+  {
+    "primary_role": "Ramp",
+    "summary": "The card generates a variable amount of red mana based on the number of cards in the player's hand, which can be used for casting spells.",
+    "justification": "The card adds {R} for each card in your hand, which is a form of mana generation.",
+    "synergy_hooks": [
+      "Mana Generator (e.g. Mana rock, Ritual)",
+      "Variable X Scaling"
+    ],
+    "secondary_role": [],
+    "justification_secondary": [],
+    "name": "Inner Fire",
+    "type": "Sorcery",
+    "cost": "{3}{R}",
+    "text": "Add {R} for each card in your hand."
+  },
+  {
+    "primary_role": "Ramp",
+    "summary": "Mana Geyser adds red mana based on the number of tapped lands controlled by opponents, providing a variable mana boost.",
+    "justification": "The Oracle text states that Mana Geyser adds {R} for each tapped land your opponents control, directly increasing the player's mana resources.",
+    "synergy_hooks": [
+      "Mana Generator (e.g. Mana rock, Ritual)",
+      "Variable X Scaling",
+      "Zone: Battlefield (Tapped Lands)"
+    ],
+    "secondary_role": [],
+    "justification_secondary": [],
+    "name": "Mana Geyser",
+    "type": "Sorcery",
+    "cost": "{3}{R}{R}",
+    "text": "Add {R} for each tapped land your opponents control."
+  },
+  {
+    "primary_role": "Ramp",
+    "summary": "Goblin Electromancer reduces the cost of instant and sorcery spells you cast, providing a cost reduction effect that can help accelerate your spell deployment.",
+    "justification": "The card explicitly states that instant and sorcery spells you cast cost {1} less to cast, which is a form of cost reduction, aligning with the Ramp role.",
+    "synergy_hooks": [
+      "Cost Reducer (Static)"
+    ],
+    "secondary_role": [],
+    "justification_secondary": [],
+    "name": "Goblin Electromancer",
+    "type": "Creature \u2014 Goblin Wizard",
+    "cost": "{U}{R}",
+    "text": "Instant and sorcery spells you cast cost {1} less to cast."
+  },
+  {
+    "primary_role": "Ramp",
+    "summary": "Jeska's Will either generates red mana equal to the number of cards in an opponent's hand or allows you to exile and play the top three cards of your library this turn, with both effects possible if you control a commander.",
+    "justification": "The card allows you to add {R} for each card in an opponent's hand and can potentially generate more mana through playing cards from your library this turn.",
+    "synergy_hooks": [
+      "Mana Generator (e.g. Mana rock, Ritual)",
+      "Zone: Library -> Hand",
+      "Variable X Scaling",
+      "replacement effect"
+    ],
+    "secondary_role": [
+      "Card Advantage"
+    ],
+    "justification_secondary": [
+      "The ability to exile and play the top three cards of your library this turn implies a form of card advantage."
+    ],
+    "name": "Jeska's Will",
+    "type": "Sorcery",
+    "cost": "{2}{R}",
+    "text": "Choose one. If you control a commander as you cast this spell, you may choose both instead.\n\u2022 Add {R} for each card in target opponent's hand.\n\u2022 Exile the top three cards of your library. You may play them this turn."
+  },
+  {
+    "primary_role": "Value Engine",
+    "summary": "Urabrask provides ongoing damage and mana generation whenever an instant or sorcery spell is cast, and offers a transformation mechanic that requires casting three or more instant and/or sorcery spells.",
+    "justification": "Urabrask's ability to deal damage and add {R} mana whenever an instant or sorcery spell is cast, and its transformation mechanic, make it a value engine.",
+    "synergy_hooks": [
+      "Whenever you cast",
+      "Mana Generator (e.g. Mana rock, Ritual)",
+      "Zone: Battlefield -> Exile",
+      "Zone: Exile -> Battlefield",
+      "Cost Reducer (Static/Variable)",
+      "Alternative Cost: Sorcery"
+    ],
+    "secondary_role": [
+      "Disruption"
+    ],
+    "justification_secondary": [
+      "Deals 1 damage to an opponent when an instant or sorcery spell is cast."
+    ],
+    "name": "Urabrask",
+    "type": "Legendary Creature \u2014 Phyrexian Praetor",
+    "cost": "{2}{R}{R}",
+    "text": "First strike\nWhenever you cast an instant or sorcery spell, Urabrask deals 1 damage to target opponent. Add {R}.\n{R}: Exile Urabrask, then return it to the battlefield transformed under its owner's control. Activate only as a sorcery and only if you've cast three or more instant and/or sorcery spells this turn."
+  },
+  {
+    "primary_role": "Value Engine",
+    "summary": "The Great Work is a Saga that deals damage, creates Treasures, and allows casting spells from graveyards, all while adding lore counters.",
+    "justification": "The Great Work provides multiple benefits as it progresses, including damage, treasure creation, and access to graveyard spells.",
+    "synergy_hooks": [
+      "Zone: Graveyard -> Hand",
+      "Mana Generator (Treasure Tokens)",
+      "replacement effect",
+      "Zone: Graveyard -> Exile",
+      "Zone: Battlefield -> Exile",
+      "Zone: Exile -> Battlefield"
+    ],
+    "secondary_role": [
+      "Ramp",
+      "Disruption",
+      "Card Advantage"
+    ],
+    "justification_secondary": [
+      "It creates Treasure tokens, which generate mana.",
+      "It deals damage to opponents and their creatures.",
+      "It allows casting spells from graveyards and exiling them instead of putting them into the graveyard."
+    ],
+    "name": "The Great Work",
+    "type": "Enchantment \u2014 Saga",
+    "cost": "",
+    "text": "(As this Saga enters and after your draw step, add a lore counter.)\nI \u2014 This Saga deals 3 damage to target opponent and each creature they control.\nII \u2014 Create three Treasure tokens.\nIII \u2014 Until end of turn, you may cast instant and sorcery spells from any graveyard. If a spell cast this way would be put into a graveyard, exile it instead. Exile this Saga, then return it to the battlefield (front face up)."
+  },
+  {
+    "primary_role": "Ramp",
+    "summary": "Birgi, God of Storytelling adds {R} whenever you cast a spell, allowing you to retain this mana until the end of the turn, and allows your creatures to boast twice during each of your turns.",
+    "justification": "The card adds {R} whenever you cast a spell and retains the mana until the end of the turn, which aligns with mana acceleration or ramp mechanics.",
+    "synergy_hooks": [
+      "Mana Generator (e.g. Mana rock, Ritual)",
+      "Whenever you cast",
+      "Triggered ability"
+    ],
+    "secondary_role": [
+      "Value Engine"
+    ],
+    "justification_secondary": [
+      "Birgi allows creatures to boast twice each turn, which can lead to increased value generation during combat."
+    ],
+    "name": "Birgi, God of Storytelling",
+    "type": "Legendary Creature \u2014 God",
+    "cost": "{2}{R}",
+    "text": "Whenever you cast a spell, add {R}. Until end of turn, you don't lose this mana as steps and phases end.\nCreatures you control can boast twice during each of your turns rather than once."
+  },
+  {
+    "primary_role": "Card Advantage",
+    "summary": "Harnfel, Horn of Bounty allows you to discard a card to exile and potentially play the top two cards of your library this turn, providing a way to efficiently cycle through your deck and access more cards.",
+    "justification": "The card allows you to discard a card to exile the top two cards of your library and play those cards this turn, thus providing card advantage.",
+    "synergy_hooks": [
+      "Zone: Library -> Hand",
+      "Alternative Cost: Discard"
+    ],
+    "secondary_role": [
+      "Value Engine"
+    ],
+    "justification_secondary": [
+      "The card's ability to play the exiled cards this turn can provide ongoing value throughout the turn."
+    ],
+    "name": "Harnfel, Horn of Bounty",
+    "type": "Legendary Artifact",
+    "cost": "{4}{R}",
+    "text": "Discard a card: Exile the top two cards of your library. You may play those cards this turn."
+  },
+  {
+    "primary_role": "Value Engine",
+    "summary": "Treasonous Ogre grants a +1/+1 counter when attacking the player with the most life, and allows the player to pay 3 life to add {R}.",
+    "justification": "The card has a triggered ability that grants a +1/+1 counter and an activated ability that adds {R} for a cost, both of which contribute to a resource advantage.",
+    "synergy_hooks": [
+      "Cost Reducer (Static/Variable)",
+      "Zone: Life -> Mana",
+      "Dethrone",
+      "Mana Generator (e.g. Mana rock, Ritual)",
+      "Additional Cost: Pay life for mana"
+    ],
+    "secondary_role": [
+      "Ramp"
+    ],
+    "justification_secondary": [
+      "The ability to add {R} by paying 3 life represents a form of mana acceleration."
+    ],
+    "name": "Treasonous Ogre",
+    "type": "Creature \u2014 Ogre Shaman",
+    "cost": "{3}{R}",
+    "text": "Dethrone (Whenever this creature attacks the player with the most life or tied for most life, put a +1/+1 counter on it.)\nPay 3 life: Add {R}."
+  },
+  {
+    "primary_role": "Ramp",
+    "summary": "The Celestus generates one mana of any color per activation and allows for time manipulation to potentially gain life and draw a card, creating a complex value engine with unique synergy hooks.",
+    "justification": "The Celestus allows adding one mana of any color, which fits the definition of a ramp card.",
+    "synergy_hooks": [
+      "Mana Generator (e.g. Mana rock, Ritual)",
+      "Action-Reaction: Whenever day becomes night or night becomes day",
+      "Cost: {T}",
+      "Cost: {3}, {T}",
+      "Zone: Library -> Hand",
+      "Zone: Hand -> Graveyard"
+    ],
+    "secondary_role": [
+      "Value Engine"
+    ],
+    "justification_secondary": [
+      "The Celestus provides a combination of life gain and card draw/discards based on time changes, which can be considered a value engine."
+    ],
+    "name": "The Celestus",
+    "type": "Legendary Artifact",
+    "cost": "{3}",
+    "text": "If it's neither day nor night, it becomes day as The Celestus enters.\n{T}: Add one mana of any color.\n{3}, {T}: If it's night, it becomes day. Otherwise, it becomes night. Activate only as a sorcery.\nWhenever day becomes night or night becomes day, you gain 1 life. You may draw a card. If you do, discard a card."
+  },
+  {
+    "primary_role": "Ramp",
+    "summary": "Mindsplice Apparatus provides a cost reduction effect on instant and sorcery spells, scaling with oil counters, which are added at the beginning of each upkeep.",
+    "justification": "The card reduces the cost of instant and sorcery spells based on the number of oil counters, aiding in mana efficiency.",
+    "synergy_hooks": [
+      "Cost Reducer (Variable)",
+      "Alternative Cost: Flashback",
+      "Mana Generator (Mana rock, Ritual)"
+    ],
+    "secondary_role": [],
+    "justification_secondary": [],
+    "name": "Mindsplice Apparatus",
+    "type": "Artifact",
+    "cost": "{3}{U}",
+    "text": "Flash\nAt the beginning of your upkeep, put an oil counter on this artifact.\nInstant and sorcery spells you cast cost {1} less to cast for each oil counter on this artifact."
+  },
+  {
+    "primary_role": "Value Engine",
+    "summary": "Storm-Kiln Artist gets +1/+0 for each artifact controlled and creates a Treasure token whenever an instant or sorcery spell is cast or copied, providing a consistent resource advantage.",
+    "justification": "The card provides a consistent advantage through its triggered ability that creates Treasure tokens, which can be sacrificed for mana, and its power scaling with artifacts under control.",
+    "synergy_hooks": [
+      "Zone: Stack -> Battlefield (Treasure Tokens)",
+      "Artifact control",
+      "Whenever you cast"
+    ],
+    "secondary_role": [
+      "Ramp"
+    ],
+    "justification_secondary": [
+      "The creation of Treasure tokens, which can be sacrificed to add mana, indirectly serves as a ramp mechanism."
+    ],
+    "name": "Storm-Kiln Artist",
+    "type": "Creature \u2014 Dwarf Shaman",
+    "cost": "{3}{R}",
+    "text": "This creature gets +1/+0 for each artifact you control.\nMagecraft \u2014 Whenever you cast or copy an instant or sorcery spell, create a Treasure token. (It's an artifact with \"{T}, Sacrifice this token: Add one mana of any color.\")"
+  },
+  {
+    "primary_role": "Ramp",
+    "summary": "Arcane Signet allows the player to produce one mana of any color in their commander's color identity upon activation, providing a versatile ramp effect.",
+    "justification": "The card's Oracle text explicitly states that it adds one mana of any color in the commander's color identity upon activation.",
+    "synergy_hooks": [
+      "Mana Generator (e.g. Mana rock, Ritual)",
+      "Zone: Stack -> Mana"
+    ],
+    "secondary_role": [],
+    "justification_secondary": [],
+    "name": "Arcane Signet",
+    "type": "Artifact",
+    "cost": "{2}",
+    "text": "{T}: Add one mana of any color in your commander's color identity."
+  },
+  {
+    "primary_role": "Ramp",
+    "summary": "Coalition Relic generates mana and can be used to store up to multiple mana for future use, acting as a flexible mana generator.",
+    "justification": "The card allows the player to add one mana of any color per tap and can accumulate charge counters to add multiple mana in the first main phase.",
+    "synergy_hooks": [
+      "Mana Generator",
+      "Tapping",
+      "Charge Counter"
+    ],
+    "secondary_role": [],
+    "justification_secondary": [],
+    "name": "Coalition Relic",
+    "type": "Artifact",
+    "cost": "{3}",
+    "text": "{T}: Add one mana of any color.\n{T}: Put a charge counter on this artifact.\nAt the beginning of your first main phase, remove all charge counters from this artifact. Add one mana of any color for each charge counter removed this way."
+  },
+  {
+    "primary_role": "Ramp",
+    "summary": "Fellwar Stone allows the controller to add a colored mana based on the opponent's land types, providing flexible ramp.",
+    "justification": "The card text specifies the ability to add one mana of any color that a land an opponent controls could produce, fitting the definition of ramp as it generates colored mana.",
+    "synergy_hooks": [
+      "Mana Generator (e.g. Mana rock, Ritual)",
+      "Alternative Cost: Any color mana"
+    ],
+    "secondary_role": [],
+    "justification_secondary": [],
+    "name": "Fellwar Stone",
+    "type": "Artifact",
+    "cost": "{2}",
+    "text": "{T}: Add one mana of any color that a land an opponent controls could produce."
+  },
+  {
+    "primary_role": "Ramp",
+    "summary": "Sol Ring is a simple artifact that generates two colorless mana when tapped.",
+    "justification": "The Oracle text '{T}: Add {C}{C}.' indicates that Sol Ring provides a mana-generating ability, which fits the Ramp category.",
+    "synergy_hooks": [
+      "Mana Generator (e.g. Mana rock, Ritual)",
+      "Zone: Stack -> Hand"
+    ],
+    "secondary_role": [],
+    "justification_secondary": [],
+    "name": "Sol Ring",
+    "type": "Artifact",
+    "cost": "{1}",
+    "text": "{T}: Add {C}{C}."
+  },
+  {
+    "primary_role": "Ramp",
+    "summary": "Talisman of Creativity provides colorless and colored mana upon activation, but deals 1 damage to the player when adding colored mana.",
+    "justification": "The card provides a mana generation ability, allowing the player to add {C}, and {U} or {R} upon activation, which fits the definition of ramp.",
+    "synergy_hooks": [
+      "Mana Generator (e.g. Mana rock, Ritual)",
+      "Zone: Hand -> Battlefield (Talisman activation)",
+      "Cost: Life (1 damage)"
+    ],
+    "secondary_role": [],
+    "justification_secondary": [],
+    "name": "Talisman of Creativity",
+    "type": "Artifact",
+    "cost": "{2}",
+    "text": "{T}: Add {C}.\n{T}: Add {U} or {R}. This artifact deals 1 damage to you."
+  },
+  {
+    "primary_role": "Ramp",
+    "summary": "Seething Song is an instant that generates a significant amount of red mana, useful for casting high-cost spells quickly.",
+    "justification": "The Oracle text explicitly states 'Add {R}{R}{R}{R}{R}', which directly increases the player's available mana.",
+    "synergy_hooks": [
+      "Mana Generator (e.g. Mana rock, Ritual)",
+      "Alternative Cost: Flashback"
+    ],
+    "secondary_role": [],
+    "justification_secondary": [],
+    "name": "Seething Song",
+    "type": "Instant",
+    "cost": "{2}{R}",
+    "text": "Add {R}{R}{R}{R}{R}."
+  },
+  {
+    "primary_role": "Ramp",
+    "summary": "Izzet Signet is an artifact that allows the player to add {U}{R} after paying {1} and tapping it, providing a consistent ramp effect.",
+    "justification": "The card's ability adds {U}{R} when activated, fulfilling the definition of ramp.",
+    "synergy_hooks": [
+      "Mana Generator (e.g. Mana rock, Ritual)",
+      "Cost: {1}, {T}",
+      "Zone: Stack -> Mana"
+    ],
+    "secondary_role": [],
+    "justification_secondary": [],
+    "name": "Izzet Signet",
+    "type": "Artifact",
+    "cost": "{2}",
+    "text": "{1}, {T}: Add {U}{R}."
+  },
+  {
+    "primary_role": "Ramp",
+    "summary": "Lotus Petal provides a versatile mana acceleration effect by allowing the player to sacrifice it and add one mana of any color.",
+    "justification": "The Oracle text states that sacrificing Lotus Petal adds one mana of any color, which qualifies it as mana acceleration.",
+    "synergy_hooks": [
+      "Mana Generator (e.g. Mana rock, Ritual)",
+      "Sacrifice (Lotus Petal)",
+      "Zone: Battlefield -> Graveyard"
+    ],
+    "secondary_role": [],
+    "justification_secondary": [],
+    "name": "Lotus Petal",
+    "type": "Artifact",
+    "cost": "{0}",
+    "text": "{T}, Sacrifice this artifact: Add one mana of any color."
+  },
+  {
+    "primary_role": "Value Engine",
+    "summary": "Haze of Rage grants creatures you control +1/+0 until end of turn and can be put back into your hand by paying an additional {2} as you cast it, and copies itself for each spell cast before it this turn.",
+    "justification": "The card's buyback ability and storm copies create additional value through card re-use and multiple effects.",
+    "synergy_hooks": [
+      "Additional Cost: Buyback",
+      "Spell Copier",
+      "Storm"
+    ],
+    "secondary_role": [
+      "Disruption"
+    ],
+    "justification_secondary": [
+      "The storm copies can create disruptive effects in certain situations."
+    ],
+    "name": "Haze of Rage",
+    "type": "Sorcery",
+    "cost": "{1}{R}",
+    "text": "Buyback {2} (You may pay an additional {2} as you cast this spell. If you do, put this card into your hand as it resolves.)\nCreatures you control get +1/+0 until end of turn.\nStorm (When you cast this spell, copy it for each spell cast before it this turn.)"
+  },
+  {
+    "primary_role": "Win Condition",
+    "summary": "Hero's Blade is an Equipment that grants +3/+2 to an equipped creature and can be automatically attached to any legendary creature you control when it enters the battlefield.",
+    "justification": "The equipment provides a significant power and toughness boost to the equipped creature, which can contribute to winning the game through combat.",
+    "synergy_hooks": [
+      "Whenever a legendary creature you control enters",
+      "Equipped creature gets +3/+2",
+      "Equip {4}"
+    ],
+    "secondary_role": [],
+    "justification_secondary": [],
+    "name": "Hero's Blade",
+    "type": "Artifact \u2014 Equipment",
+    "cost": "{2}",
+    "text": "Equipped creature gets +3/+2.\nWhenever a legendary creature you control enters, you may attach this Equipment to it.\nEquip {4} ({4}: Attach to target creature you control. Equip only as a sorcery.)"
+  },
+  {
+    "primary_role": "Disruption",
+    "summary": "Water Wings provides a temporary powerful creature buff with flying and hexproof, making it difficult for opponents to interact with the creature.",
+    "justification": "The card grants flying and hexproof to a creature, effectively removing it from the battlefield interaction with opponent's spells and abilities until the end of the turn.",
+    "synergy_hooks": [
+      "Hexproof",
+      "Flying",
+      "Temporary Buff"
+    ],
+    "secondary_role": [],
+    "justification_secondary": [],
+    "name": "Water Wings",
+    "type": "Instant",
+    "cost": "{1}{U}",
+    "text": "Until end of turn, target creature you control has base power and toughness 4/4 and gains flying and hexproof. (It can't be the target of spells or abilities your opponents control.)"
+  },
+  {
+    "primary_role": "Value Engine",
+    "summary": "Swiftfoot Boots grants hexproof and haste to the equipped creature, making it both untargetable by opponents and able to attack immediately, enhancing its utility in combat.",
+    "justification": "The card enhances equipped creature's abilities without drawing cards, reducing mana cost, or directly disrupting the opponent.",
+    "synergy_hooks": [
+      "Equip",
+      "Hexproof",
+      "Haste",
+      "Target: creature you control"
+    ],
+    "secondary_role": [],
+    "justification_secondary": [],
+    "name": "Swiftfoot Boots",
+    "type": "Artifact \u2014 Equipment",
+    "cost": "{2}",
+    "text": "Equipped creature has hexproof and haste. (It can't be the target of spells or abilities your opponents control. It can attack and {T} no matter when it came under your control.)\nEquip {1} ({1}: Attach to target creature you control. Equip only as a sorcery.)"
+  },
+  {
+    "primary_role": "Card Advantage",
+    "summary": "Frantic Search allows the player to draw two cards and then discard two cards, providing a temporary card advantage play, and also untaps up to three lands, which can assist in future turns.",
+    "justification": "The card explicitly involves drawing two cards, which matches the definition of Card Advantage.",
+    "synergy_hooks": [
+      "Zone: Library -> Hand",
+      "Zone: Hand -> Graveyard",
+      "Mana Generator (untapping lands)"
+    ],
+    "secondary_role": [
+      "Ramp"
+    ],
+    "justification_secondary": [
+      "The card untaps up to three lands, which can provide additional mana resources for future turns."
+    ],
+    "name": "Frantic Search",
+    "type": "Instant",
+    "cost": "{2}{U}",
+    "text": "Draw two cards, then discard two cards. Untap up to three lands."
+  },
+  {
+    "primary_role": "Card Advantage",
+    "summary": "Pirate's Pillage discards a card, draws two cards, and creates two Treasure tokens that generate any color mana when sacrificed.",
+    "justification": "The card explicitly draws two cards and creates two Treasure tokens.",
+    "synergy_hooks": [
+      "Zone: Hand -> Graveyard (Discard a card)",
+      "Zone: Library -> Hand (Draw two cards)",
+      "Mana Generator (Treasure tokens add one mana of any color when sacrificed)"
+    ],
+    "secondary_role": [
+      "Ramp"
+    ],
+    "justification_secondary": [
+      "The creation of two Treasure tokens, which can generate mana, fits the definition of ramp."
+    ],
+    "name": "Pirate's Pillage",
+    "type": "Sorcery",
+    "cost": "{3}{R}",
+    "text": "As an additional cost to cast this spell, discard a card.\nDraw two cards and create two Treasure tokens. (They're artifacts with \"{T}, Sacrifice this token: Add one mana of any color.\")"
+  },
+  {
+    "primary_role": "Card Advantage",
+    "summary": "Whenever you cast or copy an instant or sorcery spell, you draw a card, providing card advantage through Magecraft.",
+    "justification": "The card explicitly states 'draw a card' whenever an instant or sorcery spell is cast or copied.",
+    "synergy_hooks": [
+      "Zone: Library -> Hand",
+      "Whenever you cast",
+      "Magecraft"
+    ],
+    "secondary_role": [],
+    "justification_secondary": [],
+    "name": "Archmage Emeritus",
+    "type": "Creature \u2014 Human Wizard",
+    "cost": "{2}{U}{U}",
+    "text": "Magecraft \u2014 Whenever you cast or copy an instant or sorcery spell, draw a card."
+  },
+  {
+    "primary_role": "Card Advantage",
+    "summary": "Whispers of the Muse allows you to draw a card and, for an additional cost, can be put into your hand after resolution, providing a potential for repeated use.",
+    "justification": "The card explicitly allows drawing a card and provides a buyback mechanic to return the card to your hand.",
+    "synergy_hooks": [
+      "Draw",
+      "Buyback",
+      "Alternative Cost: Buyback",
+      "Zone: Hand -> Hand (Buyback)"
+    ],
+    "secondary_role": [
+      "Value Engine"
+    ],
+    "justification_secondary": [
+      "The card can be reused through the buyback mechanism, offering consistent card advantage."
+    ],
+    "name": "Whispers of the Muse",
+    "type": "Instant",
+    "cost": "{U}",
+    "text": "Buyback {5} (You may pay an additional {5} as you cast this spell. If you do, put this card into your hand as it resolves.)\nDraw a card."
+  },
+  {
+    "primary_role": "Card Advantage",
+    "summary": "This card allows the player to draw a card whenever an opponent casts a spell, providing card advantage unless the opponent pays {1}.",
+    "justification": "The card explicitly allows drawing a card, which fits the definition of Card Advantage.",
+    "synergy_hooks": [
+      "Zone: Library -> Hand",
+      "Action-Reaction: Whenever an opponent casts a spell"
+    ],
+    "secondary_role": [],
+    "justification_secondary": [],
+    "name": "Rhystic Study",
+    "type": "Enchantment",
+    "cost": "{2}{U}",
+    "text": "Whenever an opponent casts a spell, you may draw a card unless that player pays {1}."
+  },
+  {
+    "primary_role": "Card Advantage",
+    "summary": "Windfall forces all players to discard their hands and then draws cards equal to the highest number discarded, ensuring a net positive card advantage for the player with the most cards.",
+    "justification": "Windfall explicitly involves discarding cards and then drawing cards equal to the greatest number discarded, which results in card advantage.",
+    "synergy_hooks": [
+      "Zone: Hand -> Graveyard",
+      "Zone: Library -> Hand"
+    ],
+    "secondary_role": [],
+    "justification_secondary": [],
+    "name": "Windfall",
+    "type": "Sorcery",
+    "cost": "{2}{U}",
+    "text": "Each player discards their hand, then draws cards equal to the greatest number of cards a player discarded this way."
+  },
+  {
+    "primary_role": "Card Advantage",
+    "summary": "Big Score draws two cards and creates two Treasure tokens, providing both card advantage and mana generation.",
+    "justification": "The card explicitly draws two cards.",
+    "synergy_hooks": [
+      "Cost Reducer (Variable)",
+      "Zone: Library -> Hand",
+      "Zone: Battlefield -> Hand",
+      "Mana Generator (e.g. Mana rock, Ritual)"
+    ],
+    "secondary_role": [
+      "Ramp"
+    ],
+    "justification_secondary": [
+      "The creation of two Treasure tokens allows for additional mana generation."
+    ],
+    "name": "Big Score",
+    "type": "Instant",
+    "cost": "{3}{R}",
+    "text": "As an additional cost to cast this spell, discard a card.\nDraw two cards and create two Treasure tokens. (They're artifacts with \"{T}, Sacrifice this token: Add one mana of any color.\")"
+  },
+  {
+    "primary_role": "Card Advantage",
+    "summary": "Brainstorm allows the player to draw three cards and then rearrange two of them into their library, providing significant card selection.",
+    "justification": "The Oracle text explicitly states 'Draw three cards', which is a clear indicator of card advantage.",
+    "synergy_hooks": [
+      "Zone: Library -> Hand",
+      "Zone: Hand -> Library",
+      "Card Selection"
+    ],
+    "secondary_role": [],
+    "justification_secondary": [],
+    "name": "Brainstorm",
+    "type": "Instant",
+    "cost": "{U}",
+    "text": "Draw three cards, then put two cards from your hand on top of your library in any order."
+  },
+  {
+    "primary_role": "Card Advantage",
+    "summary": "Fists of Flame draws a card and grants trample and +1/+0 per card drawn to a target creature until end of turn.",
+    "justification": "The card explicitly draws a card, thus fulfilling the Card Advantage role.",
+    "synergy_hooks": [
+      "Draw",
+      "Zone: Library -> Hand",
+      "Variable X Scaling",
+      "Until end of turn",
+      "Target creature gains trample",
+      "Target creature gets +1/+0 for each card drawn this turn"
+    ],
+    "secondary_role": [
+      "Value Engine"
+    ],
+    "justification_secondary": [
+      "The card provides a scaling buff to a creature based on the number of cards drawn this turn, which can be considered a value engine effect."
+    ],
+    "name": "Fists of Flame",
+    "type": "Instant",
+    "cost": "{1}{R}",
+    "text": "Draw a card. Until end of turn, target creature gains trample and gets +1/+0 for each card you've drawn this turn. (A creature with trample can deal excess combat damage to the player or planeswalker it's attacking.)"
+  },
+  {
+    "primary_role": "Card Advantage",
+    "summary": "Opt allows the player to look at the top card of their library and put it on the bottom, then draw a card, providing card advantage.",
+    "justification": "The card explicitly involves drawing a card.",
+    "synergy_hooks": [
+      "Zone: Library -> Hand",
+      "Card Information: Scry"
+    ],
+    "secondary_role": [],
+    "justification_secondary": [],
+    "name": "Opt",
+    "type": "Instant",
+    "cost": "{U}",
+    "text": "Scry 1. (Look at the top card of your library. You may put that card on the bottom.)\nDraw a card."
+  },
+  {
+    "primary_role": "Ramp",
+    "summary": "Unexpected Windfall creates two Treasure tokens that can add one mana of any color each when sacrificed, and draws two cards as an additional effect, providing both ramp and card advantage.",
+    "justification": "The card creates two Treasure tokens which generate mana when sacrificed, and this fits the definition of mana generation, a ramp effect.",
+    "synergy_hooks": [
+      "Zone: Library -> Hand",
+      "Zone: Battlefield -> Hand",
+      "Cost: Discard a card"
+    ],
+    "secondary_role": [
+      "Card Advantage"
+    ],
+    "justification_secondary": [
+      "The card allows drawing two cards which fits the definition of card advantage."
+    ],
+    "name": "Unexpected Windfall",
+    "type": "Instant",
+    "cost": "{2}{R}{R}",
+    "text": "As an additional cost to cast this spell, discard a card.\nDraw two cards and create two Treasure tokens. (They're artifacts with \"{T}, Sacrifice this token: Add one mana of any color.\")"
+  },
+  {
+    "primary_role": "Card Advantage",
+    "summary": "The card allows the target player to draw two cards and can be cast from the graveyard with an additional cost of paying life.",
+    "justification": "The Oracle text explicitly states that the target player draws two cards, which aligns with the Card Advantage role.",
+    "synergy_hooks": [
+      "Zone: Library -> Hand",
+      "Flashback",
+      "Pay Life Cost",
+      "Alternative Cost: Flashback"
+    ],
+    "secondary_role": [
+      "Disruption"
+    ],
+    "justification_secondary": [
+      "The card can be cast from the graveyard, which disrupts the usual resource management and can put pressure on the opponent's graveyard."
+    ],
+    "name": "Deep Analysis",
+    "type": "Sorcery",
+    "cost": "{3}{U}",
+    "text": "Target player draws two cards.\nFlashback\u2014{1}{U}, Pay 3 life. (You may cast this card from your graveyard for its flashback cost. Then exile it.)"
+  },
+  {
+    "primary_role": "Card Advantage",
+    "summary": "Exiles the top X cards of your library, allowing you to cast instants and sorceries with mana value X or less without paying their mana costs, then exiles the rest to the graveyard.",
+    "justification": "The card allows you to cast spells without paying their mana costs, which can lead to additional card advantage by using cards for free.",
+    "synergy_hooks": [
+      "Zone: Library -> Exile",
+      "Zone: Exile -> Hand",
+      "Cost Reducer (Variable)",
+      "Alternative Cost: Flashback"
+    ],
+    "secondary_role": [
+      "Ramp"
+    ],
+    "justification_secondary": [
+      "By allowing you to cast spells without paying their mana costs, it can effectively reduce the cost of casting spells, leading to ramp effects."
+    ],
+    "name": "Epic Experiment",
+    "type": "Sorcery",
+    "cost": "{X}{U}{R}",
+    "text": "Exile the top X cards of your library. You may cast instant and sorcery spells with mana value X or less from among them without paying their mana costs. Then put all cards exiled this way that weren't cast into your graveyard."
+  },
+  {
+    "primary_role": "Card Advantage",
+    "summary": "Faithless Looting allows the player to draw two cards and then discard two cards, providing an opportunity for card cycling.",
+    "justification": "The card explicitly allows the player to draw two cards, fitting the definition of Card Advantage.",
+    "synergy_hooks": [
+      "Zone: Library -> Hand",
+      "Zone: Hand -> Graveyard",
+      "Flashback",
+      "Alternative Cost: Flashback"
+    ],
+    "secondary_role": [
+      "Disruption"
+    ],
+    "justification_secondary": [
+      "The discard action can potentially disrupt the player's hand, forcing them to discard valuable cards."
+    ],
+    "name": "Faithless Looting",
+    "type": "Sorcery",
+    "cost": "{R}",
+    "text": "Draw two cards, then discard two cards.\nFlashback {2}{R} (You may cast this card from your graveyard for its flashback cost. Then exile it.)"
+  },
+  {
+    "primary_role": "Card Advantage",
+    "summary": "Ingenious Mastery allows the player to draw multiple cards, either three or X based on the cost paid, and includes an alternative cost that impacts an opponent.",
+    "justification": "The card explicitly allows drawing three cards if the alternative cost is paid and X cards if the regular cost is paid.",
+    "synergy_hooks": [
+      "Cost Reducer (Static/Variable)",
+      "Alternative Cost: Pay {2}{U}",
+      "Draw",
+      "Zone: Library -> Hand",
+      "Treasure Generator",
+      "Scry"
+    ],
+    "secondary_role": [
+      "Ramp"
+    ],
+    "justification_secondary": [
+      "The opponent creates two Treasure tokens, which can generate mana, aligning with the Ramp role."
+    ],
+    "name": "Ingenious Mastery",
+    "type": "Sorcery",
+    "cost": "{X}{2}{U}",
+    "text": "You may pay {2}{U} rather than pay this spell's mana cost.\nIf the {2}{U} cost was paid, you draw three cards, then an opponent creates two Treasure tokens and they scry 2. If that cost wasn't paid, you draw X cards."
+  },
+  {
+    "primary_role": "Ramp",
+    "summary": "Exiles the top three cards of your library, allowing you to play them until the end of your next turn, and creates three Treasure tokens that can each add one mana of any color when sacrificed.",
+    "justification": "The card creates three Treasure tokens which can add one mana of any color when sacrificed, providing a ramp effect.",
+    "synergy_hooks": [
+      "Zone: Library -> Exile",
+      "Alternative Cost: Exile top three cards of your library",
+      "Mana Generator (Treasure tokens)",
+      "Cost: Sacrifice (Treasure tokens)"
+    ],
+    "secondary_role": [
+      "Value Engine"
+    ],
+    "justification_secondary": [
+      "The card allows you to play the exiled cards until the end of your next turn, providing a value engine effect."
+    ],
+    "name": "Inspired Tinkering",
+    "type": "Sorcery",
+    "cost": "{4}{R}",
+    "text": "Exile the top three cards of your library. Until the end of your next turn, you may play those cards.\nCreate three Treasure tokens. (They're artifacts with \"{T}, Sacrifice this token: Add one mana of any color.\")"
+  },
+  {
+    "primary_role": "Card Advantage",
+    "summary": "Tezzeret's Gambit allows the player to draw two cards and then proliferate, potentially increasing the number of counters on permanents and/or players.",
+    "justification": "The card explicitly instructs the player to 'Draw two cards', which falls under the Card Advantage category.",
+    "synergy_hooks": [
+      "Draw",
+      "Alternative Cost: Pay life instead of {U}",
+      "Proliferate"
+    ],
+    "secondary_role": [
+      "Value Engine"
+    ],
+    "justification_secondary": [
+      "Proliferate can create ongoing value by increasing the counters on permanents and/or players, potentially leading to further effects."
+    ],
+    "name": "Tezzeret's Gambit",
+    "type": "Sorcery",
+    "cost": "{3}{U/P}",
+    "text": "({U/P} can be paid with either {U} or 2 life.)\nDraw two cards, then proliferate. (Choose any number of permanents and/or players, then give each another counter of each kind already there.)"
+  },
+  {
+    "primary_role": "Card Advantage",
+    "summary": "Stroke of Genius allows the target player to draw X cards, directly providing card advantage.",
+    "justification": "The Oracle text specifies 'Target player draws X cards', which directly indicates card advantage.",
+    "synergy_hooks": [
+      "Variable X Scaling",
+      "Zone: Library -> Hand"
+    ],
+    "secondary_role": [],
+    "justification_secondary": [],
+    "name": "Stroke of Genius",
+    "type": "Instant",
+    "cost": "{X}{2}{U}",
+    "text": "Target player draws X cards."
+  },
+  {
+    "primary_role": "Card Advantage",
+    "summary": "Ponder allows the player to look at the top three cards of their library, rearrange them, and optionally shuffle, followed by drawing a card, which provides information and card advantage.",
+    "justification": "The card explicitly states 'Draw a card' which fits the definition of Card Advantage.",
+    "synergy_hooks": [
+      "Zone: Library -> Hand",
+      "Look at top cards",
+      "Reorder top cards",
+      "Optional shuffle"
+    ],
+    "secondary_role": [],
+    "justification_secondary": [],
+    "name": "Ponder",
+    "type": "Sorcery",
+    "cost": "{U}",
+    "text": "Look at the top three cards of your library, then put them back in any order. You may shuffle.\nDraw a card."
+  },
+  {
+    "primary_role": "Card Advantage",
+    "summary": "Enables casting spells with flash and provides card draw.",
+    "justification": "The card allows spells to be cast as though they had flash and explicitly instructs to draw a card.",
+    "synergy_hooks": [
+      "Cost Reducer (Static)",
+      "Zone: Library -> Hand"
+    ],
+    "secondary_role": [
+      "Value Engine"
+    ],
+    "justification_secondary": [
+      "Enabling spells with flash can create additional value opportunities during the turn."
+    ],
+    "name": "Borne Upon a Wind",
+    "type": "Instant",
+    "cost": "{1}{U}",
+    "text": "You may cast spells this turn as though they had flash.\nDraw a card."
+  },
+  {
+    "primary_role": "Disruption",
+    "summary": "Mana Leak counters a target spell unless its controller pays an additional {3}, providing a cost-based disruption mechanism.",
+    "justification": "The card's Oracle text explicitly states that it counters a target spell unless its controller pays {3}, which is a form of disruption.",
+    "synergy_hooks": [
+      "Counter Spell",
+      "Cost Reducer (Variable)"
+    ],
+    "secondary_role": [],
+    "justification_secondary": [],
+    "name": "Mana Leak",
+    "type": "Instant",
+    "cost": "{1}{U}",
+    "text": "Counter target spell unless its controller pays {3}."
+  },
+  {
+    "primary_role": "Disruption",
+    "summary": "Daze is an instant that allows you to counter a target spell unless the controller pays {1}, and it has an alternative cost that involves returning an Island you control to your hand.",
+    "justification": "The Oracle text states that Daze counters target spell unless its controller pays {1}.",
+    "synergy_hooks": [
+      "Alternative Cost: Return Island to hand",
+      "Cost Reducer (Variable)",
+      "Zone: Battlefield -> Hand"
+    ],
+    "secondary_role": [],
+    "justification_secondary": [],
+    "name": "Daze",
+    "type": "Instant",
+    "cost": "{1}{U}",
+    "text": "You may return an Island you control to its owner's hand rather than pay this spell's mana cost.\nCounter target spell unless its controller pays {1}."
+  },
+  {
+    "primary_role": "Disruption",
+    "summary": "Spell Pierce counters a noncreature spell unless its controller pays an additional cost of {2}.",
+    "justification": "The card counters a target noncreature spell, which is a form of disruption.",
+    "synergy_hooks": [
+      "Alternative Cost: {2}",
+      "Target noncreature spell"
+    ],
+    "secondary_role": [],
+    "justification_secondary": [],
+    "name": "Spell Pierce",
+    "type": "Instant",
+    "cost": "{U}",
+    "text": "Counter target noncreature spell unless its controller pays {2}."
+  },
+  {
+    "primary_role": "Disruption",
+    "summary": "The card counters an instant or sorcery spell unless the controller pays an additional {1}, and provides card draw as a fallback.",
+    "justification": "The card has the primary function of countering target instant or sorcery spell unless its controller pays {1}.",
+    "synergy_hooks": [
+      "Cost Reducer (Static)",
+      "Draw"
+    ],
+    "secondary_role": [
+      "Card Advantage"
+    ],
+    "justification_secondary": [
+      "The card includes a Draw effect, which provides card advantage."
+    ],
+    "name": "Disrupt",
+    "type": "Instant",
+    "cost": "{U}",
+    "text": "Counter target instant or sorcery spell unless its controller pays {1}.\nDraw a card."
+  },
+  {
+    "primary_role": "Disruption",
+    "summary": "Grapeshot deals 1 damage to any target, and its Storm ability allows for multiple copies if other spells were cast earlier in the turn.",
+    "justification": "The card directly deals damage to a target, which is a form of disruption.",
+    "synergy_hooks": [
+      "Storm",
+      "Spell Copier",
+      "Variable X Scaling"
+    ],
+    "secondary_role": [],
+    "justification_secondary": [],
+    "name": "Grapeshot",
+    "type": "Sorcery",
+    "cost": "{1}{R}",
+    "text": "Grapeshot deals 1 damage to any target.\nStorm (When you cast this spell, copy it for each spell cast before it this turn. You may choose new targets for the copies.)"
+  },
+  {
+    "primary_role": "Disruption",
+    "summary": "Exiles an artifact or creature and replaces it with a 4/4 blue and red Elemental creature token, providing a trade-off for the removed permanent.",
+    "justification": "The card exiles a target artifact or creature, which is a form of disruption.",
+    "synergy_hooks": [
+      "Zone: Battlefield -> Exile",
+      "Creates: Elemental creature token"
+    ],
+    "secondary_role": [
+      "Value Engine"
+    ],
+    "justification_secondary": [
+      "The card creates a 4/4 creature token, which can provide value through combat and potentially other interactions."
+    ],
+    "name": "Resculpt",
+    "type": "Instant",
+    "cost": "{1}{U}",
+    "text": "Exile target artifact or creature. Its controller creates a 4/4 blue and red Elemental creature token."
+  },
+  {
+    "primary_role": "Win Condition",
+    "summary": "Jaya's Immolating Inferno deals X damage to each of up to three targets, potentially ending the game by dealing lethal damage.",
+    "justification": "The card can deal X damage to up to three targets, which can end the game if it deals lethal damage to the opponent.",
+    "synergy_hooks": [
+      "Variable X Scaling"
+    ],
+    "secondary_role": [],
+    "justification_secondary": [],
+    "name": "Jaya's Immolating Inferno",
+    "type": "Legendary Sorcery",
+    "cost": "{X}{R}{R}",
+    "text": "(You may cast a legendary sorcery only if you control a legendary creature or planeswalker.)\nJaya's Immolating Inferno deals X damage to each of up to three targets."
+  },
+  {
+    "primary_role": "Disruption",
+    "summary": "Temporal Fissure returns a target permanent to its owner's hand and copies itself for each spell cast before it this turn, allowing for multiple returns of targets to their owners' hands.",
+    "justification": "The card returns a target permanent to its owner's hand, which is a disruptive effect.",
+    "synergy_hooks": [
+      "Zone: Battlefield -> Hand",
+      "Storm",
+      "Copy"
+    ],
+    "secondary_role": [],
+    "justification_secondary": [],
+    "name": "Temporal Fissure",
+    "type": "Sorcery",
+    "cost": "{4}{U}",
+    "text": "Return target permanent to its owner's hand.\nStorm (When you cast this spell, copy it for each spell cast before it this turn. You may choose new targets for the copies.)"
+  },
+  {
+    "primary_role": "Win Condition",
+    "summary": "Chandra's Ignition allows a target creature to deal damage equal to its power to all other creatures and opponents, potentially dealing lethal damage to multiple targets.",
+    "justification": "The Oracle text specifies that the target creature deals damage equal to its power to each other creature and each opponent, which can directly lead to reducing the life totals of opponents and killing creatures, contributing to a win condition.",
+    "synergy_hooks": [
+      "'Whenever you cast'",
+      "Targeted creature",
+      "Damage to creatures",
+      "Damage to opponents"
+    ],
+    "secondary_role": [],
+    "justification_secondary": [],
+    "name": "Chandra's Ignition",
+    "type": "Sorcery",
+    "cost": "{3}{R}{R}",
+    "text": "Target creature you control deals damage equal to its power to each other creature and each opponent."
+  },
+  {
+    "primary_role": "Disruption",
+    "summary": "Negate counters a target noncreature spell, disrupting the opponent's strategy.",
+    "justification": "The card Counter target noncreature spell directly disrupts the opponent's spell.",
+    "synergy_hooks": [
+      "Counter",
+      "Target noncreature spell"
+    ],
+    "secondary_role": [],
+    "justification_secondary": [],
+    "name": "Negate",
+    "type": "Instant",
+    "cost": "{1}{U}",
+    "text": "Counter target noncreature spell."
+  },
+  {
+    "primary_role": "Disruption",
+    "summary": "This card counters a target spell unless its controller pays {X}, and if the spell is countered, it is exiled instead of going to the graveyard.",
+    "justification": "The card's Oracle text explicitly counters a spell, which is a form of disruption.",
+    "synergy_hooks": [
+      "Cost Reducer (Variable)",
+      "Alternative Cost: Replacement Effect",
+      "Zone: Graveyard -> Exile"
+    ],
+    "secondary_role": [],
+    "justification_secondary": [],
+    "name": "Syncopate",
+    "type": "Instant",
+    "cost": "{X}{U}",
+    "text": "Counter target spell unless its controller pays {X}. If that spell is countered this way, exile it instead of putting it into its owner's graveyard."
+  },
+  {
+    "primary_role": "Disruption",
+    "summary": "Unsubstantiate returns a target spell or creature to its owner's hand, disrupting the opponent's plans.",
+    "justification": "The card returns target spell or creature to its owner's hand, which disrupts the opponent's plays.",
+    "synergy_hooks": [
+      "Return target spell or creature to its owner's hand",
+      "Zone: Battlefield/Stack -> Hand"
+    ],
+    "secondary_role": [],
+    "justification_secondary": [],
+    "name": "Unsubstantiate",
+    "type": "Instant",
+    "cost": "{1}{U}",
+    "text": "Return target spell or creature to its owner's hand."
+  },
+  {
+    "primary_role": "Disruption",
+    "summary": "The spell exiles X target creatures, creating a 2/2 green Boar creature token for each creature exiled, potentially disrupting the opponent's board while providing a small creature token.",
+    "justification": "The spell exiles target creatures, which directly disrupts the opponent's board state.",
+    "synergy_hooks": [
+      "Exile",
+      "Zone: Battlefield -> Exile",
+      "Token Creation"
+    ],
+    "secondary_role": [
+      "Value Engine"
+    ],
+    "justification_secondary": [
+      "The creation of 2/2 green Boar creature tokens provides a small, repeatable value."
+    ],
+    "name": "Curse of the Swine",
+    "type": "Sorcery",
+    "cost": "{X}{U}{U}",
+    "text": "Exile X target creatures. For each creature exiled this way, its controller creates a 2/2 green Boar creature token."
+  },
+  {
+    "primary_role": "Disruption",
+    "summary": "Rewind counters a target spell and untaps up to four lands, providing both disruption and ramp benefits.",
+    "justification": "The card explicitly counters a target spell, which is a direct form of disruption.",
+    "synergy_hooks": [
+      "Counter target spell",
+      "Untap up to four lands",
+      "Zone: Stack -> Hand (effectively, as the countered spell is sent to its owner's hand)"
+    ],
+    "secondary_role": [
+      "Ramp"
+    ],
+    "justification_secondary": [
+      "Untapping up to four lands provides a ramp effect by potentially increasing available mana for the turn."
+    ],
+    "name": "Rewind",
+    "type": "Instant",
+    "cost": "{2}{U}{U}",
+    "text": "Counter target spell. Untap up to four lands."
+  },
+  {
+    "primary_role": "Disruption",
+    "summary": "Rapid Hybridization destroys a target creature and prevents regeneration while providing a 3/3 Frog Lizard token to the creature's controller.",
+    "justification": "The card destroys a target creature, which is a direct form of disruption.",
+    "synergy_hooks": [
+      "Destroy target creature",
+      "Zone: Battlefield -> Graveyard",
+      "Token Creation: Frog Lizard"
+    ],
+    "secondary_role": [
+      "Value Engine"
+    ],
+    "justification_secondary": [
+      "The token creation provides value in the form of a new creature on the battlefield."
+    ],
+    "name": "Rapid Hybridization",
+    "type": "Instant",
+    "cost": "{U}",
+    "text": "Destroy target creature. It can't be regenerated. That creature's controller creates a 3/3 green Frog Lizard creature token."
+  },
+  {
+    "primary_role": "Win Condition",
+    "summary": "Electrodominance deals X damage to any target and allows casting a spell with mana value X or less from your hand without paying its mana cost, enabling powerful synergies.",
+    "justification": "The card deals damage and allows for a powerful spell to be cast for free, making it a potent win condition.",
+    "synergy_hooks": [
+      "Cost Reducer (Variable)",
+      "Variable X Scaling"
+    ],
+    "secondary_role": [
+      "Ramp"
+    ],
+    "justification_secondary": [
+      "The card allows for casting a spell from hand without paying its mana cost, which can act as a form of ramp."
+    ],
+    "name": "Electrodominance",
+    "type": "Instant",
+    "cost": "{X}{R}{R}",
+    "text": "Electrodominance deals X damage to any target. You may cast a spell with mana value X or less from your hand without paying its mana cost."
+  },
+  {
+    "primary_role": "Disruption",
+    "summary": "Whirlwind Denial counters each spell and ability controlled by opponents unless they pay {4}.",
+    "justification": "The card counters all spells and abilities controlled by opponents, which is a direct form of disruption.",
+    "synergy_hooks": [
+      "Cost Reducer (Variable)",
+      "Counter Spell"
+    ],
+    "secondary_role": [],
+    "justification_secondary": [],
+    "name": "Whirlwind Denial",
+    "type": "Instant",
+    "cost": "{2}{U}",
+    "text": "For each spell and ability your opponents control, counter it unless its controller pays {4}."
+  },
+  {
+    "primary_role": "Disruption",
+    "summary": "Arcane Denial counters a target spell and provides a card draw benefit to both the controller of the countered spell and the caster at the beginning of the next upkeep.",
+    "justification": "The card's primary function is to counter a target spell, which is a form of disruption.",
+    "synergy_hooks": [
+      "Counter target spell",
+      "Draw up to two cards at the beginning of the next turn's upkeep",
+      "Zone: Library -> Hand"
+    ],
+    "secondary_role": [
+      "Card Advantage"
+    ],
+    "justification_secondary": [
+      "The card provides a card draw benefit, allowing both the controller of the countered spell and the caster to draw cards at the beginning of the next upkeep."
+    ],
+    "name": "Arcane Denial",
+    "type": "Instant",
+    "cost": "{1}{U}",
+    "text": "Counter target spell. Its controller may draw up to two cards at the beginning of the next turn's upkeep.\nYou draw a card at the beginning of the next turn's upkeep."
+  },
+  {
+    "primary_role": "Disruption",
+    "summary": "Narset's Reversal copies a target instant or sorcery spell and returns the original to its owner's hand, potentially disrupting their plans and giving the controller of Narset's Reversal an extra action.",
+    "justification": "The card disrupts the opponent by returning the target spell to its owner's hand after copying it.",
+    "synergy_hooks": [
+      "Spell Copier",
+      "Return to Hand",
+      "Zone: Stack -> Hand"
+    ],
+    "secondary_role": [],
+    "justification_secondary": [],
+    "name": "Narset's Reversal",
+    "type": "Instant",
+    "cost": "{U}{U}",
+    "text": "Copy target instant or sorcery spell, then return it to its owner's hand. You may choose new targets for the copy."
+  },
+  {
+    "primary_role": "Disruption",
+    "summary": "Reiterate allows for the copying of an instant or sorcery spell with the option to choose new targets, and offers the buyback option to return the card to the hand upon resolution.",
+    "justification": "The card allows for the copying of an instant or sorcery spell, which can disrupt the game state by duplicating effects.",
+    "synergy_hooks": [
+      "Spell Copier",
+      "Buyback",
+      "Alternative Cost: Buyback"
+    ],
+    "secondary_role": [
+      "Card Advantage"
+    ],
+    "justification_secondary": [
+      "The buyback ability allows the card to be returned to the hand, providing card advantage."
+    ],
+    "name": "Reiterate",
+    "type": "Instant",
+    "cost": "{1}{R}{R}",
+    "text": "Buyback {3} (You may pay an additional {3} as you cast this spell. If you do, put this card into your hand as it resolves.)\nCopy target instant or sorcery spell. You may choose new targets for the copy."
+  },
+  {
+    "primary_role": "Disruption",
+    "summary": "Aria of Flame grants opponents life upon entering the battlefield and deals damage to a target player or planeswalker whenever the controller casts an instant or sorcery spell, scaling with the number of verse counters.",
+    "justification": "The card allows the controller to deal damage to a target player or planeswalker, which is a form of disruption.",
+    "synergy_hooks": [
+      "Whenever you cast",
+      "Alternative Cost: Flashback",
+      "Zone: Library -> Hand",
+      "Cost Reducer (Static/Variable)"
+    ],
+    "secondary_role": [
+      "Value Engine"
+    ],
+    "justification_secondary": [
+      "The card provides repeated damage output based on the number of instant or sorcery spells cast, which can be seen as a value engine due to its consistent effect."
+    ],
+    "name": "Aria of Flame",
+    "type": "Enchantment",
+    "cost": "{2}{R}",
+    "text": "When this enchantment enters, each opponent gains 10 life.\nWhenever you cast an instant or sorcery spell, put a verse counter on this enchantment, then it deals damage equal to the number of verse counters on it to target player or planeswalker."
+  },
+  {
+    "primary_role": "Disruption",
+    "summary": "Searing Touch is an instant that deals 1 damage to any target and can be bought back for {4} to return the card to your hand.",
+    "justification": "The card deals damage to any target, disrupting the opponent's resources.",
+    "synergy_hooks": [
+      "Additional Cost: Buyback",
+      "Zone: Stack -> Hand"
+    ],
+    "secondary_role": [],
+    "justification_secondary": [],
+    "name": "Searing Touch",
+    "type": "Instant",
+    "cost": "{R}",
+    "text": "Buyback {4} (You may pay an additional {4} as you cast this spell. If you do, put this card into your hand as it resolves.)\nSearing Touch deals 1 damage to any target."
+  },
+  {
+    "primary_role": "Value Engine",
+    "summary": "Until end of turn, the targeted creature gains 4/4 base power and toughness, flying, and hexproof, providing a temporary boost to the creature's effectiveness and protection from opponents' spells and abilities.",
+    "justification": "The card provides a temporary, but significant, boost to a creature's power and toughness, as well as additional abilities that can aid in combat or defense.",
+    "synergy_hooks": [
+      "Until end of turn",
+      "Target creature you control",
+      "Base power and toughness 4/4",
+      "Gains flying",
+      "Gains hexproof"
+    ],
+    "secondary_role": [],
+    "justification_secondary": [],
+    "name": "Water Wings",
+    "type": "Instant",
+    "cost": "{1}{U}",
+    "text": "Until end of turn, target creature you control has base power and toughness 4/4 and gains flying and hexproof. (It can't be the target of spells or abilities your opponents control.)"
+  },
+  {
+    "primary_role": "Card Advantage",
+    "summary": "Mystical Tutor allows a player to search their library for an instant or sorcery card, revealing it, then shuffling the library and putting the card on top, effectively providing card advantage by finding desired cards.",
+    "justification": "Mystical Tutor allows a player to search their library and put an instant or sorcery on top, which is a form of card advantage.",
+    "synergy_hooks": [
+      "Zone: Library -> Top of Library",
+      "Card Type: Instant",
+      "Card Type: Sorcery"
+    ],
+    "secondary_role": [],
+    "justification_secondary": [],
+    "name": "Mystical Tutor",
+    "type": "Instant",
+    "cost": "{U}",
+    "text": "Search your library for an instant or sorcery card, reveal it, then shuffle and put that card on top."
+  },
+  {
+    "primary_role": "Disruption",
+    "summary": "Counters a targeted instant or sorcery spell, and provides an alternative discard cost to search for a card with the same mana value, revealing and putting it into hand.",
+    "justification": "The card's primary ability is to counter target instant or sorcery spell.",
+    "synergy_hooks": [
+      "Alternative Cost: Transmute",
+      "Zone: Library -> Hand",
+      "Discard"
+    ],
+    "secondary_role": [
+      "Card Advantage"
+    ],
+    "justification_secondary": [
+      "The Transmute ability allows searching for and revealing a card with the same mana value, putting it into hand."
+    ],
+    "name": "Muddle the Mixture",
+    "type": "Instant",
+    "cost": "{U}{U}",
+    "text": "Counter target instant or sorcery spell.\nTransmute {1}{U}{U} ({1}{U}{U}, Discard this card: Search your library for a card with the same mana value as this card, reveal it, put it into your hand, then shuffle. Transmute only as a sorcery.)"
+  },
+  {
+    "primary_role": "Card Advantage",
+    "summary": "Fervent Mastery allows an opponent to discard and draw an equal number of cards, while the player searches their library for up to three cards to put into their hand and then discards three cards at random.",
+    "justification": "The card allows searching the library for up to three cards to put into the hand and involves an opponent discarding and drawing cards, which contributes to card advantage.",
+    "synergy_hooks": [
+      "Alternative Cost: Pay {2}{R}{R}",
+      "Zone: Library -> Hand (search)",
+      "Zone: Hand -> Graveyard (discard)",
+      "Variable X Scaling (number of cards discarded/drawn)"
+    ],
+    "secondary_role": [
+      "Disruption"
+    ],
+    "justification_secondary": [
+      "The card involves forcing an opponent to discard any number of cards, which is a form of disruption."
+    ],
+    "name": "Fervent Mastery",
+    "type": "Sorcery",
+    "cost": "{3}{R}{R}",
+    "text": "You may pay {2}{R}{R} rather than pay this spell's mana cost.\nIf the {2}{R}{R} cost was paid, an opponent discards any number of cards, then draws that many cards.\nSearch your library for up to three cards, put them into your hand, shuffle, then discard three cards at random."
+  },
+  {
+    "primary_role": "Card Advantage",
+    "summary": "Searches the library for an instant or sorcery card, reveals it, puts it into the hand, and shuffles the library, providing direct card advantage.",
+    "justification": "The card allows the player to search their library for an instant or sorcery card and put it into their hand, which is a direct form of card advantage.",
+    "synergy_hooks": [
+      "Zone: Library -> Hand",
+      "Search: Instant or Sorcery"
+    ],
+    "secondary_role": [],
+    "justification_secondary": [],
+    "name": "Solve the Equation",
+    "type": "Sorcery",
+    "cost": "{2}{U}",
+    "text": "Search your library for an instant or sorcery card, reveal it, put it into your hand, then shuffle."
+  },
+  {
+    "primary_role": "Card Advantage",
+    "summary": "The card enables searching a player's library for up to three cards with flashback and putting them into the graveyard, which indirectly aids in controlling the graveyard and potentially setting up for future plays.",
+    "justification": "The card allows searching a player's library for cards with flashback and putting them into the graveyard, which is a form of card manipulation that can lead to card advantage.",
+    "synergy_hooks": [
+      "Zone: Library -> Graveyard",
+      "Flashback"
+    ],
+    "secondary_role": [],
+    "justification_secondary": [],
+    "name": "Quiet Speculation",
+    "type": "Sorcery",
+    "cost": "{1}{U}",
+    "text": "Search target player's library for up to three cards with flashback and put them into that player's graveyard. Then the player shuffles."
+  },
+  {
+    "primary_role": "Card Advantage",
+    "summary": "Intuition allows the player to search their library for three cards, with an opponent choosing one to be put into the player's hand while the others go to the graveyard, effectively drawing a card.",
+    "justification": "Intuition allows the player to draw a card from their library and put it into their hand after searching for three cards and letting an opponent choose one to keep.",
+    "synergy_hooks": [
+      "Zone: Library -> Hand",
+      "Zone: Library -> Graveyard"
+    ],
+    "secondary_role": [],
+    "justification_secondary": [],
+    "name": "Intuition",
+    "type": "Instant",
+    "cost": "{2}{U}",
+    "text": "Search your library for three cards and reveal them. Target opponent chooses one. Put that card into your hand and the rest into your graveyard. Then shuffle."
+  },
+  {
+    "primary_role": "Card Advantage",
+    "summary": "Gifts Ungiven allows the player to manipulate their library, putting chosen cards into their graveyard and the rest into their hand, providing significant card advantage.",
+    "justification": "The card explicitly allows the player to search their library for up to four cards, putting two into the graveyard and the rest into their hand, which is a form of card advantage.",
+    "synergy_hooks": [
+      "Zone: Library -> Hand",
+      "Zone: Library -> Graveyard"
+    ],
+    "secondary_role": [],
+    "justification_secondary": [],
+    "name": "Gifts Ungiven",
+    "type": "Instant",
+    "cost": "{3}{U}",
+    "text": "Search your library for up to four cards with different names and reveal them. Target opponent chooses two of those cards. Put the chosen cards into your graveyard and the rest into your hand. Then shuffle."
+  },
+  {
+    "primary_role": "Disruption",
+    "summary": "Invert switches the power and toughness of targeted creatures until end of turn, potentially disrupting combat scenarios and offering temporary control advantage.",
+    "justification": "The ability to switch power and toughness can disrupt opponent's combat plans, thus fitting into the Disruption category.",
+    "synergy_hooks": [
+      "Alternative Cost: Flashback",
+      "Cost Reducer (Static/Variable)",
+      "Temporary Effect: End of Turn"
+    ],
+    "secondary_role": [],
+    "justification_secondary": [],
+    "name": "Invert",
+    "type": "Instant",
+    "cost": "{U/R}",
+    "text": "Switch the power and toughness of each of up to two target creatures until end of turn."
+  },
+  {
+    "primary_role": "Card Advantage",
+    "summary": "Invent allows the player to search their library for an instant and/or a sorcery card, put them into their hand, and shuffle the library, thus providing card advantage.",
+    "justification": "The card explicitly searches the library for an instant and/or a sorcery card and puts them into the player's hand, which is a form of card advantage.",
+    "synergy_hooks": [
+      "Zone: Library -> Hand",
+      "Card Type: Instant",
+      "Card Type: Sorcery",
+      "Shuffle"
+    ],
+    "secondary_role": [],
+    "justification_secondary": [],
+    "name": "Invent",
+    "type": "Instant",
+    "cost": "{4}{U}{R}",
+    "text": "Search your library for an instant card and/or a sorcery card, reveal them, put them into your hand, then shuffle."
+  },
+  {
+    "primary_role": "Card Advantage",
+    "summary": "Exiles a target instant or sorcery card from the graveyard and allows the casting of a copy without paying its mana cost, providing card advantage.",
+    "justification": "The card explicitly allows exiling a card from the graveyard and casting a copy of it without paying its mana cost, which provides card advantage.",
+    "synergy_hooks": [
+      "Copy",
+      "Alternative Cost: Overload",
+      "Zone: Graveyard -> Exile",
+      "Zone: Exile -> Hand (as the copy is cast)"
+    ],
+    "secondary_role": [
+      "Value Engine"
+    ],
+    "justification_secondary": [
+      "The card provides a value engine by enabling the repeated casting of exiled instants or sorceries without incurring additional costs, beyond the initial cost of casting Mizzix's Mastery itself."
+    ],
+    "name": "Mizzix's Mastery",
+    "type": "Sorcery",
+    "cost": "{3}{R}",
+    "text": "Exile target card that's an instant or sorcery from your graveyard. For each card exiled this way, copy it, and you may cast the copy without paying its mana cost. Exile Mizzix's Mastery.\nOverload {5}{R}{R}{R} (You may cast this spell for its overload cost. If you do, change \"target\" in its text to \"each.\")"
+  },
+  {
+    "primary_role": "Card Advantage",
+    "summary": "Returns an instant or sorcery card from the graveyard to your hand and can be cast from the graveyard with flashback, providing additional card manipulation opportunities.",
+    "justification": "The card explicitly returns a target instant or sorcery card from the graveyard to the hand, which is a form of card advantage.",
+    "synergy_hooks": [
+      "Zone: Graveyard -> Hand",
+      "Flashback",
+      "Alternative Cost: Flashback",
+      "graveyard"
+    ],
+    "secondary_role": [
+      "Ramp"
+    ],
+    "justification_secondary": [
+      "The flashback ability can be used to reduce the cost of casting the spell from the graveyard, which can be considered a form of ramp as it allows for more efficient use of resources."
+    ],
+    "name": "Mystic Retrieval",
+    "type": "Sorcery",
+    "cost": "{3}{U}",
+    "text": "Return target instant or sorcery card from your graveyard to your hand.\nFlashback {2}{R} (You may cast this card from your graveyard for its flashback cost. Then exile it.)"
+  },
+  {
+    "primary_role": "Disruption",
+    "summary": "Enables the casting of instants and sorcery cards from your graveyard by granting them flashback until end of turn, providing a disruption-heavy toolbox.",
+    "justification": "The card provides the ability to cast instants and sorceries from the graveyard, which can lead to disruption effects such as counterspells or removal spells.",
+    "synergy_hooks": [
+      "Alternative Cost: Flashback",
+      "graveyard",
+      "Zone: Graveyard -> Stack"
+    ],
+    "secondary_role": [
+      "Card Advantage"
+    ],
+    "justification_secondary": [
+      "Enabling the use of flashback on instants and sorceries can indirectly provide card advantage by allowing the reuse of cards."
+    ],
+    "name": "Past in Flames",
+    "type": "Sorcery",
+    "cost": "{3}{R}",
+    "text": "Each instant and sorcery card in your graveyard gains flashback until end of turn. The flashback cost is equal to its mana cost.\nFlashback {4}{R} (You may cast this card from your graveyard for its flashback cost. Then exile it.)"
+  },
+  {
+    "primary_role": "Card Advantage",
+    "summary": "Underworld Breach grants escape to nonland cards in the graveyard, allowing them to be cast from the graveyard for a specified cost, which includes exiling three other cards from the graveyard.",
+    "justification": "The card provides card advantage by allowing the casting of nonland cards from the graveyard.",
+    "synergy_hooks": [
+      "Zone: Graveyard -> Hand",
+      "Escape",
+      "Cost: Exile cards"
+    ],
+    "secondary_role": [
+      "Disruption"
+    ],
+    "justification_secondary": [
+      "The escape mechanic can be used to disrupt the opponent by casting removal or disruption cards from the graveyard."
+    ],
+    "name": "Underworld Breach",
+    "type": "Enchantment",
+    "cost": "{1}{R}",
+    "text": "Each nonland card in your graveyard has escape. The escape cost is equal to the card's mana cost plus exile three other cards from your graveyard. (You may cast cards from your graveyard for their escape cost.)\nAt the beginning of the end step, sacrifice this enchantment."
+  },
+  {
+    "primary_role": "Ramp",
+    "summary": "Training Center enters tapped unless you have two or more opponents, and can produce either blue or red mana.",
+    "justification": "The card provides colored mana ({U} or {R}) which aligns with the definition of ramp.",
+    "synergy_hooks": [
+      "Mana Generator (e.g. Mana rock, Ritual)",
+      "Zone: Battlefield -> Hand (if a future card triggers on entering the battlefield)"
+    ],
+    "secondary_role": [],
+    "justification_secondary": [],
+    "name": "Training Center",
+    "type": "Land",
+    "cost": "",
+    "text": "This land enters tapped unless you have two or more opponents.\n{T}: Add {U} or {R}."
+  },
+  {
+    "primary_role": "Ramp",
+    "summary": "Command Tower is a land that allows players to add one mana of any color in their commander's color identity when tapped, serving as a flexible ramp source in Commander formats.",
+    "justification": "The card allows adding mana of any color in the commander's color identity, which is a mana acceleration effect.",
+    "synergy_hooks": [
+      "Mana Generator (e.g. Mana rock, Ritual)",
+      "Zone: Battlefield -> Mana Pool"
+    ],
+    "secondary_role": [],
+    "justification_secondary": [],
+    "name": "Command Tower",
+    "type": "Land",
+    "cost": "",
+    "text": "{T}: Add one mana of any color in your commander's color identity."
+  },
+  {
+    "primary_role": "Ramp",
+    "summary": "Frostboil Snarl enters the battlefield untapped if you reveal an Island or Mountain from your hand, and it produces either blue or red mana.",
+    "justification": "The land provides {U} or {R} mana when tapped, which is a ramp effect.",
+    "synergy_hooks": [
+      "Alternative Cost: Reveal Island or Mountain from hand",
+      "Mana Generator (produces {U} or {R})",
+      "Zone: Hand -> Battlefield (reveal Island or Mountain from hand)"
+    ],
+    "secondary_role": [
+      "None"
+    ],
+    "justification_secondary": [],
+    "name": "Frostboil Snarl",
+    "type": "Land",
+    "cost": "",
+    "text": "As this land enters, you may reveal an Island or Mountain card from your hand. If you don't, this land enters tapped.\n{T}: Add {U} or {R}."
+  },
+  {
+    "primary_role": "Ramp",
+    "summary": "The Island is a basic land that provides a single blue mana when tapped, which is fundamental for casting blue spells.",
+    "justification": "The card text ({T}: Add {U}.) indicates that it adds a blue mana when tapped, fitting the definition of a ramp card.",
+    "synergy_hooks": [
+      "Mana Generator (e.g. Mana rock, Ritual)"
+    ],
+    "secondary_role": [],
+    "justification_secondary": [],
+    "name": "Island",
+    "type": "Basic Land \u2014 Island",
+    "cost": "",
+    "text": "({T}: Add {U}.)"
+  },
+  {
+    "primary_role": "Ramp",
+    "summary": "Mountain is a basic land that produces one red mana when tapped, enabling the casting of red spells.",
+    "justification": "The Oracle text specifies that Mountain adds {R} when tapped, which is a form of mana generation.",
+    "synergy_hooks": [
+      "Mana Generator (Basic Land)",
+      "Zone: Battlefield -> Mana Pool (via Tapping)"
+    ],
+    "secondary_role": [],
+    "justification_secondary": [],
+    "name": "Mountain",
+    "type": "Basic Land \u2014 Mountain",
+    "cost": "",
+    "text": "({T}: Add {R}.)"
+  },
+  {
+    "primary_role": "Ramp",
+    "summary": "Shivan Reef is a land that provides variable mana (colourless or a single coloured mana) and deals 1 damage to you, potentially enabling mana ramp and disrupting your life total.",
+    "justification": "The Oracle text explicitly states that the land adds {C} and {U} or {R}, indicating mana generation, which is a core component of ramp.",
+    "synergy_hooks": [
+      "Mana Generator (Mana rock)",
+      "Zone: Stack -> Hand (Alternative Cost: Flashback)",
+      "Cost Reducer (Static/Variable)"
+    ],
+    "secondary_role": [
+      "Disruption"
+    ],
+    "justification_secondary": [
+      "The land deals 1 damage to you, which can be considered a form of self-disruption."
+    ],
+    "name": "Shivan Reef",
+    "type": "Land",
+    "cost": "",
+    "text": "{T}: Add {C}.\n{T}: Add {U} or {R}. This land deals 1 damage to you."
+  },
+  {
+    "primary_role": "Win Condition",
+    "summary": "Grapeshot deals 1 damage to any target and can copy itself for each spell cast before it this turn, potentially dealing significant damage.",
+    "justification": "The oracle text explicitly states that Grapeshot deals damage to a target, which directly impacts the life total of the opponent, fitting the definition of a win condition.",
+    "synergy_hooks": [
+      "Spell Copier",
+      "Storm"
+    ],
+    "secondary_role": [],
+    "justification_secondary": [],
+    "name": "Grapeshot",
+    "type": "Sorcery",
+    "cost": "{1}{R}",
+    "text": "Grapeshot deals 1 damage to any target.\nStorm (When you cast this spell, copy it for each spell cast before it this turn. You may choose new targets for the copies.)"
+  },
+  {
+    "primary_role": "Card Advantage",
+    "summary": "Quiet Speculation searches an opponent's library for up to three flashback cards and puts them into their graveyard, which can potentially be replayed or exploited for synergies.",
+    "justification": "The card allows searching an opponent's library for up to three flashback cards and putting them into the graveyard, enabling card advantage through future flashback plays.",
+    "synergy_hooks": [
+      "Zone: Library -> Graveyard",
+      "Flashback"
+    ],
+    "secondary_role": [],
+    "justification_secondary": [],
+    "name": "Quiet Speculation",
+    "type": "Sorcery",
+    "cost": "{1}{U}",
+    "text": "Search target player's library for up to three cards with flashback and put them into that player's graveyard. Then the player shuffles."
+  },
+  {
+    "primary_role": "Card Advantage",
+    "summary": "Whispers of the Muse draws a card and offers the option to return itself to the hand if the buyback cost is paid, providing a potential card advantage.",
+    "justification": "The card draws a card and can return itself to the hand if the buyback cost is paid.",
+    "synergy_hooks": [
+      "Zone: Library -> Hand",
+      "Additional Cost: Buyback"
+    ],
+    "secondary_role": [
+      "Value Engine"
+    ],
+    "justification_secondary": [
+      "The ability to return the card to hand via buyback creates the potential for repeated use, offering a value engine effect."
+    ],
+    "name": "Whispers of the Muse",
+    "type": "Instant",
+    "cost": "{U}",
+    "text": "Buyback {5} (You may pay an additional {5} as you cast this spell. If you do, put this card into your hand as it resolves.)\nDraw a card."
+  },
+  {
+    "primary_role": "Card Advantage",
+    "summary": "Searches the library for three cards, allowing you to put one into your hand and the rest into your graveyard, providing card advantage.",
+    "justification": "The card allows the player to put a card from their library directly into their hand, which is a form of card advantage.",
+    "synergy_hooks": [
+      "Zone: Library -> Hand",
+      "Zone: Library -> Graveyard"
+    ],
+    "secondary_role": [],
+    "justification_secondary": [],
+    "name": "Intuition",
+    "type": "Instant",
+    "cost": "{2}{U}",
+    "text": "Search your library for three cards and reveal them. Target opponent chooses one. Put that card into your hand and the rest into your graveyard. Then shuffle."
+  },
+  {
+    "primary_role": "Disruption",
+    "summary": "Aria of Flame allows dealing damage to a player or planeswalker each time the controller casts an instant or sorcery spell, with the damage scaling based on the number of verse counters.",
+    "justification": "The card's Oracle text allows it to deal damage to a player or planeswalker, which is a form of disruption.",
+    "synergy_hooks": [
+      "Whenever you cast",
+      "Alternative Cost: Flashback",
+      "Zone: Stack -> Hand"
+    ],
+    "secondary_role": [
+      "Value Engine"
+    ],
+    "justification_secondary": [
+      "The card can consistently provide a damage output that can be used as a resource advantage, which is a characteristic of a value engine."
+    ],
+    "name": "Aria of Flame",
+    "type": "Enchantment",
+    "cost": "{2}{R}",
+    "text": "When this enchantment enters, each opponent gains 10 life.\nWhenever you cast an instant or sorcery spell, put a verse counter on this enchantment, then it deals damage equal to the number of verse counters on it to target player or planeswalker."
+  },
+  {
+    "primary_role": "Value Engine",
+    "summary": "Urabrask has first strike and whenever you cast an instant or sorcery spell, it deals 1 damage to an opponent and adds {R}. Additionally, it can be exiled and returned to the battlefield transformed under certain conditions.",
+    "justification": "The card has a triggered ability that deals consistent damage and adds {R} whenever an instant or sorcery spell is cast.",
+    "synergy_hooks": [
+      "Zone: Battlefield -> Exile",
+      "Zone: Exile -> Battlefield",
+      "Mana Generator",
+      "Whenever you cast",
+      "Cost Reducer (Static/Variable)"
+    ],
+    "secondary_role": [
+      "Ramp"
+    ],
+    "justification_secondary": [
+      "The card adds {R} mana whenever an instant or sorcery spell is cast."
+    ],
+    "name": "Urabrask",
+    "type": "Legendary Creature \u2014 Phyrexian Praetor",
+    "cost": "{2}{R}{R}",
+    "text": "First strike\nWhenever you cast an instant or sorcery spell, Urabrask deals 1 damage to target opponent. Add {R}.\n{R}: Exile Urabrask, then return it to the battlefield transformed under its owner's control. Activate only as a sorcery and only if you've cast three or more instant and/or sorcery spells this turn."
+  },
+  {
+    "primary_role": "Value Engine",
+    "summary": "The Great Work is a Saga that, as lore counters are added, deals damage to opponents and creatures, creates Treasure tokens, and allows casting spells from graveyards with exile instead of graveyard.",
+    "justification": "The card has multiple phases that provide various effects, including damage, mana generation, and graveyard interaction, which collectively serve as a value engine.",
+    "synergy_hooks": [
+      "Zone: Graveyard -> Hand",
+      "Mana Generator (Treasure Tokens)",
+      "Cost Reducer (Static/Variable)"
+    ],
+    "secondary_role": [
+      "Disruption"
+    ],
+    "justification_secondary": [
+      "The I phase allows the card to deal damage to opponents and their creatures, disrupting their board state."
+    ],
+    "name": "The Great Work",
+    "type": "Enchantment \u2014 Saga",
+    "cost": "",
+    "text": "(As this Saga enters and after your draw step, add a lore counter.)\nI \u2014 This Saga deals 3 damage to target opponent and each creature they control.\nII \u2014 Create three Treasure tokens.\nIII \u2014 Until end of turn, you may cast instant and sorcery spells from any graveyard. If a spell cast this way would be put into a graveyard, exile it instead. Exile this Saga, then return it to the battlefield (front face up)."
+  },
+  {
+    "primary_role": "Ramp",
+    "summary": "Birgi, God of Storytelling adds {R} whenever you cast a spell and allows creatures to boast twice during each of your turns.",
+    "justification": "The card adds {R} whenever a spell is cast, which is a mana acceleration effect.",
+    "synergy_hooks": [
+      "Mana Generator (e.g. Mana rock, Ritual)",
+      "Whenever you cast"
+    ],
+    "secondary_role": [
+      "Value Engine"
+    ],
+    "justification_secondary": [
+      "The ability to boast twice during each turn provides additional value through repeated benefits."
+    ],
+    "name": "Birgi, God of Storytelling",
+    "type": "Legendary Creature \u2014 God",
+    "cost": "{2}{R}",
+    "text": "Whenever you cast a spell, add {R}. Until end of turn, you don't lose this mana as steps and phases end.\nCreatures you control can boast twice during each of your turns rather than once."
+  },
+  {
+    "primary_role": "Card Advantage",
+    "summary": "Harnfel, Horn of Bounty discards a card to exile the top two cards of your library and allows you to play those cards this turn, providing an indirect way to access and use cards from the top of the library.",
+    "justification": "The card allows you to play cards from the top of your library, effectively giving you access to potential card plays from an undesired zone (library).",
+    "synergy_hooks": [
+      "Zone: Library -> Hand",
+      "Alternative Cost: Discard",
+      "Cost Reducer (Variable)"
+    ],
+    "secondary_role": [
+      "Value Engine"
+    ],
+    "justification_secondary": [
+      "The ability to play cards from the library can provide consistent value depending on the top cards, offering potential for varied plays and strategic advantages."
+    ],
+    "name": "Harnfel, Horn of Bounty",
+    "type": "Legendary Artifact",
+    "cost": "{4}{R}",
+    "text": "Discard a card: Exile the top two cards of your library. You may play those cards this turn."
+  },
+  {
+    "primary_role": "Ramp",
+    "summary": "This spell creates two Treasure tokens, which can later be sacrificed to generate one mana of any color each, and draws two cards as an additional benefit, making it a valuable ramp and card advantage spell.",
+    "justification": "The card creates two Treasure tokens that can be sacrificed for mana, thus providing ramp, and also draws two cards, providing card advantage.",
+    "synergy_hooks": [
+      "Additional Cost: Discard a card",
+      "Zone: Library -> Hand",
+      "Zone: Battlefield -> Hand",
+      "Mana Generator"
+    ],
+    "secondary_role": [
+      "Card Advantage"
+    ],
+    "justification_secondary": [
+      "The card explicitly draws two cards, thus providing card advantage."
+    ],
+    "name": "Unexpected Windfall",
+    "type": "Instant",
+    "cost": "{2}{R}{R}",
+    "text": "As an additional cost to cast this spell, discard a card.\nDraw two cards and create two Treasure tokens. (They're artifacts with \"{T}, Sacrifice this token: Add one mana of any color.\")"
+  },
+  {
+    "primary_role": "Disruption",
+    "summary": "Rewind counters a target spell and untaps up to four lands, providing disruption and ramp benefits.",
+    "justification": "The card explicitly counters a target spell and untaps lands, fitting the Disruption role.",
+    "synergy_hooks": [
+      "Untap Lands",
+      "Counter target spell"
+    ],
+    "secondary_role": [
+      "Ramp"
+    ],
+    "justification_secondary": [
+      "Untapping up to four lands can provide additional mana, fitting the Ramp role."
+    ],
+    "name": "Rewind",
+    "type": "Instant",
+    "cost": "{2}{U}{U}",
+    "text": "Counter target spell. Untap up to four lands."
+  },
+  {
+    "primary_role": "Disruption",
+    "summary": "This card counters an instant or sorcery spell unless the controller pays {1}, and also draws a card.",
+    "justification": "The card primarily counters target instant or sorcery spell, which is a disruptive effect, and it includes a clause for drawing a card, which is a secondary effect.",
+    "synergy_hooks": [
+      "Counter target spell",
+      "Draw a card",
+      "Cost Reducer (Variable)"
+    ],
+    "secondary_role": [
+      "Card Advantage"
+    ],
+    "justification_secondary": [
+      "The card allows the player to draw a card as a secondary effect."
+    ],
+    "name": "Disrupt",
+    "type": "Instant",
+    "cost": "{U}",
+    "text": "Counter target instant or sorcery spell unless its controller pays {1}.\nDraw a card."
+  },
+  {
+    "primary_role": "Disruption",
+    "summary": "This instant counters every spell and ability controlled by opponents unless they pay {4} for each one, providing a powerful board control effect.",
+    "justification": "The card counters spells and abilities controlled by opponents, which is a direct form of disruption.",
+    "synergy_hooks": [
+      "Counter Spell",
+      "Payment Condition",
+      "Zone: Stack -> Graveyard (if not paid)"
+    ],
+    "secondary_role": [],
+    "justification_secondary": [],
+    "name": "Whirlwind Denial",
+    "type": "Instant",
+    "cost": "{2}{U}",
+    "text": "For each spell and ability your opponents control, counter it unless its controller pays {4}."
+  },
+  {
+    "primary_role": "Disruption",
+    "summary": "Mana Drain counters a spell and later provides colorless mana based on the countered spell's mana value, offering a ramp benefit as a secondary effect.",
+    "justification": "The card explicitly counters a spell, which is a form of disruption.",
+    "synergy_hooks": [
+      "Alternative Cost: Flashback",
+      "Cost Reducer (Variable)"
+    ],
+    "secondary_role": [
+      "Ramp"
+    ],
+    "justification_secondary": [
+      "The card generates colorless mana based on the mana value of the countered spell, which is a ramp effect."
+    ],
+    "name": "Mana Drain",
+    "type": "Instant",
+    "cost": "{U}{U}",
+    "text": "Counter target spell. At the beginning of your next main phase, add an amount of {C} equal to that spell's mana value."
+  },
+  {
+    "primary_role": "Disruption",
+    "summary": "The card mills three cards from a target player's library, with the potential to create multiple copies of itself if other spells were cast before it this turn.",
+    "justification": "The card forces a target player to mill three cards, which is a form of disruption.",
+    "synergy_hooks": [
+      "Zone: Library -> Graveyard",
+      "Storm"
+    ],
+    "secondary_role": [],
+    "justification_secondary": [],
+    "name": "Brain Freeze",
+    "type": "Instant",
+    "cost": "{1}{U}",
+    "text": "Target player mills three cards.\nStorm (When you cast this spell, copy it for each spell cast before it this turn. You may choose new targets for the copies.)"
+  }
+]

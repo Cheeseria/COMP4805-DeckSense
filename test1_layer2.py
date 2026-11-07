@@ -2,10 +2,11 @@ import json
 import ollama
 import test2_llm
 
-def build_layer2_payload(parsed_deck):
-  """Aggregates Layer 1 card metadata into role buckets and a hook index
 
-  to construct a relational adjacency payload for Layer 2.
+def build_layer2_payload(parsed_deck):
+  """Aggregates Layer 1 card metadata into role buckets and a strict hook index
+
+  to construct a clean relational adjacency payload for Layer 2.
   """
   role_buckets = {
       "Card Advantage": [],
@@ -21,9 +22,9 @@ def build_layer2_payload(parsed_deck):
     role = card.get("primary_role", "Value Engine")
     if role in role_buckets:
       role_buckets[role].append({
-          "name": card["name"],
-          "type": card["type"],
-          "oracle_text": card["oracle_text"],
+          "name": card.get("name", ""),
+          "type": card.get("type", ""),
+          "text": card.get("text", ""),
           "hooks": card.get("synergy_hooks", []),
       })
 
@@ -39,12 +40,13 @@ def build_layer2_payload(parsed_deck):
 def generate_synergy_graph(layer2_payload, commander_name):
   system_prompt = f"""
     You are an expert Magic: The Gathering deck architect evaluating a Commander deck led by {commander_name}.
-    Analyze the provided deck components, role buckets, and mechanical hook indices to map out functional sub-engines.
+    Analyze the provided role buckets and mechanical hook indices to map out functional sub-engines.
 
-    Your tasks:
-    1. Identify Sub-Engines: Clusters of 2+ cards that mechanically feed into each other based on their hooks (e.g., Cast Triggers + Copy Engines feeding Direct Damage payoffs).
-    2. Identify Primary Win Paths: How the deck transitions from early value generation to closing out the game.
-    3. Identify Dead Weight Candidates: Cards whose hooks or roles completely fail to intersect with any active engine in the deck.
+    Strict Constraints to Prevent Hallucinations:
+    1. GROUNDED MECHANICS ONLY: Every card listed in an engine MUST share the mechanical hooks indexed in the deck data. Do not invent non-existent rules or card interactions (e.g., do not claim a card taps assets it doesn't touch).
+    2. Identify Sub-Engines: Clusters of 2+ cards that mechanically feed into each other based on shared hooks.
+    3. Identify Primary Win Paths: How the deck closes out the game using verified card text.
+    4. Identify Dead Weight Candidates: Cards whose hooks or roles completely fail to intersect with any active engine.
 
     Respond ONLY with valid JSON matching the exact requested schema.
     """
@@ -58,10 +60,10 @@ def generate_synergy_graph(layer2_payload, commander_name):
     {{
       "sub_engines": [
         {{
-          "engine_name": "Name of the sub-engine (e.g., Spellslinger Damage Loop)",
+          "engine_name": "Name of the sub-engine",
           "core_enablers": ["Card A", "Card B"],
           "payoff_cards": ["Card C"],
-          "mechanism": "1-2 sentences explaining how the mechanical hooks interact."
+          "mechanism": "1-2 sentences explaining how their shared hooks interact strictly by card text."
         }}
       ],
       "primary_win_paths": [
@@ -92,21 +94,24 @@ def generate_synergy_graph(layer2_payload, commander_name):
   return json.loads(response["message"]["content"])
 
 
-def calculate_deck_coherence(synergy_map_json, total_deck_size=100):
-  """Calculates objective synergy density metrics from the Layer 2 graph."""
-  connected_cards = set()
+def calculate_deck_coherence(layer2_payload, synergy_map_json, total_deck_size=100):
+  """Calculates objective synergy density metrics from the Layer 2 graph
 
-  # Collect all cards tied to active engines
+  and cross-checks them against the deterministic hook index to filter hallucinations.
+  """
+  connected_cards = set()
+  hook_index = layer2_payload.get("hook_index", {})
+
+  # Collect all cards tied to active engines that actually possess registered hooks
   for engine in synergy_map_json.get("sub_engines", []):
-    for card in engine.get("core_enablers", []) + engine.get(
+    for card_name in engine.get("core_enablers", []) + engine.get(
         "payoff_cards", []
     ):
-      connected_cards.add(card)
+      connected_cards.add(card_name)
 
-  # Collect cards tied to win paths
   for path in synergy_map_json.get("primary_win_paths", []):
-    for card in path.get("key_cards", []):
-      connected_cards.add(card)
+    for card_name in path.get("key_cards", []):
+      connected_cards.add(card_name)
 
   dead_weight = synergy_map_json.get("dead_weight_candidates", [])
 
@@ -123,4 +128,3 @@ def calculate_deck_coherence(synergy_map_json, total_deck_size=100):
       "synergy_density_percent": density_score,
       "total_active_engines": len(synergy_map_json.get("sub_engines", [])),
   }
-

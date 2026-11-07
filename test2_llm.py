@@ -2,7 +2,6 @@
 import ollama
 import card as Cards
 import json
-import test
 
 def extract_card_facts(card):
     """Extract deterministic facts directly from Scryfall data."""
@@ -47,6 +46,12 @@ def validate_card_role(card_facts):
     3. ABSOLUTE RULE: If a keyword does not appear in the oracle text, you are STRICTLY FORBIDDEN from stating that the card performs said keyword (e.g. "Draw" does not appear in an oracle text --> you are forbidden from saying that the card draws cards)
     4. Triggered abilities that trigger on an archetype may not belong to the same archetype. For the role, look explicitly at the result of the ability instead of the trigger, for the synergy_hooks, add the role of the trigger.
 
+    MANDATORY SEMANTIC CORRELATION RULES FOR SYNERGY HOOKS:
+    When extracting synergy_hooks, do not just copy-paste keywords. Map out the semantic and mechanical consequences implied by the text:
+    1. Zone Changes & Triggers: If a mechanic forces a permanent to be sacrificed, exiled, discarded, milled, or put into a graveyard (e.g., Blitz, Escape, Flashback, Explore, Destroy), explicitly tag the implied zone transitions (e.g., "Zone: Battlefield -> Graveyard" due to creature death). Similarly, if a mechanic forces a card to go into hand, this is also treated as a zone change (e.g. "Zone: Library -> Hand" from drawing a card, or "Zone: Graveyard -> Hand" from recursion effects, "Zone: Battlefield -> Hand" from bounce effects, or "Zone: Stack -> Hand" from Reprieve-like or buyback effects)
+    2. Cost vs. Payoff: If an ability requires a cost (like paying life, sacrificing, discarding, or tapping), tag the resource type consumed. If it provides a benefit (like drawing cards, adding mana, or reducing costs), tag the resource type produced.
+    3. Action-Reaction: If an effect triggers on an action (e.g., "Whenever you cast", "Whenever a creature dies"), tag both the trigger condition and the resulting output so it can match complementary cards in a graph.
+
     Classification Rules:
     - Card Advantage: Cards including the keyword "Draw", cards that provide extra cards to the player from undesired zones (e.g. moving cards from the graveyard, library, exile, or the command zone to the hand)
     - Ramp: Cards that include the keyword "Add", cards that either individually generate one of either colourless ({{1}}+), or coloured mana ({{W}}/{{U}}/{{B}}/{{R}}/{{G}}, etc) or generate objects that can create mana (e.g. a creature that with a tap cost that adds {{G}}, or a spell that creates Treasure Tokens/allows the user to play more lands), cards that decrease the cost of other cards
@@ -68,45 +73,57 @@ def validate_card_role(card_facts):
       "primary_role": "One of the Allowed Primary Roles",
       "summary": "Short 1-sentence mechanical summary based strictly on Oracle text and analyse potential synergies if any (explicitly within synergy_hooks).",
       "justification": "Justification of primary role based completely on oracle text.",
-      "synergy_hooks": ["List all key triggers, keywords present, e.g., 'Copy', 'Whenever you cast', 'Buyback', "Menace", "graveyard" or leave empty if none."],
+      "synergy_hooks": ["Extract structural properties or impact of the spell, such as: 'Cost Reducer (Static/Variable)', 'Alternative Cost: Flashback (for example, other alternative costs apply, like overload)', 'Additional Cost: Buyback (for example, other additional costs also apply, such as kicker, multikicker, etc)', 'Mana Generator (e.g. Mana rock, Ritual)', 'Spell Copier', or 'Variable X Scaling'. Do not hardcode card names—only describe what the text structurally enables. List all key triggers, keywords present, e.g., 'Copy', 'Whenever you cast', 'Buyback', "Menace", "graveyard", mention of a specific card type, Any explicit effect of the card, or leave empty if none."],
       "secondary_role": ["List any remaining potential roles that this card may fulfill outside of the primary role, can be none if the card purely fulfills one role. Do not assume anything outside of the card, solely look at this individual card's oracle text, do not extrapolate any information or any potentiality."],
       "justification_secondary": ["List all justifications for secondary roles if any, otherwise leave blank. Do not assume anything outside of the card, solely look at this individual card's oracle text."]
     }}
     """
     
     response = ollama.chat(
-        model="qwen2.5:14b",
+        model="qwen2.5:32b",
         format="json",  # Enforces JSON output from Ollama
         messages=[
             {"role": "system", "content": system_prompt},
             {"role": "user", "content": user_prompt}
         ]
     )
-    
-    # Parse string into Python dictionary
-    return json.loads(response['message']['content'])
+    parsed = json.loads(response["message"]["content"])
 
-"""testjson = {
-    'name': 'Brainstorm', 
-    'oracle_text': 'Draw three cards, then put two cards from your hand on top of your library in any order.', 
-    'type_line': 'Instant', 
-    'mana_cost': "U"
-}"""
+    # FORCE Python to own these fields so they can never cause KeyErrors
+    parsed["name"] = card_facts["name"]
+    parsed["type"] = card_facts["type"]
+    parsed["cost"] = card_facts["mana_cost"]
+    parsed["text"] = card_facts["oracle_text"]
+    return parsed
 
-"""testjson = {
+"""
+testjson = test.search("Henzie")
+#i = Cards.createCard(testjson, 1, "Card Draw")
+facts = extract_card_facts(testjson)
+result = validate_card_role(facts)
+print(testjson.getName())
+print(json.dumps(result, indent=2))
+
+testjson = {
     'name': 'Vadrik, Astral Archmage', 
-    'oracle_text': If it's neither day nor night, it becomes day as Vadrik enters.
+    'oracle_text': "If it's neither day nor night, it becomes day as Vadrik enters.
 Instant and sorcery spells you cast cost {{X}} less to cast, where X is Vadrik's power.
-Whenever day becomes night or night becomes day, put a +1/+1 counter on Vadrik., 
+Whenever day becomes night or night becomes day, put a +1/+1 counter on Vadrik.", 
     'type_line': 'Legendary Creature — Human Wizard', 
     'mana_cost': "{{1}}{{U}}{{R}}",
     'power': '1',
     'toughness': '2'
-}"""
-
-
+}
+testjson = {
+    'name': 'Brainstorm', 
+    'oracle_text': 'Draw three cards, then put two cards from your hand on top of your library in any order.', 
+    'type_line': 'Instant', 
+    'mana_cost': "U"
+}
+"""
+"""
 #temp card
-tempcard = [test.search("veyran, voice of duality"), test.search("zaffai, thunder conductor")]
+tempcard = [test.search("Harnfel, Horn of Bounty")]
 #Cards.createCard(testjson, 1, "Ramp")
 
 for i in tempcard:
@@ -114,7 +131,7 @@ for i in tempcard:
     result = validate_card_role(facts)
     print(i.getName())
     print(json.dumps(result, indent=2))
-
+"""
 
 #for card in deck:
 #    print(validate_card_role(extract_card_facts(card)) + "\n")

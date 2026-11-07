@@ -31,16 +31,16 @@ class Card:
         return self.amount
 
 def createCard(json, num, category):
-    name = json["name"]
-    cost = json["mana_cost"]
-    oracle_text = json["oracle_text"]
-    card_type = json["type_line"]
+    name = json.get("name", "")
+    cost = json.get("mana_cost", "")
+    oracle_text = json.get("oracle_text","")
+    card_type = json.get("type_line","")
     if "Creature" in card_type:
-        statline = json["power"] + " / " + json["toughness"]
+        statline = json.get("power","") + " / " + json.get("toughness","")
     elif "Planeswalker" in card_type:
-        statline = json["loyalty"]
+        statline = json.get("loyalty","")
     elif "Battle" in card_type:
-        statline = json["defense"]
+        statline = json.get("defense","")
     else:
         statline = ""
 
