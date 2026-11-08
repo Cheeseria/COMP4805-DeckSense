@@ -1,0 +1,3390 @@
+{
+  "__meta": {
+    "version": "v1",
+    "deck_id": "vadrik_time",
+    "deck_url": "https://archidekt.com/decks/6429634/vadrik_time",
+    "model": "qwen2.5:32b",
+    "written_at": 1794054148.078089
+  },
+  "facts": [
+    {
+      "name": "Haze of Rage",
+      "mana_cost": "{1}{R}",
+      "mana_value": 2.0,
+      "type": "Sorcery",
+      "oracle_text": "Buyback {2} (You may pay an additional {2} as you cast this spell. If you do, put this card into your hand as it resolves.)\nCreatures you control get +1/+0 until end of turn.\nStorm (When you cast this spell, copy it for each spell cast before it this turn.)",
+      "statline": "",
+      "keywords": [
+        "Storm",
+        "Buyback"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "oracle_id": "f17d0fb8-c157-43b8-be26-f5ba4c6aed14",
+      "is_commander": false,
+      "user_categories": [
+        "Pump",
+        "Sideboard",
+        "changes"
+      ],
+      "synergy": [
+        {
+          "kind": "additional cost",
+          "source": "scryfall_keyword"
+        },
+        {
+          "kind": "cast trigger",
+          "source": "scryfall_keyword"
+        },
+        {
+          "kind": "ability:static",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "recursion",
+          "source": "oracle_text"
+        }
+      ]
+    },
+    {
+      "name": "Temporal Fissure",
+      "mana_cost": "{4}{U}",
+      "mana_value": 5.0,
+      "type": "Sorcery",
+      "oracle_text": "Return target permanent to its owner's hand.\nStorm (When you cast this spell, copy it for each spell cast before it this turn. You may choose new targets for the copies.)",
+      "statline": "",
+      "keywords": [
+        "Storm"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "oracle_id": "8a9525f4-74a6-44f0-a1b1-d57937d7783b",
+      "is_commander": false,
+      "user_categories": [
+        "Removal",
+        "Sideboard"
+      ],
+      "synergy": [
+        {
+          "kind": "cast trigger",
+          "source": "scryfall_keyword"
+        },
+        {
+          "kind": "ability:static",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "zone_transition",
+          "from": "battlefield",
+          "to": "hand",
+          "source": "oracle_text"
+        }
+      ]
+    },
+    {
+      "name": "Goblin Electromancer",
+      "mana_cost": "{U}{R}",
+      "mana_value": 2.0,
+      "type": "Creature \u2014 Goblin Wizard",
+      "oracle_text": "Instant and sorcery spells you cast cost {1} less to cast.",
+      "statline": "2 / 2",
+      "keywords": [],
+      "color_identity": [
+        "R",
+        "U"
+      ],
+      "oracle_id": "81f06f84-1580-43c0-89d5-08d34541a519",
+      "is_commander": false,
+      "user_categories": [
+        "Ramp",
+        "Sideboard"
+      ],
+      "synergy": [
+        {
+          "kind": "ability:static",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "cost_modifier",
+          "source": "oracle_text"
+        }
+      ]
+    },
+    {
+      "name": "Archmage Emeritus",
+      "mana_cost": "{2}{U}{U}",
+      "mana_value": 4.0,
+      "type": "Creature \u2014 Human Wizard",
+      "oracle_text": "Magecraft \u2014 Whenever you cast or copy an instant or sorcery spell, draw a card.",
+      "statline": "2 / 2",
+      "keywords": [
+        "Magecraft"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "oracle_id": "8305d576-21d8-4ce7-8eda-a7cd9793aca5",
+      "is_commander": false,
+      "user_categories": [
+        "Draw",
+        "Sideboard"
+      ],
+      "synergy": [
+        {
+          "kind": "cast trigger",
+          "source": "scryfall_keyword"
+        },
+        {
+          "kind": "ability:static",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "zone_transition",
+          "from": "library",
+          "to": "hand",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "trigger:cast",
+          "source": "oracle_text"
+        }
+      ]
+    },
+    {
+      "name": "Chandra's Ignition",
+      "mana_cost": "{3}{R}{R}",
+      "mana_value": 5.0,
+      "type": "Sorcery",
+      "oracle_text": "Target creature you control deals damage equal to its power to each other creature and each opponent.",
+      "statline": "",
+      "keywords": [],
+      "color_identity": [
+        "R"
+      ],
+      "oracle_id": "f61680da-606e-4d16-b0a0-361aa5210901",
+      "is_commander": false,
+      "user_categories": [
+        "Removal",
+        "Sideboard"
+      ],
+      "synergy": [
+        {
+          "kind": "ability:static",
+          "source": "oracle_text"
+        }
+      ]
+    },
+    {
+      "name": "Swiftfoot Boots",
+      "mana_cost": "{2}",
+      "mana_value": 2.0,
+      "type": "Artifact \u2014 Equipment",
+      "oracle_text": "Equipped creature has hexproof and haste. (It can't be the target of spells or abilities your opponents control. It can attack and {T} no matter when it came under your control.)\nEquip {1} ({1}: Attach to target creature you control. Equip only as a sorcery.)",
+      "statline": "",
+      "keywords": [
+        "Equip"
+      ],
+      "color_identity": [],
+      "oracle_id": "c8b143ad-43ec-4e0d-a440-e348daa31391",
+      "is_commander": false,
+      "user_categories": [
+        "Protection",
+        "Sideboard"
+      ],
+      "synergy": [
+        {
+          "kind": "ability:static",
+          "source": "oracle_text"
+        }
+      ]
+    },
+    {
+      "name": "Treasonous Ogre",
+      "mana_cost": "{3}{R}",
+      "mana_value": 4.0,
+      "type": "Creature \u2014 Ogre Shaman",
+      "oracle_text": "Dethrone (Whenever this creature attacks the player with the most life or tied for most life, put a +1/+1 counter on it.)\nPay 3 life: Add {R}.",
+      "statline": "2 / 3",
+      "keywords": [
+        "Dethrone"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "oracle_id": "826d4279-1576-4898-a1c2-26fd547fb0d0",
+      "is_commander": false,
+      "user_categories": [
+        "Ramp",
+        "Sideboard"
+      ],
+      "synergy": [
+        {
+          "kind": "ability:static",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "mana_generator",
+          "source": "oracle_text"
+        }
+      ]
+    },
+    {
+      "name": "Searing Touch",
+      "mana_cost": "{R}",
+      "mana_value": 1.0,
+      "type": "Instant",
+      "oracle_text": "Buyback {4} (You may pay an additional {4} as you cast this spell. If you do, put this card into your hand as it resolves.)\nSearing Touch deals 1 damage to any target.",
+      "statline": "",
+      "keywords": [
+        "Buyback"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "oracle_id": "1cd9a3ba-a115-4e59-983d-605e4435f3a8",
+      "is_commander": false,
+      "user_categories": [
+        "Burn",
+        "Sideboard",
+        "changes"
+      ],
+      "synergy": [
+        {
+          "kind": "additional cost",
+          "source": "scryfall_keyword"
+        },
+        {
+          "kind": "ability:static",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "recursion",
+          "source": "oracle_text"
+        }
+      ]
+    },
+    {
+      "name": "Mizzix's Mastery",
+      "mana_cost": "{3}{R}",
+      "mana_value": 4.0,
+      "type": "Sorcery",
+      "oracle_text": "Exile target card that's an instant or sorcery from your graveyard. For each card exiled this way, copy it, and you may cast the copy without paying its mana cost. Exile Mizzix's Mastery.\nOverload {5}{R}{R}{R} (You may cast this spell for its overload cost. If you do, change \"target\" in its text to \"each.\")",
+      "statline": "",
+      "keywords": [
+        "Overload"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "oracle_id": "40362fe0-a1a9-4d76-8c35-eac474b91af5",
+      "is_commander": false,
+      "user_categories": [
+        "Recursion",
+        "Sideboard"
+      ],
+      "synergy": [
+        {
+          "kind": "alternative cost",
+          "source": "scryfall_keyword"
+        },
+        {
+          "kind": "ability:static",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "zone_transition",
+          "from": "battlefield",
+          "to": "exile",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "cast_from_zone",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "recursion",
+          "source": "oracle_text"
+        }
+      ]
+    },
+    {
+      "name": "The Celestus",
+      "mana_cost": "{3}",
+      "mana_value": 3.0,
+      "type": "Legendary Artifact",
+      "oracle_text": "If it's neither day nor night, it becomes day as The Celestus enters.\n{T}: Add one mana of any color.\n{3}, {T}: If it's night, it becomes day. Otherwise, it becomes night. Activate only as a sorcery.\nWhenever day becomes night or night becomes day, you gain 1 life. You may draw a card. If you do, discard a card.",
+      "statline": "",
+      "keywords": [],
+      "color_identity": [],
+      "oracle_id": "c0ad2b5f-066b-424b-bddf-d3014731e599",
+      "is_commander": false,
+      "user_categories": [
+        "Ramp",
+        "Sideboard"
+      ],
+      "synergy": [
+        {
+          "kind": "ability:activated",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "ability:static",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "ability:triggered",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "zone_transition",
+          "from": "hand",
+          "to": "graveyard",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "zone_transition",
+          "from": "library",
+          "to": "hand",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "mana_generator",
+          "source": "oracle_text"
+        }
+      ]
+    },
+    {
+      "name": "Mindsplice Apparatus",
+      "mana_cost": "{3}{U}",
+      "mana_value": 4.0,
+      "type": "Artifact",
+      "oracle_text": "Flash\nAt the beginning of your upkeep, put an oil counter on this artifact.\nInstant and sorcery spells you cast cost {1} less to cast for each oil counter on this artifact.",
+      "statline": "",
+      "keywords": [
+        "Flash"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "oracle_id": "4d0760fb-4e04-4f29-a268-14c13c30232d",
+      "is_commander": false,
+      "user_categories": [
+        "Ramp",
+        "Sideboard"
+      ],
+      "synergy": [
+        {
+          "kind": "timing",
+          "source": "scryfall_keyword"
+        },
+        {
+          "kind": "ability:static",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "ability:triggered",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "trigger:upkeep",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "cost_modifier",
+          "source": "oracle_text"
+        }
+      ]
+    },
+    {
+      "name": "Coalition Relic",
+      "mana_cost": "{3}",
+      "mana_value": 3.0,
+      "type": "Artifact",
+      "oracle_text": "{T}: Add one mana of any color.\n{T}: Put a charge counter on this artifact.\nAt the beginning of your first main phase, remove all charge counters from this artifact. Add one mana of any color for each charge counter removed this way.",
+      "statline": "",
+      "keywords": [],
+      "color_identity": [],
+      "oracle_id": "008cb342-79f5-4df6-a6b7-0e9e22ed693f",
+      "is_commander": false,
+      "user_categories": [
+        "Ramp",
+        "Sideboard"
+      ],
+      "synergy": [
+        {
+          "kind": "ability:activated",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "ability:triggered",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "mana_generator",
+          "source": "oracle_text"
+        }
+      ]
+    },
+    {
+      "name": "Faithless Looting",
+      "mana_cost": "{R}",
+      "mana_value": 1.0,
+      "type": "Sorcery",
+      "oracle_text": "Draw two cards, then discard two cards.\nFlashback {2}{R} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "statline": "",
+      "keywords": [
+        "Flashback"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "oracle_id": "3d6fa57a-aa53-4b5c-b8af-a7612c823117",
+      "is_commander": false,
+      "user_categories": [
+        "Draw",
+        "Sideboard"
+      ],
+      "synergy": [
+        {
+          "kind": "alternative cost",
+          "source": "scryfall_keyword"
+        },
+        {
+          "kind": "ability:static",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "zone_transition",
+          "from": "battlefield",
+          "to": "exile",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "zone_transition",
+          "from": "hand",
+          "to": "graveyard",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "zone_transition",
+          "from": "library",
+          "to": "hand",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "cast_from_zone",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "recursion",
+          "source": "oracle_text"
+        }
+      ]
+    },
+    {
+      "name": "Borne Upon a Wind",
+      "mana_cost": "{1}{U}",
+      "mana_value": 2.0,
+      "type": "Instant",
+      "oracle_text": "You may cast spells this turn as though they had flash.\nDraw a card.",
+      "statline": "",
+      "keywords": [],
+      "color_identity": [
+        "U"
+      ],
+      "oracle_id": "ce19962d-94f9-4b2b-b668-963c0acce308",
+      "is_commander": false,
+      "user_categories": [
+        "Draw",
+        "Sideboard"
+      ],
+      "synergy": [
+        {
+          "kind": "ability:static",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "zone_transition",
+          "from": "library",
+          "to": "hand",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "cast_from_zone",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "recursion",
+          "source": "oracle_text"
+        }
+      ]
+    },
+    {
+      "name": "Clout of the Dominus",
+      "mana_cost": "{U/R}",
+      "mana_value": 1.0,
+      "type": "Enchantment \u2014 Aura",
+      "oracle_text": "Enchant creature\nAs long as enchanted creature is blue, it gets +1/+1 and has shroud. (It can't be the target of spells or abilities.)\nAs long as enchanted creature is red, it gets +1/+1 and has haste.",
+      "statline": "",
+      "keywords": [
+        "Enchant"
+      ],
+      "color_identity": [
+        "R",
+        "U"
+      ],
+      "oracle_id": "6e412163-a93a-4738-a8f0-a4d27c960360",
+      "is_commander": false,
+      "user_categories": [
+        "changes"
+      ],
+      "synergy": [
+        {
+          "kind": "ability:replacement",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "ability:static",
+          "source": "oracle_text"
+        }
+      ]
+    },
+    {
+      "name": "Finale of Revelation",
+      "mana_cost": "{X}{U}{U}",
+      "mana_value": 2.0,
+      "type": "Sorcery",
+      "oracle_text": "Draw X cards. If X is 10 or more, instead shuffle your graveyard into your library, draw X cards, untap up to five lands, and you have no maximum hand size for the rest of the game.\nExile Finale of Revelation.",
+      "statline": "",
+      "keywords": [],
+      "color_identity": [
+        "U"
+      ],
+      "oracle_id": "755bd5d8-67f1-4f24-a4e8-d98edf2f2e03",
+      "is_commander": false,
+      "user_categories": [
+        "changes"
+      ],
+      "synergy": [
+        {
+          "kind": "ability:replacement",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "ability:static",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "zone_transition",
+          "from": "battlefield",
+          "to": "exile",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "replacement_effect",
+          "source": "oracle_text"
+        }
+      ]
+    },
+    {
+      "name": "March of Swirling Mist",
+      "mana_cost": "{X}{U}",
+      "mana_value": 1.0,
+      "type": "Instant",
+      "oracle_text": "As an additional cost to cast this spell, you may exile any number of blue cards from your hand. This spell costs {2} less to cast for each card exiled this way.\nUp to X target creatures phase out. (While they're phased out, they're treated as though they don't exist. Each one phases in before its controller untaps during their next untap step.)",
+      "statline": "",
+      "keywords": [],
+      "color_identity": [
+        "U"
+      ],
+      "oracle_id": "debc69ea-372a-4720-838a-16856cd50b07",
+      "is_commander": false,
+      "user_categories": [
+        "changes"
+      ],
+      "synergy": [
+        {
+          "kind": "ability:replacement",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "ability:static",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "zone_transition",
+          "from": "battlefield",
+          "to": "exile",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "additional cost",
+          "source": "oracle_text"
+        }
+      ]
+    },
+    {
+      "name": "Merchant Scroll",
+      "mana_cost": "{1}{U}",
+      "mana_value": 2.0,
+      "type": "Sorcery",
+      "oracle_text": "Search your library for a blue instant card, reveal that card, put it into your hand, then shuffle.",
+      "statline": "",
+      "keywords": [],
+      "color_identity": [
+        "U"
+      ],
+      "oracle_id": "86cebe2a-95e7-4f22-99cc-e805aeaf347e",
+      "is_commander": false,
+      "user_categories": [
+        "changes"
+      ],
+      "synergy": [
+        {
+          "kind": "ability:static",
+          "source": "oracle_text"
+        }
+      ]
+    },
+    {
+      "name": "Invert // Invent",
+      "mana_cost": "{U/R} // {4}{U}{R}",
+      "mana_value": 7.0,
+      "type": "Instant // Instant",
+      "oracle_text": "",
+      "statline": "",
+      "keywords": [],
+      "color_identity": [
+        "R",
+        "U"
+      ],
+      "oracle_id": "9a378964-2c04-4d60-a905-c819d37ed4c3",
+      "is_commander": false,
+      "user_categories": [
+        "Tutor",
+        "changes"
+      ],
+      "synergy": []
+    },
+    {
+      "name": "Perplexing Test",
+      "mana_cost": "{3}{U}{U}",
+      "mana_value": 5.0,
+      "type": "Instant",
+      "oracle_text": "Choose one \u2014\n\u2022 Return all creature tokens to their owners' hands.\n\u2022 Return all nontoken creatures to their owners' hands.",
+      "statline": "",
+      "keywords": [],
+      "color_identity": [
+        "U"
+      ],
+      "oracle_id": "8682266c-2b0f-496e-b1c6-1fb338feac24",
+      "is_commander": false,
+      "user_categories": [
+        "changes"
+      ],
+      "synergy": [
+        {
+          "kind": "ability:static",
+          "source": "oracle_text"
+        }
+      ]
+    },
+    {
+      "name": "Ashling, Flame Dancer",
+      "mana_cost": "{2}{R}{R}",
+      "mana_value": 4.0,
+      "type": "Legendary Creature \u2014 Elemental Shaman",
+      "oracle_text": "You don't lose unspent red mana as steps and phases end.\nMagecraft \u2014 Whenever you cast or copy an instant or sorcery spell, discard a card, then draw a card. If this is the second time this ability has resolved this turn, Ashling deals 2 damage to each opponent and each creature they control. If it's the third time, add {R}{R}{R}{R}.",
+      "statline": "4 / 4",
+      "keywords": [
+        "Magecraft"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "oracle_id": "6fe9fd59-9cac-4572-8f94-bc19bea44f94",
+      "is_commander": false,
+      "user_categories": [
+        "changes"
+      ],
+      "synergy": [
+        {
+          "kind": "cast trigger",
+          "source": "scryfall_keyword"
+        },
+        {
+          "kind": "ability:static",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "zone_transition",
+          "from": "hand",
+          "to": "graveyard",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "zone_transition",
+          "from": "library",
+          "to": "hand",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "trigger:cast",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "mana_generator",
+          "source": "oracle_text"
+        }
+      ]
+    },
+    {
+      "name": "Honored Heirloom",
+      "mana_cost": "{3}",
+      "mana_value": 3.0,
+      "type": "Artifact",
+      "oracle_text": "{T}: Add one mana of any color.\n{2}, {T}: Exile target card from a graveyard.",
+      "statline": "",
+      "keywords": [],
+      "color_identity": [],
+      "oracle_id": "4bf0427e-5e87-4d32-ad34-1d8946ab96fd",
+      "is_commander": false,
+      "user_categories": [
+        "changes"
+      ],
+      "synergy": [
+        {
+          "kind": "ability:activated",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "zone_transition",
+          "from": "battlefield",
+          "to": "exile",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "mana_generator",
+          "source": "oracle_text"
+        }
+      ]
+    },
+    {
+      "name": "Serum Visions",
+      "mana_cost": "{U}",
+      "mana_value": 1.0,
+      "type": "Sorcery",
+      "oracle_text": "Draw a card. Scry 2.",
+      "statline": "",
+      "keywords": [
+        "Scry"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "oracle_id": "56956afd-db53-4542-816b-490c8b0bbcf7",
+      "is_commander": false,
+      "user_categories": [
+        "changes"
+      ],
+      "synergy": [
+        {
+          "kind": "card selection",
+          "source": "scryfall_keyword"
+        },
+        {
+          "kind": "ability:static",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "zone_transition",
+          "from": "library",
+          "to": "hand",
+          "source": "oracle_text"
+        }
+      ]
+    },
+    {
+      "name": "Preordain",
+      "mana_cost": "{U}",
+      "mana_value": 1.0,
+      "type": "Sorcery",
+      "oracle_text": "Scry 2, then draw a card. (To scry 2, look at the top two cards of your library, then put any number of them on the bottom and the rest on top in any order.)",
+      "statline": "",
+      "keywords": [
+        "Scry"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "oracle_id": "ac641490-ca14-48d7-8cc4-b69ce984befa",
+      "is_commander": false,
+      "user_categories": [
+        "changes"
+      ],
+      "synergy": [
+        {
+          "kind": "card selection",
+          "source": "scryfall_keyword"
+        },
+        {
+          "kind": "ability:static",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "zone_transition",
+          "from": "library",
+          "to": "hand",
+          "source": "oracle_text"
+        }
+      ]
+    },
+    {
+      "name": "Anticipate",
+      "mana_cost": "{1}{U}",
+      "mana_value": 2.0,
+      "type": "Instant",
+      "oracle_text": "Look at the top three cards of your library. Put one of them into your hand and the rest on the bottom of your library in any order.",
+      "statline": "",
+      "keywords": [],
+      "color_identity": [
+        "U"
+      ],
+      "oracle_id": "a97da5a9-17fc-4367-81e1-17ff81601a63",
+      "is_commander": false,
+      "user_categories": [
+        "changes"
+      ],
+      "synergy": [
+        {
+          "kind": "ability:static",
+          "source": "oracle_text"
+        }
+      ]
+    },
+    {
+      "name": "Consider",
+      "mana_cost": "{U}",
+      "mana_value": 1.0,
+      "type": "Instant",
+      "oracle_text": "Surveil 1. (Look at the top card of your library. You may put it into your graveyard.)\nDraw a card.",
+      "statline": "",
+      "keywords": [
+        "Surveil"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "oracle_id": "4c9bcba6-87b5-4fb3-97ee-6fe5b739337d",
+      "is_commander": false,
+      "user_categories": [
+        "changes"
+      ],
+      "synergy": [
+        {
+          "kind": "card selection",
+          "source": "scryfall_keyword"
+        },
+        {
+          "kind": "ability:static",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "zone_transition",
+          "from": "library",
+          "to": "hand",
+          "source": "oracle_text"
+        }
+      ]
+    },
+    {
+      "name": "Whirlwind Denial",
+      "mana_cost": "{2}{U}",
+      "mana_value": 3.0,
+      "type": "Instant",
+      "oracle_text": "For each spell and ability your opponents control, counter it unless its controller pays {4}.",
+      "statline": "",
+      "keywords": [],
+      "color_identity": [
+        "U"
+      ],
+      "oracle_id": "ba9e129d-a3cf-431c-93af-f2e4902d40a0",
+      "is_commander": false,
+      "user_categories": [
+        "Maybeboard",
+        "Removal",
+        "changes"
+      ],
+      "synergy": [
+        {
+          "kind": "ability:static",
+          "source": "oracle_text"
+        }
+      ]
+    },
+    {
+      "name": "An Offer You Can't Refuse",
+      "mana_cost": "{U}",
+      "mana_value": 1.0,
+      "type": "Instant",
+      "oracle_text": "Counter target noncreature spell. Its controller creates two Treasure tokens. (They're artifacts with \"{T}, Sacrifice this token: Add one mana of any color.\")",
+      "statline": "",
+      "keywords": [
+        "Treasure"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "oracle_id": "234a734b-ba28-4f1b-9d01-3c3e7d516590",
+      "is_commander": false,
+      "user_categories": [
+        "changes"
+      ],
+      "synergy": [
+        {
+          "kind": "ability:static",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "zone_transition",
+          "from": "battlefield",
+          "to": "graveyard",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "mana_generator",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "artifact token",
+          "source": "oracle_text"
+        }
+      ]
+    },
+    {
+      "name": "Mana Drain",
+      "mana_cost": "{U}{U}",
+      "mana_value": 2.0,
+      "type": "Instant",
+      "oracle_text": "Counter target spell. At the beginning of your next main phase, add an amount of {C} equal to that spell's mana value.",
+      "statline": "",
+      "keywords": [],
+      "color_identity": [
+        "U"
+      ],
+      "oracle_id": "74d3277a-38e5-4732-afed-084a56148f20",
+      "is_commander": false,
+      "user_categories": [
+        "Maybeboard",
+        "changes"
+      ],
+      "synergy": [
+        {
+          "kind": "ability:static",
+          "source": "oracle_text"
+        }
+      ]
+    },
+    {
+      "name": "Sleight of Hand",
+      "mana_cost": "{U}",
+      "mana_value": 1.0,
+      "type": "Sorcery",
+      "oracle_text": "Look at the top two cards of your library. Put one of them into your hand and the other on the bottom of your library.",
+      "statline": "",
+      "keywords": [],
+      "color_identity": [
+        "U"
+      ],
+      "oracle_id": "05a039ad-1689-4d13-b393-6c1219583b5d",
+      "is_commander": false,
+      "user_categories": [
+        "changes"
+      ],
+      "synergy": [
+        {
+          "kind": "ability:static",
+          "source": "oracle_text"
+        }
+      ]
+    },
+    {
+      "name": "Vadrik, Astral Archmage",
+      "mana_cost": "{1}{U}{R}",
+      "mana_value": 3.0,
+      "type": "Legendary Creature \u2014 Human Wizard",
+      "oracle_text": "If it's neither day nor night, it becomes day as Vadrik enters.\nInstant and sorcery spells you cast cost {X} less to cast, where X is Vadrik's power.\nWhenever day becomes night or night becomes day, put a +1/+1 counter on Vadrik.",
+      "statline": "1 / 2",
+      "keywords": [],
+      "color_identity": [
+        "R",
+        "U"
+      ],
+      "oracle_id": "a9ab17ce-ba07-4ce8-99f9-9c4c633957f7",
+      "is_commander": true,
+      "user_categories": [
+        "Commander"
+      ],
+      "synergy": [
+        {
+          "kind": "ability:static",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "ability:triggered",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "cost_modifier",
+          "source": "oracle_text"
+        }
+      ]
+    },
+    {
+      "name": "Mizzix of the Izmagnus",
+      "mana_cost": "{2}{U}{R}",
+      "mana_value": 4.0,
+      "type": "Legendary Creature \u2014 Goblin Wizard",
+      "oracle_text": "Whenever you cast an instant or sorcery spell with mana value greater than the number of experience counters you have, you get an experience counter.\nInstant and sorcery spells you cast cost {1} less to cast for each experience counter you have.",
+      "statline": "2 / 2",
+      "keywords": [],
+      "color_identity": [
+        "R",
+        "U"
+      ],
+      "oracle_id": "f787c6cf-a4ff-487b-a7b0-0f516e68510a",
+      "is_commander": false,
+      "user_categories": [
+        "Ramp"
+      ],
+      "synergy": [
+        {
+          "kind": "ability:static",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "ability:triggered",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "trigger:cast",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "cost_modifier",
+          "source": "oracle_text"
+        }
+      ]
+    },
+    {
+      "name": "Runaway Steam-Kin",
+      "mana_cost": "{1}{R}",
+      "mana_value": 2.0,
+      "type": "Creature \u2014 Elemental",
+      "oracle_text": "Whenever you cast a red spell, if this creature has fewer than three +1/+1 counters on it, put a +1/+1 counter on this creature.\nRemove three +1/+1 counters from this creature: Add {R}{R}{R}.",
+      "statline": "1 / 1",
+      "keywords": [],
+      "color_identity": [
+        "R"
+      ],
+      "oracle_id": "eb414a8f-566f-4635-80a1-77b2e18ac8dc",
+      "is_commander": false,
+      "user_categories": [
+        "Ramp"
+      ],
+      "synergy": [
+        {
+          "kind": "ability:static",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "ability:triggered",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "trigger:cast",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "mana_generator",
+          "source": "oracle_text"
+        }
+      ]
+    },
+    {
+      "name": "Sudden Breakthrough",
+      "mana_cost": "{1}{R}",
+      "mana_value": 2.0,
+      "type": "Instant",
+      "oracle_text": "Target creature gets +2/+0 and gains first strike until end of turn.\nCreate a Treasure token. (It's an artifact with \"{T}, Sacrifice this token: Add one mana of any color.\")",
+      "statline": "",
+      "keywords": [
+        "Treasure"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "oracle_id": "f5576cd4-6b21-4b29-902c-9c1fbdd7b2be",
+      "is_commander": false,
+      "user_categories": [
+        "Ramp"
+      ],
+      "synergy": [
+        {
+          "kind": "ability:static",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "zone_transition",
+          "from": "battlefield",
+          "to": "graveyard",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "mana_generator",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "artifact token",
+          "source": "oracle_text"
+        }
+      ]
+    },
+    {
+      "name": "Inner Fire",
+      "mana_cost": "{3}{R}",
+      "mana_value": 4.0,
+      "type": "Sorcery",
+      "oracle_text": "Add {R} for each card in your hand.",
+      "statline": "",
+      "keywords": [],
+      "color_identity": [
+        "R"
+      ],
+      "oracle_id": "27348fe5-21d4-40f7-9feb-bba2c2321008",
+      "is_commander": false,
+      "user_categories": [
+        "Ramp"
+      ],
+      "synergy": [
+        {
+          "kind": "ability:static",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "mana_generator",
+          "source": "oracle_text"
+        }
+      ]
+    },
+    {
+      "name": "Mana Geyser",
+      "mana_cost": "{3}{R}{R}",
+      "mana_value": 5.0,
+      "type": "Sorcery",
+      "oracle_text": "Add {R} for each tapped land your opponents control.",
+      "statline": "",
+      "keywords": [],
+      "color_identity": [
+        "R"
+      ],
+      "oracle_id": "a8dba58b-2956-492e-ae30-49db2ae68e53",
+      "is_commander": false,
+      "user_categories": [
+        "Ramp"
+      ],
+      "synergy": [
+        {
+          "kind": "ability:static",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "mana_generator",
+          "source": "oracle_text"
+        }
+      ]
+    },
+    {
+      "name": "Jeska's Will",
+      "mana_cost": "{2}{R}",
+      "mana_value": 3.0,
+      "type": "Sorcery",
+      "oracle_text": "Choose one. If you control a commander as you cast this spell, you may choose both instead.\n\u2022 Add {R} for each card in target opponent's hand.\n\u2022 Exile the top three cards of your library. You may play them this turn.",
+      "statline": "",
+      "keywords": [],
+      "color_identity": [
+        "R"
+      ],
+      "oracle_id": "0fd114c4-092b-4e28-b0dc-ef529f3bc73e",
+      "is_commander": false,
+      "user_categories": [
+        "Ramp"
+      ],
+      "synergy": [
+        {
+          "kind": "ability:replacement",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "ability:static",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "zone_transition",
+          "from": "battlefield",
+          "to": "exile",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "mana_generator",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "cast_from_zone",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "replacement_effect",
+          "source": "oracle_text"
+        }
+      ]
+    },
+    {
+      "name": "Urabrask // The Great Work",
+      "mana_cost": "{2}{R}{R}",
+      "mana_value": 4.0,
+      "type": "Legendary Creature \u2014 Phyrexian Praetor",
+      "oracle_text": "First strike\nWhenever you cast an instant or sorcery spell, Urabrask deals 1 damage to target opponent. Add {R}.\n{R}: Exile Urabrask, then return it to the battlefield transformed under its owner's control. Activate only as a sorcery and only if you've cast three or more instant and/or sorcery spells this turn.\n//\n(As this Saga enters and after your draw step, add a lore counter.)\nI \u2014 This Saga deals 3 damage to target opponent and each creature they control.\nII \u2014 Create three Treasure tokens.\nIII \u2014 Until end of turn, you may cast instant and sorcery spells from any graveyard. If a spell cast this way would be put into a graveyard, exile it instead. Exile this Saga, then return it to the battlefield (front face up).",
+      "statline": "4 / 4",
+      "keywords": [
+        "Transform",
+        "First strike",
+        "Treasure"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "oracle_id": "4b1da9aa-a30c-44b8-a10e-f9dc3fe70b6f",
+      "is_commander": false,
+      "user_categories": [
+        "Maybeboard",
+        "Ramp"
+      ],
+      "synergy": [
+        {
+          "kind": "combat",
+          "source": "scryfall_keyword"
+        },
+        {
+          "kind": "ability:activated",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "ability:replacement",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "ability:static",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "ability:triggered",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "zone_transition",
+          "from": "battlefield",
+          "to": "graveyard",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "zone_transition",
+          "from": "battlefield",
+          "to": "exile",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "zone_transition",
+          "from": "battlefield",
+          "to": "hand",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "trigger:cast",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "mana_generator",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "artifact token",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "cast_from_zone",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "replacement_effect",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "recursion",
+          "source": "oracle_text"
+        }
+      ]
+    },
+    {
+      "name": "Birgi, God of Storytelling // Harnfel, Horn of Bounty",
+      "mana_cost": "{2}{R}",
+      "mana_value": 3.0,
+      "type": "Legendary Creature \u2014 God",
+      "oracle_text": "Whenever you cast a spell, add {R}. Until end of turn, you don't lose this mana as steps and phases end.\nCreatures you control can boast twice during each of your turns rather than once.\n//\nDiscard a card: Exile the top two cards of your library. You may play those cards this turn.",
+      "statline": "3 / 3",
+      "keywords": [],
+      "color_identity": [
+        "R"
+      ],
+      "oracle_id": "fb81e4d3-1d8c-4779-be62-87cf49277e51",
+      "is_commander": false,
+      "user_categories": [
+        "Maybeboard",
+        "Ramp"
+      ],
+      "synergy": [
+        {
+          "kind": "ability:static",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "ability:triggered",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "zone_transition",
+          "from": "battlefield",
+          "to": "exile",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "zone_transition",
+          "from": "hand",
+          "to": "graveyard",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "trigger:cast",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "mana_generator",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "cast_from_zone",
+          "source": "oracle_text"
+        }
+      ]
+    },
+    {
+      "name": "Storm-Kiln Artist",
+      "mana_cost": "{3}{R}",
+      "mana_value": 4.0,
+      "type": "Creature \u2014 Dwarf Shaman",
+      "oracle_text": "This creature gets +1/+0 for each artifact you control.\nMagecraft \u2014 Whenever you cast or copy an instant or sorcery spell, create a Treasure token. (It's an artifact with \"{T}, Sacrifice this token: Add one mana of any color.\")",
+      "statline": "2 / 2",
+      "keywords": [
+        "Treasure",
+        "Magecraft"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "oracle_id": "a145ff8c-5812-4bcb-bd16-9839dc25121d",
+      "is_commander": false,
+      "user_categories": [
+        "Ramp"
+      ],
+      "synergy": [
+        {
+          "kind": "cast trigger",
+          "source": "scryfall_keyword"
+        },
+        {
+          "kind": "ability:static",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "zone_transition",
+          "from": "battlefield",
+          "to": "graveyard",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "trigger:cast",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "mana_generator",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "artifact token",
+          "source": "oracle_text"
+        }
+      ]
+    },
+    {
+      "name": "Arcane Signet",
+      "mana_cost": "{2}",
+      "mana_value": 2.0,
+      "type": "Artifact",
+      "oracle_text": "{T}: Add one mana of any color in your commander's color identity.",
+      "statline": "",
+      "keywords": [],
+      "color_identity": [],
+      "oracle_id": "0bc7f093-bef0-4f1a-852c-4b75ebf54838",
+      "is_commander": false,
+      "user_categories": [
+        "Ramp"
+      ],
+      "synergy": [
+        {
+          "kind": "ability:activated",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "mana_generator",
+          "source": "oracle_text"
+        }
+      ]
+    },
+    {
+      "name": "Fellwar Stone",
+      "mana_cost": "{2}",
+      "mana_value": 2.0,
+      "type": "Artifact",
+      "oracle_text": "{T}: Add one mana of any color that a land an opponent controls could produce.",
+      "statline": "",
+      "keywords": [],
+      "color_identity": [],
+      "oracle_id": "95560508-7ac9-4be9-8a3f-3c7d5b52807b",
+      "is_commander": false,
+      "user_categories": [
+        "Ramp"
+      ],
+      "synergy": [
+        {
+          "kind": "ability:activated",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "mana_generator",
+          "source": "oracle_text"
+        }
+      ]
+    },
+    {
+      "name": "Sol Ring",
+      "mana_cost": "{1}",
+      "mana_value": 1.0,
+      "type": "Artifact",
+      "oracle_text": "{T}: Add {C}{C}.",
+      "statline": "",
+      "keywords": [],
+      "color_identity": [],
+      "oracle_id": "6ad8011d-3471-4369-9d68-b264cc027487",
+      "is_commander": false,
+      "user_categories": [
+        "Ramp"
+      ],
+      "synergy": [
+        {
+          "kind": "ability:activated",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "mana_generator",
+          "source": "oracle_text"
+        }
+      ]
+    },
+    {
+      "name": "Talisman of Creativity",
+      "mana_cost": "{2}",
+      "mana_value": 2.0,
+      "type": "Artifact",
+      "oracle_text": "{T}: Add {C}.\n{T}: Add {U} or {R}. This artifact deals 1 damage to you.",
+      "statline": "",
+      "keywords": [],
+      "color_identity": [
+        "R",
+        "U"
+      ],
+      "oracle_id": "14d2979d-5728-42d7-a027-0eb1f754655d",
+      "is_commander": false,
+      "user_categories": [
+        "Ramp"
+      ],
+      "synergy": [
+        {
+          "kind": "ability:activated",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "mana_generator",
+          "source": "oracle_text"
+        }
+      ]
+    },
+    {
+      "name": "Seething Song",
+      "mana_cost": "{2}{R}",
+      "mana_value": 3.0,
+      "type": "Instant",
+      "oracle_text": "Add {R}{R}{R}{R}{R}.",
+      "statline": "",
+      "keywords": [],
+      "color_identity": [
+        "R"
+      ],
+      "oracle_id": "64bf8929-f5f2-4d50-8667-13b1d007bcfc",
+      "is_commander": false,
+      "user_categories": [
+        "Ramp"
+      ],
+      "synergy": [
+        {
+          "kind": "ability:static",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "mana_generator",
+          "source": "oracle_text"
+        }
+      ]
+    },
+    {
+      "name": "Izzet Signet",
+      "mana_cost": "{2}",
+      "mana_value": 2.0,
+      "type": "Artifact",
+      "oracle_text": "{1}, {T}: Add {U}{R}.",
+      "statline": "",
+      "keywords": [],
+      "color_identity": [
+        "R",
+        "U"
+      ],
+      "oracle_id": "2fda4fe7-8b0c-489c-a000-6d358e614e34",
+      "is_commander": false,
+      "user_categories": [
+        "Ramp"
+      ],
+      "synergy": [
+        {
+          "kind": "ability:activated",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "mana_generator",
+          "source": "oracle_text"
+        }
+      ]
+    },
+    {
+      "name": "Lotus Petal",
+      "mana_cost": "{0}",
+      "mana_value": 0.0,
+      "type": "Artifact",
+      "oracle_text": "{T}, Sacrifice this artifact: Add one mana of any color.",
+      "statline": "",
+      "keywords": [],
+      "color_identity": [],
+      "oracle_id": "32e5339e-9e4f-46f8-b305-f9d6d3ba8bb5",
+      "is_commander": false,
+      "user_categories": [
+        "Ramp"
+      ],
+      "synergy": [
+        {
+          "kind": "ability:static",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "zone_transition",
+          "from": "battlefield",
+          "to": "graveyard",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "mana_generator",
+          "source": "oracle_text"
+        }
+      ]
+    },
+    {
+      "name": "Hero's Blade",
+      "mana_cost": "{2}",
+      "mana_value": 2.0,
+      "type": "Artifact \u2014 Equipment",
+      "oracle_text": "Equipped creature gets +3/+2.\nWhenever a legendary creature you control enters, you may attach this Equipment to it.\nEquip {4} ({4}: Attach to target creature you control. Equip only as a sorcery.)",
+      "statline": "",
+      "keywords": [
+        "Equip"
+      ],
+      "color_identity": [],
+      "oracle_id": "e6bcd25d-39b6-4619-8a27-9f3d87f4a17b",
+      "is_commander": false,
+      "user_categories": [
+        "Pump"
+      ],
+      "synergy": [
+        {
+          "kind": "ability:static",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "ability:triggered",
+          "source": "oracle_text"
+        }
+      ]
+    },
+    {
+      "name": "Water Wings",
+      "mana_cost": "{1}{U}",
+      "mana_value": 2.0,
+      "type": "Instant",
+      "oracle_text": "Until end of turn, target creature you control has base power and toughness 4/4 and gains flying and hexproof. (It can't be the target of spells or abilities your opponents control.)",
+      "statline": "",
+      "keywords": [],
+      "color_identity": [
+        "U"
+      ],
+      "oracle_id": "17f8e8cb-cd1b-4d94-9efa-ce268e8e7096",
+      "is_commander": false,
+      "user_categories": [
+        "Instant",
+        "Protection"
+      ],
+      "synergy": [
+        {
+          "kind": "ability:static",
+          "source": "oracle_text"
+        }
+      ]
+    },
+    {
+      "name": "Frantic Search",
+      "mana_cost": "{2}{U}",
+      "mana_value": 3.0,
+      "type": "Instant",
+      "oracle_text": "Draw two cards, then discard two cards. Untap up to three lands.",
+      "statline": "",
+      "keywords": [],
+      "color_identity": [
+        "U"
+      ],
+      "oracle_id": "16e015b2-f8a3-4b1a-80be-58a8f5fb5e8c",
+      "is_commander": false,
+      "user_categories": [
+        "Draw"
+      ],
+      "synergy": [
+        {
+          "kind": "ability:static",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "zone_transition",
+          "from": "hand",
+          "to": "graveyard",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "zone_transition",
+          "from": "library",
+          "to": "hand",
+          "source": "oracle_text"
+        }
+      ]
+    },
+    {
+      "name": "Pirate's Pillage",
+      "mana_cost": "{3}{R}",
+      "mana_value": 4.0,
+      "type": "Sorcery",
+      "oracle_text": "As an additional cost to cast this spell, discard a card.\nDraw two cards and create two Treasure tokens. (They're artifacts with \"{T}, Sacrifice this token: Add one mana of any color.\")",
+      "statline": "",
+      "keywords": [
+        "Treasure"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "oracle_id": "7a2e866b-9642-495e-b47f-5b13a24373cc",
+      "is_commander": false,
+      "user_categories": [
+        "Draw"
+      ],
+      "synergy": [
+        {
+          "kind": "ability:replacement",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "ability:static",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "zone_transition",
+          "from": "battlefield",
+          "to": "graveyard",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "zone_transition",
+          "from": "hand",
+          "to": "graveyard",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "zone_transition",
+          "from": "library",
+          "to": "hand",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "additional cost",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "mana_generator",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "artifact token",
+          "source": "oracle_text"
+        }
+      ]
+    },
+    {
+      "name": "Whispers of the Muse",
+      "mana_cost": "{U}",
+      "mana_value": 1.0,
+      "type": "Instant",
+      "oracle_text": "Buyback {5} (You may pay an additional {5} as you cast this spell. If you do, put this card into your hand as it resolves.)\nDraw a card.",
+      "statline": "",
+      "keywords": [
+        "Buyback"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "oracle_id": "a4a8af4e-8686-45ba-94fd-ccf6cc8adaae",
+      "is_commander": false,
+      "user_categories": [
+        "Draw",
+        "Maybeboard"
+      ],
+      "synergy": [
+        {
+          "kind": "additional cost",
+          "source": "scryfall_keyword"
+        },
+        {
+          "kind": "ability:static",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "zone_transition",
+          "from": "library",
+          "to": "hand",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "recursion",
+          "source": "oracle_text"
+        }
+      ]
+    },
+    {
+      "name": "Rhystic Study",
+      "mana_cost": "{2}{U}",
+      "mana_value": 3.0,
+      "type": "Enchantment",
+      "oracle_text": "Whenever an opponent casts a spell, you may draw a card unless that player pays {1}.",
+      "statline": "",
+      "keywords": [],
+      "color_identity": [
+        "U"
+      ],
+      "oracle_id": "53236dd7-845a-444c-96d5-f41ed7325d8f",
+      "is_commander": false,
+      "user_categories": [
+        "Draw"
+      ],
+      "synergy": [
+        {
+          "kind": "ability:triggered",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "zone_transition",
+          "from": "library",
+          "to": "hand",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "trigger:opponent_cast",
+          "source": "oracle_text"
+        }
+      ]
+    },
+    {
+      "name": "Windfall",
+      "mana_cost": "{2}{U}",
+      "mana_value": 3.0,
+      "type": "Sorcery",
+      "oracle_text": "Each player discards their hand, then draws cards equal to the greatest number of cards a player discarded this way.",
+      "statline": "",
+      "keywords": [],
+      "color_identity": [
+        "U"
+      ],
+      "oracle_id": "08becc07-28bc-4a2f-a6b0-28a2998d2f50",
+      "is_commander": false,
+      "user_categories": [
+        "Draw"
+      ],
+      "synergy": [
+        {
+          "kind": "ability:static",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "zone_transition",
+          "from": "hand",
+          "to": "graveyard",
+          "source": "oracle_text"
+        }
+      ]
+    },
+    {
+      "name": "Big Score",
+      "mana_cost": "{3}{R}",
+      "mana_value": 4.0,
+      "type": "Instant",
+      "oracle_text": "As an additional cost to cast this spell, discard a card.\nDraw two cards and create two Treasure tokens. (They're artifacts with \"{T}, Sacrifice this token: Add one mana of any color.\")",
+      "statline": "",
+      "keywords": [
+        "Treasure"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "oracle_id": "a5cbd257-c836-493e-bb1a-76242619dea2",
+      "is_commander": false,
+      "user_categories": [
+        "Draw"
+      ],
+      "synergy": [
+        {
+          "kind": "ability:replacement",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "ability:static",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "zone_transition",
+          "from": "battlefield",
+          "to": "graveyard",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "zone_transition",
+          "from": "hand",
+          "to": "graveyard",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "zone_transition",
+          "from": "library",
+          "to": "hand",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "additional cost",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "mana_generator",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "artifact token",
+          "source": "oracle_text"
+        }
+      ]
+    },
+    {
+      "name": "Brainstorm",
+      "mana_cost": "{U}",
+      "mana_value": 1.0,
+      "type": "Instant",
+      "oracle_text": "Draw three cards, then put two cards from your hand on top of your library in any order.",
+      "statline": "",
+      "keywords": [],
+      "color_identity": [
+        "U"
+      ],
+      "oracle_id": "36cd2364-d113-47d1-b2c4-b088d9eb88dd",
+      "is_commander": false,
+      "user_categories": [
+        "Draw"
+      ],
+      "synergy": [
+        {
+          "kind": "ability:static",
+          "source": "oracle_text"
+        }
+      ]
+    },
+    {
+      "name": "Fists of Flame",
+      "mana_cost": "{1}{R}",
+      "mana_value": 2.0,
+      "type": "Instant",
+      "oracle_text": "Draw a card. Until end of turn, target creature gains trample and gets +1/+0 for each card you've drawn this turn. (A creature with trample can deal excess combat damage to the player or planeswalker it's attacking.)",
+      "statline": "",
+      "keywords": [],
+      "color_identity": [
+        "R"
+      ],
+      "oracle_id": "e05abb6b-e9f4-4d9e-ad1e-7805ebc09914",
+      "is_commander": false,
+      "user_categories": [
+        "Draw"
+      ],
+      "synergy": [
+        {
+          "kind": "ability:static",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "zone_transition",
+          "from": "library",
+          "to": "hand",
+          "source": "oracle_text"
+        }
+      ]
+    },
+    {
+      "name": "Opt",
+      "mana_cost": "{U}",
+      "mana_value": 1.0,
+      "type": "Instant",
+      "oracle_text": "Scry 1. (Look at the top card of your library. You may put that card on the bottom.)\nDraw a card.",
+      "statline": "",
+      "keywords": [
+        "Scry"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "oracle_id": "713332c1-5bd8-400f-bfff-c1ca0697a043",
+      "is_commander": false,
+      "user_categories": [
+        "Draw"
+      ],
+      "synergy": [
+        {
+          "kind": "card selection",
+          "source": "scryfall_keyword"
+        },
+        {
+          "kind": "ability:static",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "zone_transition",
+          "from": "library",
+          "to": "hand",
+          "source": "oracle_text"
+        }
+      ]
+    },
+    {
+      "name": "Unexpected Windfall",
+      "mana_cost": "{2}{R}{R}",
+      "mana_value": 4.0,
+      "type": "Instant",
+      "oracle_text": "As an additional cost to cast this spell, discard a card.\nDraw two cards and create two Treasure tokens. (They're artifacts with \"{T}, Sacrifice this token: Add one mana of any color.\")",
+      "statline": "",
+      "keywords": [
+        "Treasure"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "oracle_id": "498c10c9-253d-4b15-b48c-1509381b17e8",
+      "is_commander": false,
+      "user_categories": [
+        "Draw",
+        "Maybeboard"
+      ],
+      "synergy": [
+        {
+          "kind": "ability:replacement",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "ability:static",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "zone_transition",
+          "from": "battlefield",
+          "to": "graveyard",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "zone_transition",
+          "from": "hand",
+          "to": "graveyard",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "zone_transition",
+          "from": "library",
+          "to": "hand",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "additional cost",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "mana_generator",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "artifact token",
+          "source": "oracle_text"
+        }
+      ]
+    },
+    {
+      "name": "Deep Analysis",
+      "mana_cost": "{3}{U}",
+      "mana_value": 4.0,
+      "type": "Sorcery",
+      "oracle_text": "Target player draws two cards.\nFlashback\u2014{1}{U}, Pay 3 life. (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "statline": "",
+      "keywords": [
+        "Flashback"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "oracle_id": "579cbd92-797f-4cdf-91ed-fca7a523eae5",
+      "is_commander": false,
+      "user_categories": [
+        "Draw"
+      ],
+      "synergy": [
+        {
+          "kind": "alternative cost",
+          "source": "scryfall_keyword"
+        },
+        {
+          "kind": "ability:static",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "zone_transition",
+          "from": "battlefield",
+          "to": "exile",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "cast_from_zone",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "recursion",
+          "source": "oracle_text"
+        }
+      ]
+    },
+    {
+      "name": "Epic Experiment",
+      "mana_cost": "{X}{U}{R}",
+      "mana_value": 2.0,
+      "type": "Sorcery",
+      "oracle_text": "Exile the top X cards of your library. You may cast instant and sorcery spells with mana value X or less from among them without paying their mana costs. Then put all cards exiled this way that weren't cast into your graveyard.",
+      "statline": "",
+      "keywords": [],
+      "color_identity": [
+        "R",
+        "U"
+      ],
+      "oracle_id": "08bc10fd-8901-4836-ad4d-a867e1bcba77",
+      "is_commander": false,
+      "user_categories": [
+        "Draw"
+      ],
+      "synergy": [
+        {
+          "kind": "ability:static",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "zone_transition",
+          "from": "battlefield",
+          "to": "exile",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "cast_from_zone",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "recursion",
+          "source": "oracle_text"
+        }
+      ]
+    },
+    {
+      "name": "Ingenious Mastery",
+      "mana_cost": "{X}{2}{U}",
+      "mana_value": 3.0,
+      "type": "Sorcery",
+      "oracle_text": "You may pay {2}{U} rather than pay this spell's mana cost.\nIf the {2}{U} cost was paid, you draw three cards, then an opponent creates two Treasure tokens and they scry 2. If that cost wasn't paid, you draw X cards.",
+      "statline": "",
+      "keywords": [
+        "Treasure",
+        "Scry"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "oracle_id": "dad43a2d-5b30-45f2-a34d-9e68d1fbb716",
+      "is_commander": false,
+      "user_categories": [
+        "Draw"
+      ],
+      "synergy": [
+        {
+          "kind": "card selection",
+          "source": "scryfall_keyword"
+        },
+        {
+          "kind": "ability:static",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "alternative cost",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "artifact token",
+          "source": "oracle_text"
+        }
+      ]
+    },
+    {
+      "name": "Inspired Tinkering",
+      "mana_cost": "{4}{R}",
+      "mana_value": 5.0,
+      "type": "Sorcery",
+      "oracle_text": "Exile the top three cards of your library. Until the end of your next turn, you may play those cards.\nCreate three Treasure tokens. (They're artifacts with \"{T}, Sacrifice this token: Add one mana of any color.\")",
+      "statline": "",
+      "keywords": [
+        "Treasure"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "oracle_id": "3088b09b-1dce-4fc9-99de-2ca9c752eb12",
+      "is_commander": false,
+      "user_categories": [
+        "Draw"
+      ],
+      "synergy": [
+        {
+          "kind": "ability:static",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "zone_transition",
+          "from": "battlefield",
+          "to": "graveyard",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "zone_transition",
+          "from": "battlefield",
+          "to": "exile",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "mana_generator",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "artifact token",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "cast_from_zone",
+          "source": "oracle_text"
+        }
+      ]
+    },
+    {
+      "name": "Tezzeret's Gambit",
+      "mana_cost": "{3}{U/P}",
+      "mana_value": 4.0,
+      "type": "Sorcery",
+      "oracle_text": "({U/P} can be paid with either {U} or 2 life.)\nDraw two cards, then proliferate. (Choose any number of permanents and/or players, then give each another counter of each kind already there.)",
+      "statline": "",
+      "keywords": [
+        "Proliferate"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "oracle_id": "b33d2b77-f068-4fdc-a1a8-0353a35e3973",
+      "is_commander": false,
+      "user_categories": [
+        "Draw"
+      ],
+      "synergy": [
+        {
+          "kind": "counter synergy",
+          "source": "scryfall_keyword"
+        },
+        {
+          "kind": "ability:static",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "zone_transition",
+          "from": "library",
+          "to": "hand",
+          "source": "oracle_text"
+        }
+      ]
+    },
+    {
+      "name": "Stroke of Genius",
+      "mana_cost": "{X}{2}{U}",
+      "mana_value": 3.0,
+      "type": "Instant",
+      "oracle_text": "Target player draws X cards.",
+      "statline": "",
+      "keywords": [],
+      "color_identity": [
+        "U"
+      ],
+      "oracle_id": "0cc6d683-366f-4ae4-be60-20ad9621fdaf",
+      "is_commander": false,
+      "user_categories": [
+        "Draw"
+      ],
+      "synergy": [
+        {
+          "kind": "ability:static",
+          "source": "oracle_text"
+        }
+      ]
+    },
+    {
+      "name": "Ponder",
+      "mana_cost": "{U}",
+      "mana_value": 1.0,
+      "type": "Sorcery",
+      "oracle_text": "Look at the top three cards of your library, then put them back in any order. You may shuffle.\nDraw a card.",
+      "statline": "",
+      "keywords": [],
+      "color_identity": [
+        "U"
+      ],
+      "oracle_id": "02090581-61aa-4348-ad57-451be8ee91c2",
+      "is_commander": false,
+      "user_categories": [
+        "Draw"
+      ],
+      "synergy": [
+        {
+          "kind": "ability:static",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "zone_transition",
+          "from": "library",
+          "to": "hand",
+          "source": "oracle_text"
+        }
+      ]
+    },
+    {
+      "name": "Mana Leak",
+      "mana_cost": "{1}{U}",
+      "mana_value": 2.0,
+      "type": "Instant",
+      "oracle_text": "Counter target spell unless its controller pays {3}.",
+      "statline": "",
+      "keywords": [],
+      "color_identity": [
+        "U"
+      ],
+      "oracle_id": "c61fe162-2202-4e56-9ba0-393547f9875f",
+      "is_commander": false,
+      "user_categories": [
+        "Counters"
+      ],
+      "synergy": [
+        {
+          "kind": "ability:static",
+          "source": "oracle_text"
+        }
+      ]
+    },
+    {
+      "name": "Daze",
+      "mana_cost": "{1}{U}",
+      "mana_value": 2.0,
+      "type": "Instant",
+      "oracle_text": "You may return an Island you control to its owner's hand rather than pay this spell's mana cost.\nCounter target spell unless its controller pays {1}.",
+      "statline": "",
+      "keywords": [],
+      "color_identity": [
+        "U"
+      ],
+      "oracle_id": "70486bee-6ee7-41ea-b834-8caf4699302b",
+      "is_commander": false,
+      "user_categories": [
+        "Counters"
+      ],
+      "synergy": [
+        {
+          "kind": "ability:static",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "alternative cost",
+          "source": "oracle_text"
+        }
+      ]
+    },
+    {
+      "name": "Spell Pierce",
+      "mana_cost": "{U}",
+      "mana_value": 1.0,
+      "type": "Instant",
+      "oracle_text": "Counter target noncreature spell unless its controller pays {2}.",
+      "statline": "",
+      "keywords": [],
+      "color_identity": [
+        "U"
+      ],
+      "oracle_id": "d64b0848-0193-4025-ba62-63ecd8fb9f50",
+      "is_commander": false,
+      "user_categories": [
+        "Counters"
+      ],
+      "synergy": [
+        {
+          "kind": "ability:static",
+          "source": "oracle_text"
+        }
+      ]
+    },
+    {
+      "name": "Disrupt",
+      "mana_cost": "{U}",
+      "mana_value": 1.0,
+      "type": "Instant",
+      "oracle_text": "Counter target instant or sorcery spell unless its controller pays {1}.\nDraw a card.",
+      "statline": "",
+      "keywords": [],
+      "color_identity": [
+        "U"
+      ],
+      "oracle_id": "76347258-71d5-4874-adde-ff7aa932b808",
+      "is_commander": false,
+      "user_categories": [
+        "Counters",
+        "Maybeboard"
+      ],
+      "synergy": [
+        {
+          "kind": "ability:static",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "zone_transition",
+          "from": "library",
+          "to": "hand",
+          "source": "oracle_text"
+        }
+      ]
+    },
+    {
+      "name": "Grapeshot",
+      "mana_cost": "{1}{R}",
+      "mana_value": 2.0,
+      "type": "Sorcery",
+      "oracle_text": "Grapeshot deals 1 damage to any target.\nStorm (When you cast this spell, copy it for each spell cast before it this turn. You may choose new targets for the copies.)",
+      "statline": "",
+      "keywords": [
+        "Storm"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "oracle_id": "ebd2d760-5ad8-4027-b124-171822f3edfe",
+      "is_commander": false,
+      "user_categories": [
+        "Maybeboard",
+        "Removal"
+      ],
+      "synergy": [
+        {
+          "kind": "cast trigger",
+          "source": "scryfall_keyword"
+        },
+        {
+          "kind": "ability:static",
+          "source": "oracle_text"
+        }
+      ]
+    },
+    {
+      "name": "Resculpt",
+      "mana_cost": "{1}{U}",
+      "mana_value": 2.0,
+      "type": "Instant",
+      "oracle_text": "Exile target artifact or creature. Its controller creates a 4/4 blue and red Elemental creature token.",
+      "statline": "",
+      "keywords": [],
+      "color_identity": [
+        "U"
+      ],
+      "oracle_id": "814e321d-16fd-4f7b-a8d8-2b089be76f2c",
+      "is_commander": false,
+      "user_categories": [
+        "Removal"
+      ],
+      "synergy": [
+        {
+          "kind": "ability:static",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "zone_transition",
+          "from": "battlefield",
+          "to": "exile",
+          "source": "oracle_text"
+        }
+      ]
+    },
+    {
+      "name": "Jaya's Immolating Inferno",
+      "mana_cost": "{X}{R}{R}",
+      "mana_value": 2.0,
+      "type": "Legendary Sorcery",
+      "oracle_text": "(You may cast a legendary sorcery only if you control a legendary creature or planeswalker.)\nJaya's Immolating Inferno deals X damage to each of up to three targets.",
+      "statline": "",
+      "keywords": [],
+      "color_identity": [
+        "R"
+      ],
+      "oracle_id": "f5f0deb0-070a-45b6-9b81-0bc8143f3040",
+      "is_commander": false,
+      "user_categories": [
+        "Removal"
+      ],
+      "synergy": [
+        {
+          "kind": "ability:static",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "cast_from_zone",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "recursion",
+          "source": "oracle_text"
+        }
+      ]
+    },
+    {
+      "name": "Negate",
+      "mana_cost": "{1}{U}",
+      "mana_value": 2.0,
+      "type": "Instant",
+      "oracle_text": "Counter target noncreature spell.",
+      "statline": "",
+      "keywords": [],
+      "color_identity": [
+        "U"
+      ],
+      "oracle_id": "3407fe41-fdd3-4119-8f70-4bc4590a379f",
+      "is_commander": false,
+      "user_categories": [
+        "Removal"
+      ],
+      "synergy": [
+        {
+          "kind": "ability:static",
+          "source": "oracle_text"
+        }
+      ]
+    },
+    {
+      "name": "Syncopate",
+      "mana_cost": "{X}{U}",
+      "mana_value": 1.0,
+      "type": "Instant",
+      "oracle_text": "Counter target spell unless its controller pays {X}. If that spell is countered this way, exile it instead of putting it into its owner's graveyard.",
+      "statline": "",
+      "keywords": [],
+      "color_identity": [
+        "U"
+      ],
+      "oracle_id": "318f7f70-e374-40ef-8afb-3389c10461d8",
+      "is_commander": false,
+      "user_categories": [
+        "Removal"
+      ],
+      "synergy": [
+        {
+          "kind": "ability:replacement",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "zone_transition",
+          "from": "battlefield",
+          "to": "exile",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "replacement_effect",
+          "source": "oracle_text"
+        }
+      ]
+    },
+    {
+      "name": "Unsubstantiate",
+      "mana_cost": "{1}{U}",
+      "mana_value": 2.0,
+      "type": "Instant",
+      "oracle_text": "Return target spell or creature to its owner's hand.",
+      "statline": "",
+      "keywords": [],
+      "color_identity": [
+        "U"
+      ],
+      "oracle_id": "c387f46f-ad91-4964-8dc6-acefe537fe3c",
+      "is_commander": false,
+      "user_categories": [
+        "Removal"
+      ],
+      "synergy": [
+        {
+          "kind": "ability:static",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "zone_transition",
+          "from": "battlefield",
+          "to": "hand",
+          "source": "oracle_text"
+        }
+      ]
+    },
+    {
+      "name": "Curse of the Swine",
+      "mana_cost": "{X}{U}{U}",
+      "mana_value": 2.0,
+      "type": "Sorcery",
+      "oracle_text": "Exile X target creatures. For each creature exiled this way, its controller creates a 2/2 green Boar creature token.",
+      "statline": "",
+      "keywords": [],
+      "color_identity": [
+        "U"
+      ],
+      "oracle_id": "5669ea7c-c4fc-494c-896b-4bce9b494817",
+      "is_commander": false,
+      "user_categories": [
+        "Removal"
+      ],
+      "synergy": [
+        {
+          "kind": "ability:static",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "zone_transition",
+          "from": "battlefield",
+          "to": "exile",
+          "source": "oracle_text"
+        }
+      ]
+    },
+    {
+      "name": "Rewind",
+      "mana_cost": "{2}{U}{U}",
+      "mana_value": 4.0,
+      "type": "Instant",
+      "oracle_text": "Counter target spell. Untap up to four lands.",
+      "statline": "",
+      "keywords": [],
+      "color_identity": [
+        "U"
+      ],
+      "oracle_id": "bb27bfdf-fe8d-45bd-ad62-8118dce06eda",
+      "is_commander": false,
+      "user_categories": [
+        "Maybeboard",
+        "Removal"
+      ],
+      "synergy": [
+        {
+          "kind": "ability:static",
+          "source": "oracle_text"
+        }
+      ]
+    },
+    {
+      "name": "Rapid Hybridization",
+      "mana_cost": "{U}",
+      "mana_value": 1.0,
+      "type": "Instant",
+      "oracle_text": "Destroy target creature. It can't be regenerated. That creature's controller creates a 3/3 green Frog Lizard creature token.",
+      "statline": "",
+      "keywords": [],
+      "color_identity": [
+        "U"
+      ],
+      "oracle_id": "06692cd9-ac2f-4a32-8fd1-043ba3c0fe71",
+      "is_commander": false,
+      "user_categories": [
+        "Removal"
+      ],
+      "synergy": [
+        {
+          "kind": "ability:static",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "zone_transition",
+          "from": "battlefield",
+          "to": "graveyard",
+          "source": "oracle_text"
+        }
+      ]
+    },
+    {
+      "name": "Electrodominance",
+      "mana_cost": "{X}{R}{R}",
+      "mana_value": 2.0,
+      "type": "Instant",
+      "oracle_text": "Electrodominance deals X damage to any target. You may cast a spell with mana value X or less from your hand without paying its mana cost.",
+      "statline": "",
+      "keywords": [],
+      "color_identity": [
+        "R"
+      ],
+      "oracle_id": "4a59d86e-405d-4c70-b2a5-c64f5cecfd9e",
+      "is_commander": false,
+      "user_categories": [
+        "Removal"
+      ],
+      "synergy": [
+        {
+          "kind": "ability:static",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "alternative cost",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "cast_from_zone",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "recursion",
+          "source": "oracle_text"
+        }
+      ]
+    },
+    {
+      "name": "Arcane Denial",
+      "mana_cost": "{1}{U}",
+      "mana_value": 2.0,
+      "type": "Instant",
+      "oracle_text": "Counter target spell. Its controller may draw up to two cards at the beginning of the next turn's upkeep.\nYou draw a card at the beginning of the next turn's upkeep.",
+      "statline": "",
+      "keywords": [],
+      "color_identity": [
+        "U"
+      ],
+      "oracle_id": "ab1cc360-b9de-48d9-9983-4dfe4a7d2a37",
+      "is_commander": false,
+      "user_categories": [
+        "Removal"
+      ],
+      "synergy": [
+        {
+          "kind": "ability:static",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "zone_transition",
+          "from": "library",
+          "to": "hand",
+          "source": "oracle_text"
+        }
+      ]
+    },
+    {
+      "name": "Narset's Reversal",
+      "mana_cost": "{U}{U}",
+      "mana_value": 2.0,
+      "type": "Instant",
+      "oracle_text": "Copy target instant or sorcery spell, then return it to its owner's hand. You may choose new targets for the copy.",
+      "statline": "",
+      "keywords": [],
+      "color_identity": [
+        "U"
+      ],
+      "oracle_id": "d55f6c70-321f-4fb4-bd33-0850ae1a7c36",
+      "is_commander": false,
+      "user_categories": [
+        "Removal"
+      ],
+      "synergy": [
+        {
+          "kind": "ability:static",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "zone_transition",
+          "from": "battlefield",
+          "to": "hand",
+          "source": "oracle_text"
+        }
+      ]
+    },
+    {
+      "name": "Reiterate",
+      "mana_cost": "{1}{R}{R}",
+      "mana_value": 3.0,
+      "type": "Instant",
+      "oracle_text": "Buyback {3} (You may pay an additional {3} as you cast this spell. If you do, put this card into your hand as it resolves.)\nCopy target instant or sorcery spell. You may choose new targets for the copy.",
+      "statline": "",
+      "keywords": [
+        "Buyback"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "oracle_id": "38394ee3-6726-4f91-bc25-36bce0c6aab9",
+      "is_commander": false,
+      "user_categories": [
+        "Copy"
+      ],
+      "synergy": [
+        {
+          "kind": "additional cost",
+          "source": "scryfall_keyword"
+        },
+        {
+          "kind": "ability:static",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "recursion",
+          "source": "oracle_text"
+        }
+      ]
+    },
+    {
+      "name": "Aria of Flame",
+      "mana_cost": "{2}{R}",
+      "mana_value": 3.0,
+      "type": "Enchantment",
+      "oracle_text": "When this enchantment enters, each opponent gains 10 life.\nWhenever you cast an instant or sorcery spell, put a verse counter on this enchantment, then it deals damage equal to the number of verse counters on it to target player or planeswalker.",
+      "statline": "",
+      "keywords": [],
+      "color_identity": [
+        "R"
+      ],
+      "oracle_id": "406fad02-e1a6-4c24-b46d-976c548e1c78",
+      "is_commander": false,
+      "user_categories": [
+        "Burn",
+        "Maybeboard"
+      ],
+      "synergy": [
+        {
+          "kind": "ability:triggered",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "trigger:cast",
+          "source": "oracle_text"
+        }
+      ]
+    },
+    {
+      "name": "Mystical Tutor",
+      "mana_cost": "{U}",
+      "mana_value": 1.0,
+      "type": "Instant",
+      "oracle_text": "Search your library for an instant or sorcery card, reveal it, then shuffle and put that card on top.",
+      "statline": "",
+      "keywords": [],
+      "color_identity": [
+        "U"
+      ],
+      "oracle_id": "fb81f95c-70f8-4eb7-8d15-15d0ae23ec03",
+      "is_commander": false,
+      "user_categories": [
+        "Tutor"
+      ],
+      "synergy": [
+        {
+          "kind": "ability:static",
+          "source": "oracle_text"
+        }
+      ]
+    },
+    {
+      "name": "Muddle the Mixture",
+      "mana_cost": "{U}{U}",
+      "mana_value": 2.0,
+      "type": "Instant",
+      "oracle_text": "Counter target instant or sorcery spell.\nTransmute {1}{U}{U} ({1}{U}{U}, Discard this card: Search your library for a card with the same mana value as this card, reveal it, put it into your hand, then shuffle. Transmute only as a sorcery.)",
+      "statline": "",
+      "keywords": [
+        "Transmute"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "oracle_id": "0826cf7d-7ccc-459b-a92f-29dc169628f8",
+      "is_commander": false,
+      "user_categories": [
+        "Tutor"
+      ],
+      "synergy": [
+        {
+          "kind": "ability:static",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "zone_transition",
+          "from": "hand",
+          "to": "graveyard",
+          "source": "oracle_text"
+        }
+      ]
+    },
+    {
+      "name": "Fervent Mastery",
+      "mana_cost": "{3}{R}{R}",
+      "mana_value": 5.0,
+      "type": "Sorcery",
+      "oracle_text": "You may pay {2}{R}{R} rather than pay this spell's mana cost.\nIf the {2}{R}{R} cost was paid, an opponent discards any number of cards, then draws that many cards.\nSearch your library for up to three cards, put them into your hand, shuffle, then discard three cards at random.",
+      "statline": "",
+      "keywords": [],
+      "color_identity": [
+        "R"
+      ],
+      "oracle_id": "cae6d903-3fd6-422d-b21b-92201b78fa1b",
+      "is_commander": false,
+      "user_categories": [
+        "Tutor"
+      ],
+      "synergy": [
+        {
+          "kind": "ability:static",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "zone_transition",
+          "from": "hand",
+          "to": "graveyard",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "alternative cost",
+          "source": "oracle_text"
+        }
+      ]
+    },
+    {
+      "name": "Solve the Equation",
+      "mana_cost": "{2}{U}",
+      "mana_value": 3.0,
+      "type": "Sorcery",
+      "oracle_text": "Search your library for an instant or sorcery card, reveal it, put it into your hand, then shuffle.",
+      "statline": "",
+      "keywords": [],
+      "color_identity": [
+        "U"
+      ],
+      "oracle_id": "f02682f0-26c0-4032-9df3-273b6a45d0a8",
+      "is_commander": false,
+      "user_categories": [
+        "Tutor"
+      ],
+      "synergy": [
+        {
+          "kind": "ability:static",
+          "source": "oracle_text"
+        }
+      ]
+    },
+    {
+      "name": "Quiet Speculation",
+      "mana_cost": "{1}{U}",
+      "mana_value": 2.0,
+      "type": "Sorcery",
+      "oracle_text": "Search target player's library for up to three cards with flashback and put them into that player's graveyard. Then the player shuffles.",
+      "statline": "",
+      "keywords": [],
+      "color_identity": [
+        "U"
+      ],
+      "oracle_id": "938f48a9-766e-41d3-a425-9c3a6adf675b",
+      "is_commander": false,
+      "user_categories": [
+        "Maybeboard",
+        "Tutor"
+      ],
+      "synergy": [
+        {
+          "kind": "ability:static",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "recursion",
+          "source": "oracle_text"
+        }
+      ]
+    },
+    {
+      "name": "Intuition",
+      "mana_cost": "{2}{U}",
+      "mana_value": 3.0,
+      "type": "Instant",
+      "oracle_text": "Search your library for three cards and reveal them. Target opponent chooses one. Put that card into your hand and the rest into your graveyard. Then shuffle.",
+      "statline": "",
+      "keywords": [],
+      "color_identity": [
+        "U"
+      ],
+      "oracle_id": "3c9faba7-f2d3-4978-be94-020dc8003dc0",
+      "is_commander": false,
+      "user_categories": [
+        "Maybeboard",
+        "Tutor"
+      ],
+      "synergy": [
+        {
+          "kind": "ability:static",
+          "source": "oracle_text"
+        }
+      ]
+    },
+    {
+      "name": "Gifts Ungiven",
+      "mana_cost": "{3}{U}",
+      "mana_value": 4.0,
+      "type": "Instant",
+      "oracle_text": "Search your library for up to four cards with different names and reveal them. Target opponent chooses two of those cards. Put the chosen cards into your graveyard and the rest into your hand. Then shuffle.",
+      "statline": "",
+      "keywords": [],
+      "color_identity": [
+        "U"
+      ],
+      "oracle_id": "58aec411-167d-4709-8560-793eaaed62c5",
+      "is_commander": false,
+      "user_categories": [
+        "Tutor"
+      ],
+      "synergy": [
+        {
+          "kind": "ability:static",
+          "source": "oracle_text"
+        }
+      ]
+    },
+    {
+      "name": "Mystic Retrieval",
+      "mana_cost": "{3}{U}",
+      "mana_value": 4.0,
+      "type": "Sorcery",
+      "oracle_text": "Return target instant or sorcery card from your graveyard to your hand.\nFlashback {2}{R} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "statline": "",
+      "keywords": [
+        "Flashback"
+      ],
+      "color_identity": [
+        "R",
+        "U"
+      ],
+      "oracle_id": "b7cfbfa1-dd38-47ff-9138-fa6b247afc11",
+      "is_commander": false,
+      "user_categories": [
+        "Recursion"
+      ],
+      "synergy": [
+        {
+          "kind": "alternative cost",
+          "source": "scryfall_keyword"
+        },
+        {
+          "kind": "ability:static",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "zone_transition",
+          "from": "battlefield",
+          "to": "exile",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "zone_transition",
+          "from": "battlefield",
+          "to": "hand",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "zone_transition",
+          "from": "graveyard",
+          "to": "hand",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "cast_from_zone",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "recursion",
+          "source": "oracle_text"
+        }
+      ]
+    },
+    {
+      "name": "Past in Flames",
+      "mana_cost": "{3}{R}",
+      "mana_value": 4.0,
+      "type": "Sorcery",
+      "oracle_text": "Each instant and sorcery card in your graveyard gains flashback until end of turn. The flashback cost is equal to its mana cost.\nFlashback {4}{R} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "statline": "",
+      "keywords": [
+        "Flashback"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "oracle_id": "37a18736-5fe2-4897-809b-013497bdd890",
+      "is_commander": false,
+      "user_categories": [
+        "Recursion"
+      ],
+      "synergy": [
+        {
+          "kind": "alternative cost",
+          "source": "scryfall_keyword"
+        },
+        {
+          "kind": "ability:static",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "zone_transition",
+          "from": "battlefield",
+          "to": "exile",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "cast_from_zone",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "recursion",
+          "source": "oracle_text"
+        }
+      ]
+    },
+    {
+      "name": "Underworld Breach",
+      "mana_cost": "{1}{R}",
+      "mana_value": 2.0,
+      "type": "Enchantment",
+      "oracle_text": "Each nonland card in your graveyard has escape. The escape cost is equal to the card's mana cost plus exile three other cards from your graveyard. (You may cast cards from your graveyard for their escape cost.)\nAt the beginning of the end step, sacrifice this enchantment.",
+      "statline": "",
+      "keywords": [],
+      "color_identity": [
+        "R"
+      ],
+      "oracle_id": "27e0948b-9916-473b-8d8c-a51bdfbc7457",
+      "is_commander": false,
+      "user_categories": [
+        "Recursion"
+      ],
+      "synergy": [
+        {
+          "kind": "ability:static",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "ability:triggered",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "zone_transition",
+          "from": "battlefield",
+          "to": "graveyard",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "zone_transition",
+          "from": "battlefield",
+          "to": "exile",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "cast_from_zone",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "recursion",
+          "source": "oracle_text"
+        }
+      ]
+    },
+    {
+      "name": "Training Center",
+      "mana_cost": "",
+      "mana_value": 0.0,
+      "type": "Land",
+      "oracle_text": "This land enters tapped unless you have two or more opponents.\n{T}: Add {U} or {R}.",
+      "statline": "",
+      "keywords": [],
+      "color_identity": [
+        "R",
+        "U"
+      ],
+      "oracle_id": "e3570ac7-c593-40e3-bbd6-ec3da6d8158d",
+      "is_commander": false,
+      "user_categories": [
+        "Land"
+      ],
+      "synergy": [
+        {
+          "kind": "ability:activated",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "ability:static",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "mana_generator",
+          "source": "oracle_text"
+        }
+      ]
+    },
+    {
+      "name": "Command Tower",
+      "mana_cost": "",
+      "mana_value": 0.0,
+      "type": "Land",
+      "oracle_text": "{T}: Add one mana of any color in your commander's color identity.",
+      "statline": "",
+      "keywords": [],
+      "color_identity": [],
+      "oracle_id": "0895c9b7-ae7d-4bb3-af17-3b75deb50a25",
+      "is_commander": false,
+      "user_categories": [
+        "Land"
+      ],
+      "synergy": [
+        {
+          "kind": "ability:activated",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "mana_generator",
+          "source": "oracle_text"
+        }
+      ]
+    },
+    {
+      "name": "Frostboil Snarl",
+      "mana_cost": "",
+      "mana_value": 0.0,
+      "type": "Land",
+      "oracle_text": "As this land enters, you may reveal an Island or Mountain card from your hand. If you don't, this land enters tapped.\n{T}: Add {U} or {R}.",
+      "statline": "",
+      "keywords": [],
+      "color_identity": [
+        "R",
+        "U"
+      ],
+      "oracle_id": "7137aae6-260d-41de-8b4e-42a8cf752697",
+      "is_commander": false,
+      "user_categories": [
+        "Land"
+      ],
+      "synergy": [
+        {
+          "kind": "ability:activated",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "ability:replacement",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "mana_generator",
+          "source": "oracle_text"
+        }
+      ]
+    },
+    {
+      "name": "Island",
+      "mana_cost": "",
+      "mana_value": 0.0,
+      "type": "Basic Land \u2014 Island",
+      "oracle_text": "({T}: Add {U}.)",
+      "statline": "",
+      "keywords": [],
+      "color_identity": [
+        "U"
+      ],
+      "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+      "is_commander": false,
+      "user_categories": [
+        "Land"
+      ],
+      "synergy": [
+        {
+          "kind": "ability:static",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "mana_generator",
+          "source": "oracle_text"
+        }
+      ]
+    },
+    {
+      "name": "Mountain",
+      "mana_cost": "",
+      "mana_value": 0.0,
+      "type": "Basic Land \u2014 Mountain",
+      "oracle_text": "({T}: Add {R}.)",
+      "statline": "",
+      "keywords": [],
+      "color_identity": [
+        "R"
+      ],
+      "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+      "is_commander": false,
+      "user_categories": [
+        "Land"
+      ],
+      "synergy": [
+        {
+          "kind": "ability:static",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "mana_generator",
+          "source": "oracle_text"
+        }
+      ]
+    },
+    {
+      "name": "Shivan Reef",
+      "mana_cost": "",
+      "mana_value": 0.0,
+      "type": "Land",
+      "oracle_text": "{T}: Add {C}.\n{T}: Add {U} or {R}. This land deals 1 damage to you.",
+      "statline": "",
+      "keywords": [],
+      "color_identity": [
+        "R",
+        "U"
+      ],
+      "oracle_id": "0fe16212-66c3-4e45-a641-7391e9b2e304",
+      "is_commander": false,
+      "user_categories": [
+        "Land"
+      ],
+      "synergy": [
+        {
+          "kind": "ability:activated",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "mana_generator",
+          "source": "oracle_text"
+        }
+      ]
+    },
+    {
+      "name": "Brain Freeze",
+      "mana_cost": "{1}{U}",
+      "mana_value": 2.0,
+      "type": "Instant",
+      "oracle_text": "Target player mills three cards.\nStorm (When you cast this spell, copy it for each spell cast before it this turn. You may choose new targets for the copies.)",
+      "statline": "",
+      "keywords": [
+        "Storm",
+        "Mill"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "oracle_id": "464c0150-3dbc-403b-9ada-fef25ab1f29d",
+      "is_commander": false,
+      "user_categories": [
+        "Mill"
+      ],
+      "synergy": [
+        {
+          "kind": "cast trigger",
+          "source": "scryfall_keyword"
+        },
+        {
+          "kind": "ability:static",
+          "source": "oracle_text"
+        },
+        {
+          "kind": "zone_transition",
+          "from": "battlefield",
+          "to": "graveyard",
+          "source": "oracle_text"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,366 @@
+{
+  "__meta": {
+    "version": "v1",
+    "deck_id": "vadrik_time",
+    "deck_url": "https://archidekt.com/decks/6429634/vadrik_time",
+    "model": "qwen2.5:32b",
+    "written_at": 1794077741.5552964
+  },
+  "analysis": {
+    "card_groups_and_intra_synergies": [
+      {
+        "group_name": "Mana Generation and Reduction",
+        "cards": [
+          "Arcane Signet",
+          "Izzet Signet",
+          "Lotus Petal",
+          "Sol Ring",
+          "Talisman of Creativity",
+          "Urabrask // The Great Work",
+          "Ashling, Flame Dancer",
+          "Mizzix of the Izmagnus",
+          "Runaway Steam-Kin",
+          "Mana Geyser",
+          "Jeska's Will",
+          "Inner Fire",
+          "Searing Touch",
+          "Mizzix's Mastery",
+          "Faithless Looting",
+          "Borne Upon a Wind",
+          "Treasonous Ogre",
+          "Haze of Rage",
+          "The Celestus",
+          "Coalition Relic"
+        ],
+        "intra_synergy_explanation": "These cards provide mana generation, reduction, and additional effects that can be used to fuel other cards in the deck."
+      },
+      {
+        "group_name": "Card Draw and Search",
+        "cards": [
+          "Deep Analysis",
+          "Epic Experiment",
+          "Past in Flames",
+          "Quiet Speculation",
+          "Reiterate",
+          "Mystic Retrieval",
+          "Underworld Breach",
+          "Unexpected Windfall",
+          "Whispers of the Muse",
+          "Storm-Kiln Artist",
+          "Birgi, God of Storytelling // Harnfel, Horn of Bounty",
+          "Archmage Emeritus",
+          "Inspired Tinkering",
+          "Training Center",
+          "Command Tower",
+          "Fellwar Stone",
+          "Sudden Breakthrough",
+          "Mana Drain",
+          "Mana Leak",
+          "Spell Pierce",
+          "Negate",
+          "Syncopate",
+          "Unsubstantiate"
+        ],
+        "intra_synergy_explanation": "These cards provide card draw, search, and interaction that can be used to find and play other cards in the deck."
+      }
+    ],
+    "cross_group_synergies": [
+      {
+        "bridged_groups": [
+          "Mana Generation and Reduction",
+          "Card Draw and Search"
+        ],
+        "bridge_mechanism": "Cards like 'Urabrask // The Great Work' and 'Ashling, Flame Dancer' can reduce the cost of cards in the 'Card Draw and Search' group, allowing for more efficient card draw and search."
+      }
+    ],
+    "validated_cycles": [
+      {
+        "original_cycle": [
+          "Urabrask // The Great Work",
+          "Ashling, Flame Dancer",
+          "Mana Geyser"
+        ],
+        "is_valid": true,
+        "reasoning": "Urabrask // The Great Work reduces the cost of Ashling, Flame Dancer by 1, and Ashling, Flame Dancer generates 1 mana. Mana Geyser can generate additional mana to sustain the loop.",
+        "corrected_math": "Step A: Cast Urabrask // The Great Work for 1 mana. Step B: Cast Ashling, Flame Dancer for 3 mana (4 - 1 from Urabrask). Step C: Ashling, Flame Dancer generates 1 mana. Step D: Use Mana Geyser to generate additional mana to sustain the loop."
+      }
+    ],
+    "win_conditions_and_loops": [
+      {
+        "original_cycle": [
+          "Urabrask // The Great Work",
+          "Ashling, Flame Dancer",
+          "Mana Geyser"
+        ],
+        "is_valid": true,
+        "reasoning": "Urabrask // The Great Work reduces the cost of Ashling, Flame Dancer by 1, and Ashling, Flame Dancer generates 1 mana. Mana Geyser can generate additional mana to sustain the loop.",
+        "corrected_math": "Step A: Cast Urabrask // The Great Work for 1 mana. Step B: Cast Ashling, Flame Dancer for 3 mana (4 - 1 from Urabrask). Step C: Ashling, Flame Dancer generates 1 mana. Step D: Use Mana Geyser to generate additional mana to sustain the loop."
+      }
+    ],
+    "dead_weight_candidates": [
+      {
+        "card_name": "Chandra's Ignition",
+        "reason": "Does not provide significant mana generation or card draw/search."
+      },
+      {
+        "card_name": "Swiftfoot Boots",
+        "reason": "Does not provide significant mana generation or card draw/search."
+      },
+      {
+        "card_name": "Clout of the Dominus",
+        "reason": "Does not provide significant mana generation or card draw/search."
+      },
+      {
+        "card_name": "Finale of Revelation",
+        "reason": "Does not provide significant mana generation or card draw/search."
+      },
+      {
+        "card_name": "Merchant Scroll",
+        "reason": "Does not provide significant mana generation or card draw/search."
+      },
+      {
+        "card_name": "Invert // Invent",
+        "reason": "Does not provide significant mana generation or card draw/search."
+      },
+      {
+        "card_name": "Perplexing Test",
+        "reason": "Does not provide significant mana generation or card draw/search."
+      },
+      {
+        "card_name": "Serum Visions",
+        "reason": "Does not provide significant mana generation or card draw/search."
+      },
+      {
+        "card_name": "Preordain",
+        "reason": "Does not provide significant mana generation or card draw/search."
+      },
+      {
+        "card_name": "Anticipate",
+        "reason": "Does not provide significant mana generation or card draw/search."
+      },
+      {
+        "card_name": "Consider",
+        "reason": "Does not provide significant mana generation or card draw/search."
+      },
+      {
+        "card_name": "Whirlwind Denial",
+        "reason": "Does not provide significant mana generation or card draw/search."
+      },
+      {
+        "card_name": "Mana Drain",
+        "reason": "Does not provide significant mana generation or card draw/search."
+      },
+      {
+        "card_name": "Sleight of Hand",
+        "reason": "Does not provide significant mana generation or card draw/search."
+      },
+      {
+        "card_name": "Hero's Blade",
+        "reason": "Does not provide significant mana generation or card draw/search."
+      },
+      {
+        "card_name": "Water Wings",
+        "reason": "Does not provide significant mana generation or card draw/search."
+      },
+      {
+        "card_name": "Frantic Search",
+        "reason": "Does not provide significant mana generation or card draw/search."
+      },
+      {
+        "card_name": "Rhystic Study",
+        "reason": "Does not provide significant mana generation or card draw/search."
+      },
+      {
+        "card_name": "Windfall",
+        "reason": "Does not provide significant mana generation or card draw/search."
+      },
+      {
+        "card_name": "Brainstorm",
+        "reason": "Does not provide significant mana generation or card draw/search."
+      },
+      {
+        "card_name": "Fists of Flame",
+        "reason": "Does not provide significant mana generation or card draw/search."
+      },
+      {
+        "card_name": "Opt",
+        "reason": "Does not provide significant mana generation or card draw/search."
+      },
+      {
+        "card_name": "Tezzeret's Gambit",
+        "reason": "Does not provide significant mana generation or card draw/search."
+      },
+      {
+        "card_name": "Stroke of Genius",
+        "reason": "Does not provide significant mana generation or card draw/search."
+      },
+      {
+        "card_name": "Ponder",
+        "reason": "Does not provide significant mana generation or card draw/search."
+      },
+      {
+        "card_name": "Mana Leak",
+        "reason": "Does not provide significant mana generation or card draw/search."
+      },
+      {
+        "card_name": "Spell Pierce",
+        "reason": "Does not provide significant mana generation or card draw/search."
+      },
+      {
+        "card_name": "Disrupt",
+        "reason": "Does not provide significant mana generation or card draw/search."
+      },
+      {
+        "card_name": "Resculpt",
+        "reason": "Does not provide significant mana generation or card draw/search."
+      },
+      {
+        "card_name": "Negate",
+        "reason": "Does not provide significant mana generation or card draw/search."
+      },
+      {
+        "card_name": "Syncopate",
+        "reason": "Does not provide significant mana generation or card draw/search."
+      },
+      {
+        "card_name": "Unsubstantiate",
+        "reason": "Does not provide significant mana generation or card draw/search."
+      },
+      {
+        "card_name": "Curse of the Swine",
+        "reason": "Does not provide significant mana generation or card draw/search."
+      },
+      {
+        "card_name": "Rewind",
+        "reason": "Does not provide significant mana generation or card draw/search."
+      },
+      {
+        "card_name": "Rapid Hybridization",
+        "reason": "Does not provide significant mana generation or card draw/search."
+      },
+      {
+        "card_name": "Arcane Denial",
+        "reason": "Does not provide significant mana generation or card draw/search."
+      },
+      {
+        "card_name": "Narset's Reversal",
+        "reason": "Does not provide significant mana generation or card draw/search."
+      },
+      {
+        "card_name": "Mystical Tutor",
+        "reason": "Does not provide significant mana generation or card draw/search."
+      },
+      {
+        "card_name": "Muddle the Mixture",
+        "reason": "Does not provide significant mana generation or card draw/search."
+      },
+      {
+        "card_name": "Solve the Equation",
+        "reason": "Does not provide significant mana generation or card draw/search."
+      },
+      {
+        "card_name": "Intuition",
+        "reason": "Does not provide significant mana generation or card draw/search."
+      },
+      {
+        "card_name": "Gifts Ungiven",
+        "reason": "Does not provide significant mana generation or card draw/search."
+      }
+    ],
+    "_cited_card_data": {
+      "Ashling, Flame Dancer": {
+        "oracle_text": "You don't lose unspent red mana as steps and phases end.\nMagecraft \u2014 Whenever you cast or copy an instant or sorcery spell, discard a card, then draw a card. If this is the second time this ability has resolved this turn, Ashling deals 2 damage to each opponent and each creature they control. If it's the third time, add {R}{R}{R}{R}.",
+        "summary": "Prevents loss of unspent red mana and provides card draw and damage or mana based on the number of instants or sorceries cast or copied.",
+        "mana_value": 4.0
+      },
+      "Mana Geyser": {
+        "oracle_text": "Add {R} for each tapped land your opponents control.",
+        "summary": "Add {R} for each tapped land your opponents control.",
+        "mana_value": 5.0
+      },
+      "Urabrask // The Great Work": {
+        "oracle_text": "First strike\nWhenever you cast an instant or sorcery spell, Urabrask deals 1 damage to target opponent. Add {R}.\n{R}: Exile Urabrask, then return it to the battlefield transformed under its owner's control. Activate only as a sorcery and only if you've cast three or more instant and/or sorcery spells this turn.\n//\n(As this Saga enters and after your draw step, add a lore counter.)\nI \u2014 This Saga deals 3 damage to target opponent and each creature they control.\nII \u2014 Create three Treasure tokens.\nIII \u2014 Until end of turn, you may cast instant and sorcery spells from any graveyard. If a spell cast this way would be put into a graveyard, exile it instead. Exile this Saga, then return it to the battlefield (front face up).",
+        "summary": "Deals damage and adds red mana when instants or sorceries are cast, transforms with three or more instants/sorceries cast, and has a saga ability that deals damage, creates Treasures, and allows casting instants and sorceries from graveyards.",
+        "mana_value": 4.0
+      },
+      "Whispers of the Muse": {
+        "oracle_text": "Buyback {5} (You may pay an additional {5} as you cast this spell. If you do, put this card into your hand as it resolves.)\nDraw a card.",
+        "summary": "Draw a card and optionally pay {5} to put the card into your hand after it resolves.",
+        "mana_value": 1.0
+      },
+      "Unexpected Windfall": {
+        "oracle_text": "As an additional cost to cast this spell, discard a card.\nDraw two cards and create two Treasure tokens. (They're artifacts with \"{T}, Sacrifice this token: Add one mana of any color.\")",
+        "summary": "As an additional cost to cast this spell, discard a card. Draw two cards and create two Treasure tokens.",
+        "mana_value": 4.0
+      },
+      "Deep Analysis": {
+        "oracle_text": "Target player draws two cards.\nFlashback\u2014{1}{U}, Pay 3 life. (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+        "summary": "Target player draws two cards. Flashback\u2014{1}{U}, Pay 3 life.",
+        "mana_value": 4.0
+      },
+      "Epic Experiment": {
+        "oracle_text": "Exile the top X cards of your library. You may cast instant and sorcery spells with mana value X or less from among them without paying their mana costs. Then put all cards exiled this way that weren't cast into your graveyard.",
+        "summary": "Exile top X cards of your library, allowing you to cast instants and sorceries with mana value X or less without paying their mana costs, then put the rest into your graveyard.",
+        "mana_value": 2.0
+      },
+      "Reiterate": {
+        "oracle_text": "Buyback {3} (You may pay an additional {3} as you cast this spell. If you do, put this card into your hand as it resolves.)\nCopy target instant or sorcery spell. You may choose new targets for the copy.",
+        "summary": "Copy target instant or sorcery spell and allow new targets, with an option to buyback the card.",
+        "mana_value": 3.0
+      },
+      "Quiet Speculation": {
+        "oracle_text": "Search target player's library for up to three cards with flashback and put them into that player's graveyard. Then the player shuffles.",
+        "summary": "Searches target player's library for up to three cards with flashback and puts them into that player's graveyard, then shuffles.",
+        "mana_value": 2.0
+      },
+      "Mystic Retrieval": {
+        "oracle_text": "Return target instant or sorcery card from your graveyard to your hand.\nFlashback {2}{R} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+        "summary": "Return target instant or sorcery card from your graveyard to your hand. Flashback {2}{R} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+        "mana_value": 4.0
+      },
+      "Past in Flames": {
+        "oracle_text": "Each instant and sorcery card in your graveyard gains flashback until end of turn. The flashback cost is equal to its mana cost.\nFlashback {4}{R} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+        "summary": "Enables instants and sorceries in graveyard to be cast with flashback until end of turn.",
+        "mana_value": 4.0
+      },
+      "Underworld Breach": {
+        "oracle_text": "Each nonland card in your graveyard has escape. The escape cost is equal to the card's mana cost plus exile three other cards from your graveyard. (You may cast cards from your graveyard for their escape cost.)\nAt the beginning of the end step, sacrifice this enchantment.",
+        "summary": "Enables casting nonland cards from graveyard with escape ability, sacrificing itself at the end of each end step.",
+        "mana_value": 2.0
+      }
+    },
+    "diagnostics": {
+      "dropped_edges": 824,
+      "clusters_provided": 1
+    },
+    "fact_checked_loops": [
+      {
+        "original_cycle": [
+          "Urabrask // The Great Work",
+          "Ashling, Flame Dancer",
+          "Mana Geyser"
+        ],
+        "is_valid": true,
+        "reasoning": "Urabrask // The Great Work reduces the cost of Ashling, Flame Dancer by 1, and Ashling, Flame Dancer generates 1 mana. Mana Geyser can generate additional mana to sustain the loop.",
+        "corrected_math": "Step A: Cast Urabrask // The Great Work for 1 mana. Step B: Cast Ashling, Flame Dancer for 3 mana (4 - 1 from Urabrask). Step C: Ashling, Flame Dancer generates 1 mana. Step D: Use Mana Geyser to generate additional mana to sustain the loop."
+      }
+    ],
+    "rejected_loops": [
+      {
+        "original_cycle": [
+          "Deep Analysis",
+          "Epic Experiment",
+          "Past in Flames",
+          "Quiet Speculation",
+          "Reiterate",
+          "Mystic Retrieval",
+          "Underworld Breach",
+          "Unexpected Windfall",
+          "Whispers of the Muse"
+        ],
+        "is_valid": false,
+        "hallucination_reason": "The proposed velocity chain does not form a loop that generates mana or reduces costs in a way that sustains itself. The cards listed are for card draw and searching, but do not provide a mechanism to generate the necessary mana to sustain a loop."
+      }
+    ]
+  }
+}

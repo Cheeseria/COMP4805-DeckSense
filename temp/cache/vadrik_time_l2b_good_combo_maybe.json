@@ -1,0 +1,238 @@
+{
+  "__meta": {
+    "version": "v1",
+    "deck_id": "vadrik_time",
+    "deck_url": "https://archidekt.com/decks/6429634/vadrik_time",
+    "model": "qwen2.5:32b",
+    "written_at": 1794076234.2095485
+  },
+  "analysis": {
+    "card_groups_and_intra_synergies": [
+      {
+        "group_name": "Mana Acceleration and Artifact Synergy",
+        "cards": [
+          "Arcane Signet",
+          "Izzet Signet",
+          "Sol Ring",
+          "Lotus Petal",
+          "Talisman of Creativity",
+          "Command Tower",
+          "Coalition Relic",
+          "Mizzix's Mastery",
+          "Mizzix of the Izmagnus",
+          "Storm-Kiln Artist",
+          "Urabrask // The Great Work"
+        ],
+        "intra_synergy_explanation": "These cards provide mana acceleration and artifact synergies, allowing for quick ramp and card advantage."
+      },
+      {
+        "group_name": "Card Draw and Search Synergy",
+        "cards": [
+          "Deep Analysis",
+          "Epic Experiment",
+          "Faithless Looting",
+          "Mystic Retrieval",
+          "Past in Flames",
+          "Quiet Speculation",
+          "Reiterate",
+          "Sudden Breakthrough",
+          "Whispers of the Muse",
+          "Inner Fire",
+          "Mana Geyser",
+          "Jeska's Will",
+          "Underworld Breach"
+        ],
+        "intra_synergy_explanation": "These cards provide card draw and search capabilities, allowing for efficient deck manipulation and resource generation."
+      },
+      {
+        "group_name": "Combat and Damage Synergy",
+        "cards": [
+          "Ashling, Flame Dancer",
+          "Goblin Electromancer",
+          "Haze of Rage",
+          "Searing Touch",
+          "Grapeshot",
+          "Jaya's Immolating Inferno",
+          "Electrodominance",
+          "Runaway Steam-Kin",
+          "Treasonous Ogre",
+          "Birgi, God of Storytelling // Harnfel, Horn of Bounty"
+        ],
+        "intra_synergy_explanation": "These cards provide combat and damage synergies, allowing for aggressive plays and potential combat wins."
+      }
+    ],
+    "cross_group_synergies": [
+      {
+        "bridged_groups": [
+          "Mana Acceleration and Artifact Synergy",
+          "Card Draw and Search Synergy"
+        ],
+        "bridge_mechanism": "Urabrask // The Great Work and Mizzix's Mastery provide additional mana and card draw, bridging the two groups."
+      },
+      {
+        "bridged_groups": [
+          "Card Draw and Search Synergy",
+          "Combat and Damage Synergy"
+        ],
+        "bridge_mechanism": "Cards like Haze of Rage and Searing Touch can be cast with additional mana from card draw and search, enhancing combat damage."
+      }
+    ],
+    "validated_cycles": [
+      {
+        "original_cycle": [
+          "Urabrask // The Great Work",
+          "Searing Touch"
+        ],
+        "is_valid": true,
+        "reasoning": "Urabrask // The Great Work triggers when Searing Touch is cast, generating 1 colorless mana. Searing Touch costs 1 colorless and 1 red mana, and the generated mana can be used to cast Searing Touch again.",
+        "corrected_math": "Step A: Cast Searing Touch for 1 colorless and 1 red mana. Step B: Urabrask // The Great Work triggers, generating 1 colorless mana. Step C: Use the generated 1 colorless mana to cast Searing Touch again."
+      }
+    ],
+    "win_conditions_and_loops": [
+      {
+        "original_cycle": [
+          "Urabrask // The Great Work",
+          "Searing Touch"
+        ],
+        "is_valid": true,
+        "reasoning": "Urabrask // The Great Work triggers when Searing Touch is cast, generating 1 colorless mana. Searing Touch costs 1 colorless and 1 red mana, and the generated mana can be used to cast Searing Touch again.",
+        "corrected_math": "Step A: Cast Searing Touch for 1 colorless and 1 red mana. Step B: Urabrask // The Great Work triggers, generating 1 colorless mana. Step C: Use the generated 1 colorless mana to cast Searing Touch again."
+      }
+    ],
+    "dead_weight_candidates": [
+      {
+        "card_name": "Chandra's Ignition",
+        "reason": "Does not provide significant synergy with the rest of the deck and lacks a strong win condition."
+      },
+      {
+        "card_name": "Swiftfoot Boots",
+        "reason": "Does not provide significant synergy with the rest of the deck and lacks a strong win condition."
+      },
+      {
+        "card_name": "Clout of the Dominus",
+        "reason": "Does not provide significant synergy with the rest of the deck and lacks a strong win condition."
+      },
+      {
+        "card_name": "Finale of Revelation",
+        "reason": "Does not provide significant synergy with the rest of the deck and lacks a strong win condition."
+      },
+      {
+        "card_name": "Merchant Scroll",
+        "reason": "Does not provide significant synergy with the rest of the deck and lacks a strong win condition."
+      },
+      {
+        "card_name": "Invert // Invent",
+        "reason": "Does not provide significant synergy with the rest of the deck and lacks a strong win condition."
+      },
+      {
+        "card_name": "Perplexing Test",
+        "reason": "Does not provide significant synergy with the rest of the deck and lacks a strong win condition."
+      },
+      {
+        "card_name": "Serum Visions",
+        "reason": "Does not provide significant synergy with the rest of the deck and lacks a strong win condition."
+      },
+      {
+        "card_name": "Preordain",
+        "reason": "Does not provide significant synergy with the rest of the deck and lacks a strong win condition."
+      },
+      {
+        "card_name": "Anticipate",
+        "reason": "Does not provide significant synergy with the rest of the deck and lacks a strong win condition."
+      }
+    ],
+    "_cited_card_data": {
+      "Haze of Rage": {
+        "oracle_text": "Buyback {2} (You may pay an additional {2} as you cast this spell. If you do, put this card into your hand as it resolves.)\nCreatures you control get +1/+0 until end of turn.\nStorm (When you cast this spell, copy it for each spell cast before it this turn.)",
+        "summary": "Creatures you control get +1/+0 until end of turn. Can be put into hand as it resolves if Buyback is paid. Copies itself for each spell cast before it this turn due to Storm.",
+        "mana_value": 2.0
+      },
+      "Searing Touch": {
+        "oracle_text": "Buyback {4} (You may pay an additional {4} as you cast this spell. If you do, put this card into your hand as it resolves.)\nSearing Touch deals 1 damage to any target.",
+        "summary": "Deals 1 damage to any target and can be put into hand as it resolves if Buyback is paid.",
+        "mana_value": 1.0
+      },
+      "Mizzix's Mastery": {
+        "oracle_text": "Exile target card that's an instant or sorcery from your graveyard. For each card exiled this way, copy it, and you may cast the copy without paying its mana cost. Exile Mizzix's Mastery.\nOverload {5}{R}{R}{R} (You may cast this spell for its overload cost. If you do, change \"target\" in its text to \"each.\")",
+        "summary": "Exile target card that's an instant or sorcery from your graveyard and copy it, allowing you to cast the copy without paying its mana cost.",
+        "mana_value": 4.0
+      },
+      "Ashling, Flame Dancer": {
+        "oracle_text": "You don't lose unspent red mana as steps and phases end.\nMagecraft \u2014 Whenever you cast or copy an instant or sorcery spell, discard a card, then draw a card. If this is the second time this ability has resolved this turn, Ashling deals 2 damage to each opponent and each creature they control. If it's the third time, add {R}{R}{R}{R}.",
+        "summary": "Prevents loss of unspent red mana and provides card draw and damage or mana based on the number of instants or sorceries cast or copied.",
+        "mana_value": 4.0
+      },
+      "Urabrask // The Great Work": {
+        "oracle_text": "First strike\nWhenever you cast an instant or sorcery spell, Urabrask deals 1 damage to target opponent. Add {R}.\n{R}: Exile Urabrask, then return it to the battlefield transformed under its owner's control. Activate only as a sorcery and only if you've cast three or more instant and/or sorcery spells this turn.\n//\n(As this Saga enters and after your draw step, add a lore counter.)\nI \u2014 This Saga deals 3 damage to target opponent and each creature they control.\nII \u2014 Create three Treasure tokens.\nIII \u2014 Until end of turn, you may cast instant and sorcery spells from any graveyard. If a spell cast this way would be put into a graveyard, exile it instead. Exile this Saga, then return it to the battlefield (front face up).",
+        "summary": "Deals damage and adds red mana when instants or sorceries are cast, transforms with three or more instants/sorceries cast, and has a saga ability that deals damage, creates Treasures, and allows casting instants and sorceries from graveyards.",
+        "mana_value": 4.0
+      },
+      "Deep Analysis": {
+        "oracle_text": "Target player draws two cards.\nFlashback\u2014{1}{U}, Pay 3 life. (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+        "summary": "Target player draws two cards. Flashback\u2014{1}{U}, Pay 3 life.",
+        "mana_value": 4.0
+      },
+      "Epic Experiment": {
+        "oracle_text": "Exile the top X cards of your library. You may cast instant and sorcery spells with mana value X or less from among them without paying their mana costs. Then put all cards exiled this way that weren't cast into your graveyard.",
+        "summary": "Exile top X cards of your library, allowing you to cast instants and sorceries with mana value X or less without paying their mana costs, then put the rest into your graveyard.",
+        "mana_value": 2.0
+      },
+      "Reiterate": {
+        "oracle_text": "Buyback {3} (You may pay an additional {3} as you cast this spell. If you do, put this card into your hand as it resolves.)\nCopy target instant or sorcery spell. You may choose new targets for the copy.",
+        "summary": "Copy target instant or sorcery spell and allow new targets, with an option to buyback the card.",
+        "mana_value": 3.0
+      },
+      "Past in Flames": {
+        "oracle_text": "Each instant and sorcery card in your graveyard gains flashback until end of turn. The flashback cost is equal to its mana cost.\nFlashback {4}{R} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+        "summary": "Enables instants and sorceries in graveyard to be cast with flashback until end of turn.",
+        "mana_value": 4.0
+      }
+    },
+    "diagnostics": {
+      "dropped_edges": 824,
+      "clusters_provided": 1
+    },
+    "fact_checked_loops": [
+      {
+        "original_cycle": [
+          "Urabrask // The Great Work",
+          "Searing Touch"
+        ],
+        "is_valid": true,
+        "reasoning": "Urabrask // The Great Work triggers when Searing Touch is cast, generating 1 colorless mana. Searing Touch costs 1 colorless and 1 red mana, and the generated mana can be used to cast Searing Touch again.",
+        "corrected_math": "Step A: Cast Searing Touch for 1 colorless and 1 red mana. Step B: Urabrask // The Great Work triggers, generating 1 colorless mana. Step C: Use the generated 1 colorless mana to cast Searing Touch again."
+      }
+    ],
+    "rejected_loops": [
+      {
+        "original_cycle": [
+          "Urabrask // The Great Work",
+          "Mizzix's Mastery",
+          "Searing Touch",
+          "Haze of Rage"
+        ],
+        "is_valid": false,
+        "hallucination_reason": "Mizzix's Mastery requires exiling a card from the graveyard to copy and cast it without paying its mana cost. This does not generate the necessary mana to sustain the loop."
+      },
+      {
+        "original_cycle": [
+          "Ashling, Flame Dancer",
+          "Haze of Rage",
+          "Searing Touch"
+        ],
+        "is_valid": false,
+        "hallucination_reason": "Ashling, Flame Dancer and Haze of Rage do not generate the necessary mana to sustain the loop. Searing Touch requires 1 colorless and 1 red mana, which is not generated by the cards in the loop."
+      },
+      {
+        "original_cycle": [
+          "Deep Analysis",
+          "Epic Experiment",
+          "Past in Flames",
+          "Reiterate"
+        ],
+        "is_valid": false,
+        "hallucination_reason": "These cards do not generate the necessary mana to sustain the loop. They provide card draw and spell copying but do not generate the required mana to cast each other repeatedly."
+      }
+    ]
+  }
+}
