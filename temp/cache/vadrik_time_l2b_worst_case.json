@@ -1,0 +1,379 @@
+{
+  "__meta": {
+    "version": "v1",
+    "deck_id": "vadrik_time",
+    "deck_url": "https://archidekt.com/decks/6429634/vadrik_time",
+    "model": "qwen2.5:32b",
+    "written_at": 1794139201.8152776
+  },
+  "analysis": {
+    "card_groups_and_intra_synergies": [
+      {
+        "group_name": "Mana Generation and Card Draw",
+        "cards": [
+          "Runaway Steam-Kin",
+          "Sudden Breakthrough",
+          "Inner Fire",
+          "Mana Geyser",
+          "Jeska's Will",
+          "Birgi, God of Storytelling // Harnfel, Horn of Bounty",
+          "Storm-Kiln Artist",
+          "Arcane Signet",
+          "Fellwar Stone",
+          "Sol Ring",
+          "Talisman of Creativity",
+          "Seething Song",
+          "Izzet Signet",
+          "Lotus Petal"
+        ],
+        "intra_synergy_explanation": "These cards generate mana and can be used to fuel card draw effects, creating a cycle of mana generation and card advantage."
+      },
+      {
+        "group_name": "Card Draw and Mana Utilization",
+        "cards": [
+          "Whispers of the Muse",
+          "Ingenious Mastery",
+          "Tezzeret's Gambit",
+          "Daze",
+          "Reiterate",
+          "Muddle the Mixture",
+          "Fervent Mastery"
+        ],
+        "intra_synergy_explanation": "These cards utilize mana to draw cards or perform other beneficial actions, creating a cycle of card draw and mana utilization."
+      }
+    ],
+    "cross_group_synergies": [
+      {
+        "bridged_groups": [
+          "Mana Generation and Card Draw",
+          "Card Draw and Mana Utilization"
+        ],
+        "bridge_mechanism": "Mana generation cards provide the necessary mana to activate card draw and mana utilization cards, creating a continuous cycle of card draw and mana generation."
+      }
+    ],
+    "validated_cycles": [],
+    "win_conditions_and_loops": [],
+    "dead_weight_candidates": [
+      {
+        "card_name": "Temporal Fissure",
+        "reason": "Does not fit into the mana generation or card draw cycles and has limited utility."
+      },
+      {
+        "card_name": "Goblin Electromancer",
+        "reason": "Does not fit into the mana generation or card draw cycles and has limited utility."
+      },
+      {
+        "card_name": "Archmage Emeritus",
+        "reason": "Does not fit into the mana generation or card draw cycles and has limited utility."
+      },
+      {
+        "card_name": "Chandra's Ignition",
+        "reason": "Does not fit into the mana generation or card draw cycles and has limited utility."
+      },
+      {
+        "card_name": "Swiftfoot Boots",
+        "reason": "Does not fit into the mana generation or card draw cycles and has limited utility."
+      },
+      {
+        "card_name": "Mizzix's Mastery",
+        "reason": "Does not fit into the mana generation or card draw cycles and has limited utility."
+      },
+      {
+        "card_name": "Mindsplice Apparatus",
+        "reason": "Does not fit into the mana generation or card draw cycles and has limited utility."
+      },
+      {
+        "card_name": "Borne Upon a Wind",
+        "reason": "Does not fit into the mana generation or card draw cycles and has limited utility."
+      },
+      {
+        "card_name": "Clout of the Dominus",
+        "reason": "Does not fit into the mana generation or card draw cycles and has limited utility."
+      },
+      {
+        "card_name": "Finale of Revelation",
+        "reason": "Does not fit into the mana generation or card draw cycles and has limited utility."
+      },
+      {
+        "card_name": "March of Swirling Mist",
+        "reason": "Does not fit into the mana generation or card draw cycles and has limited utility."
+      },
+      {
+        "card_name": "Merchant Scroll",
+        "reason": "Does not fit into the mana generation or card draw cycles and has limited utility."
+      },
+      {
+        "card_name": "Perplexing Test",
+        "reason": "Does not fit into the mana generation or card draw cycles and has limited utility."
+      },
+      {
+        "card_name": "Serum Visions",
+        "reason": "Does not fit into the mana generation or card draw cycles and has limited utility."
+      },
+      {
+        "card_name": "Preordain",
+        "reason": "Does not fit into the mana generation or card draw cycles and has limited utility."
+      },
+      {
+        "card_name": "Anticipate",
+        "reason": "Does not fit into the mana generation or card draw cycles and has limited utility."
+      },
+      {
+        "card_name": "Consider",
+        "reason": "Does not fit into the mana generation or card draw cycles and has limited utility."
+      },
+      {
+        "card_name": "An Offer You Can't Refuse",
+        "reason": "Does not fit into the mana generation or card draw cycles and has limited utility."
+      },
+      {
+        "card_name": "Sleight of Hand",
+        "reason": "Does not fit into the mana generation or card draw cycles and has limited utility."
+      },
+      {
+        "card_name": "Vadrik, Astral Archmage",
+        "reason": "Does not fit into the mana generation or card draw cycles and has limited utility."
+      },
+      {
+        "card_name": "Mizzix of the Izmagnus",
+        "reason": "Does not fit into the mana generation or card draw cycles and has limited utility."
+      },
+      {
+        "card_name": "Urabrask // The Great Work",
+        "reason": "Does not fit into the mana generation or card draw cycles and has limited utility."
+      },
+      {
+        "card_name": "Hero's Blade",
+        "reason": "Does not fit into the mana generation or card draw cycles and has limited utility."
+      },
+      {
+        "card_name": "Water Wings",
+        "reason": "Does not fit into the mana generation or card draw cycles and has limited utility."
+      },
+      {
+        "card_name": "Frantic Search",
+        "reason": "Does not fit into the mana generation or card draw cycles and has limited utility."
+      },
+      {
+        "card_name": "Pirate's Pillage",
+        "reason": "Does not fit into the mana generation or card draw cycles and has limited utility."
+      },
+      {
+        "card_name": "Rhystic Study",
+        "reason": "Does not fit into the mana generation or card draw cycles and has limited utility."
+      },
+      {
+        "card_name": "Windfall",
+        "reason": "Does not fit into the mana generation or card draw cycles and has limited utility."
+      },
+      {
+        "card_name": "Big Score",
+        "reason": "Does not fit into the mana generation or card draw cycles and has limited utility."
+      },
+      {
+        "card_name": "Brainstorm",
+        "reason": "Does not fit into the mana generation or card draw cycles and has limited utility."
+      },
+      {
+        "card_name": "Fists of Flame",
+        "reason": "Does not fit into the mana generation or card draw cycles and has limited utility."
+      },
+      {
+        "card_name": "Opt",
+        "reason": "Does not fit into the mana generation or card draw cycles and has limited utility."
+      },
+      {
+        "card_name": "Unexpected Windfall",
+        "reason": "Does not fit into the mana generation or card draw cycles and has limited utility."
+      },
+      {
+        "card_name": "Deep Analysis",
+        "reason": "Does not fit into the mana generation or card draw cycles and has limited utility."
+      },
+      {
+        "card_name": "Epic Experiment",
+        "reason": "Does not fit into the mana generation or card draw cycles and has limited utility."
+      },
+      {
+        "card_name": "Stroke of Genius",
+        "reason": "Does not fit into the mana generation or card draw cycles and has limited utility."
+      },
+      {
+        "card_name": "Ponder",
+        "reason": "Does not fit into the mana generation or card draw cycles and has limited utility."
+      },
+      {
+        "card_name": "Mana Leak",
+        "reason": "Does not fit into the mana generation or card draw cycles and has limited utility."
+      },
+      {
+        "card_name": "Spell Pierce",
+        "reason": "Does not fit into the mana generation or card draw cycles and has limited utility."
+      },
+      {
+        "card_name": "Disrupt",
+        "reason": "Does not fit into the mana generation or card draw cycles and has limited utility."
+      },
+      {
+        "card_name": "Grapeshot",
+        "reason": "Does not fit into the mana generation or card draw cycles and has limited utility."
+      },
+      {
+        "card_name": "Resculpt",
+        "reason": "Does not fit into the mana generation or card draw cycles and has limited utility."
+      },
+      {
+        "card_name": "Jaya's Immolating Inferno",
+        "reason": "Does not fit into the mana generation or card draw cycles and has limited utility."
+      },
+      {
+        "card_name": "Negate",
+        "reason": "Does not fit into the mana generation or card draw cycles and has limited utility."
+      },
+      {
+        "card_name": "Syncopate",
+        "reason": "Does not fit into the mana generation or card draw cycles and has limited utility."
+      },
+      {
+        "card_name": "Unsubstantiate",
+        "reason": "Does not fit into the mana generation or card draw cycles and has limited utility."
+      },
+      {
+        "card_name": "Curse of the Swine",
+        "reason": "Does not fit into the mana generation or card draw cycles and has limited utility."
+      },
+      {
+        "card_name": "Rewind",
+        "reason": "Does not fit into the mana generation or card draw cycles and has limited utility."
+      },
+      {
+        "card_name": "Rapid Hybridization",
+        "reason": "Does not fit into the mana generation or card draw cycles and has limited utility."
+      },
+      {
+        "card_name": "Electrodominance",
+        "reason": "Does not fit into the mana generation or card draw cycles and has limited utility."
+      },
+      {
+        "card_name": "Arcane Denial",
+        "reason": "Does not fit into the mana generation or card draw cycles and has limited utility."
+      },
+      {
+        "card_name": "Narset's Reversal",
+        "reason": "Does not fit into the mana generation or card draw cycles and has limited utility."
+      },
+      {
+        "card_name": "Aria of Flame",
+        "reason": "Does not fit into the mana generation or card draw cycles and has limited utility."
+      },
+      {
+        "card_name": "Mystical Tutor",
+        "reason": "Does not fit into the mana generation or card draw cycles and has limited utility."
+      },
+      {
+        "card_name": "Solve the Equation",
+        "reason": "Does not fit into the mana generation or card draw cycles and has limited utility."
+      },
+      {
+        "card_name": "Quiet Speculation",
+        "reason": "Does not fit into the mana generation or card draw cycles and has limited utility."
+      },
+      {
+        "card_name": "Intuition",
+        "reason": "Does not fit into the mana generation or card draw cycles and has limited utility."
+      },
+      {
+        "card_name": "Mystic Retrieval",
+        "reason": "Does not fit into the mana generation or card draw cycles and has limited utility."
+      },
+      {
+        "card_name": "Past in Flames",
+        "reason": "Does not fit into the mana generation or card draw cycles and has limited utility."
+      },
+      {
+        "card_name": "Underworld Breach",
+        "reason": "Does not fit into the mana generation or card draw cycles and has limited utility."
+      },
+      {
+        "card_name": "Brain Freeze",
+        "reason": "Does not fit into the mana generation or card draw cycles and has limited utility."
+      }
+    ],
+    "_cited_card_data": {
+      "Runaway Steam-Kin": {
+        "oracle_text": "Whenever you cast a red spell, if this creature has fewer than three +1/+1 counters on it, put a +1/+1 counter on this creature.\nRemove three +1/+1 counters from this creature: Add {R}{R}{R}.",
+        "summary": "Gains +1/+1 counters when red spells are cast and can produce three red mana by removing three +1/+1 counters.",
+        "mana_value": 2.0
+      },
+      "Whispers of the Muse": {
+        "oracle_text": "Buyback {5} (You may pay an additional {5} as you cast this spell. If you do, put this card into your hand as it resolves.)\nDraw a card.",
+        "summary": "Draw a card and optionally return the spell to your hand for an additional {5} cost.",
+        "mana_value": 1.0
+      },
+      "Ingenious Mastery": {
+        "oracle_text": "You may pay {2}{U} rather than pay this spell's mana cost.\nIf the {2}{U} cost was paid, you draw three cards, then an opponent creates two Treasure tokens and they scry 2. If that cost wasn't paid, you draw X cards.",
+        "summary": "Allows paying {2}{U} to draw three cards and create two Treasure tokens, or draw X cards if the alternative cost is not used.",
+        "mana_value": 3.0
+      },
+      "Tezzeret's Gambit": {
+        "oracle_text": "({U/P} can be paid with either {U} or 2 life.)\nDraw two cards, then proliferate. (Choose any number of permanents and/or players, then give each another counter of each kind already there.)",
+        "summary": "Draw two cards and proliferate.",
+        "mana_value": 4.0
+      },
+      "Daze": {
+        "oracle_text": "You may return an Island you control to its owner's hand rather than pay this spell's mana cost.\nCounter target spell unless its controller pays {1}.",
+        "summary": "Counter target spell unless its controller pays {1}.",
+        "mana_value": 2.0
+      },
+      "Reiterate": {
+        "oracle_text": "Buyback {3} (You may pay an additional {3} as you cast this spell. If you do, put this card into your hand as it resolves.)\nCopy target instant or sorcery spell. You may choose new targets for the copy.",
+        "summary": "Copy target instant or sorcery spell and optionally return this card to hand with buyback.",
+        "mana_value": 3.0
+      },
+      "Muddle the Mixture": {
+        "oracle_text": "Counter target instant or sorcery spell.\nTransmute {1}{U}{U} ({1}{U}{U}, Discard this card: Search your library for a card with the same mana value as this card, reveal it, put it into your hand, then shuffle. Transmute only as a sorcery.)",
+        "summary": "Counters a target instant or sorcery spell and has a transmute ability to search for a card with the same mana value.",
+        "mana_value": 2.0
+      },
+      "Fervent Mastery": {
+        "oracle_text": "You may pay {2}{R}{R} rather than pay this spell's mana cost.\nIf the {2}{R}{R} cost was paid, an opponent discards any number of cards, then draws that many cards.\nSearch your library for up to three cards, put them into your hand, shuffle, then discard three cards at random.",
+        "summary": "Allows paying an alternative cost to draw and discard cards, and search for up to three cards to put into hand and then discard three random cards.",
+        "mana_value": 5.0
+      }
+    },
+    "diagnostics": {
+      "dropped_edges": 0,
+      "clusters_provided": 1
+    },
+    "rejected_loops": [
+      {
+        "original_cycle": [
+          "Runaway Steam-Kin",
+          "Whispers of the Muse",
+          "Ingenious Mastery",
+          "Tezzeret's Gambit",
+          "Daze",
+          "Reiterate",
+          "Muddle the Mixture",
+          "Fervent Mastery"
+        ],
+        "is_valid": false,
+        "hallucination_reason": "LLM rejected semantic logic."
+      },
+      {
+        "original_cycle": [
+          "Runaway Steam-Kin",
+          "Whispers of the Muse",
+          "Ingenious Mastery",
+          "Tezzeret's Gambit",
+          "Daze",
+          "Reiterate",
+          "Muddle the Mixture",
+          "Fervent Mastery"
+        ],
+        "is_valid": false,
+        "hallucination_reason": "LLM rejected semantic logic."
+      }
+    ]
+  }
+}
