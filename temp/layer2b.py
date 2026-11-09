@@ -5,25 +5,49 @@ import ollama
 ALLOWED_PATH_TYPES = {"Velocity Chain", "Combat Win", "Validated Infinite Loop"}
 
 
-def _score_edge(e, node_map):
-    """Higher = more likely to matter for loop-finding."""
-    w = e.get("weight", 0)
+def _cluster_of(graph):
+    """Map card name -> cluster index. Cards not in any cluster get -1."""
+    mapping = {}
+    for i, cluster in enumerate(graph.get("synergy_clusters", [])):
+        for name in cluster:
+            mapping[name] = i
+    return mapping
+
+
+def _score_edge(e, node_map, cluster_map):
+    """Higher = more likely to matter for loop-finding.
+
+    Priority order:
+      1. Cross-cluster edges (the bridges where loops form)
+      2. Weight (number of independent domain overlaps)
+      3. Loop-relevance bonus (either endpoint has loop-relevant mechanisms)
+    """
     LOOP_MECHS = {
         "cost reduction", "spell copy", "buyback", "flashback", "escape",
         "magecraft", "cast trigger", "graveyard cast", "mana generation",
-        "recursion", "card draw"
+        "recursion", "card draw", "card return to hand"
     }
+
     def hits(name):
         mechs = {m.lower() for m in node_map.get(name, {}).get("mechanisms", [])}
         return bool(mechs & LOOP_MECHS)
+
+    w = e.get("weight", 0)
     bonus = (1 if hits(e["source"]) else 0) + (1 if hits(e["target"]) else 0)
-    return (w, bonus)
+
+    s_cluster = cluster_map.get(e["source"], -1)
+    t_cluster = cluster_map.get(e["target"], -1)
+    crosses = 1 if (s_cluster != -1 and t_cluster != -1 and s_cluster != t_cluster) else 0
+
+    return (crosses, w, bonus)
 
 
 def _flatten_edges(graph, max_edges=200):
     edges = graph.get("interaction_edges", [])
     node_map = {n["name"]: n for n in graph.get("interaction_nodes", [])}
-    ranked = sorted(edges, key=lambda e: _score_edge(e, node_map), reverse=True)
+    cluster_map = _cluster_of(graph)
+
+    ranked = sorted(edges, key=lambda e: _score_edge(e, node_map, cluster_map), reverse=True)
     kept = ranked[:max_edges]
     dropped = len(ranked) - len(kept)
 
@@ -40,94 +64,120 @@ def _flatten_edges(graph, max_edges=200):
     return "\n".join(lines), dropped
 
 
+def _flatten_cross_cluster(graph, max_edges=100):
+    """Separately surface the cross-cluster bridges — the edges where loops live."""
+    edges = graph.get("interaction_edges", [])
+    node_map = {n["name"]: n for n in graph.get("interaction_nodes", [])}
+    cluster_map = _cluster_of(graph)
+
+    cross = [e for e in edges
+             if cluster_map.get(e["source"], -1) != -1
+             and cluster_map.get(e["target"], -1) != -1
+             and cluster_map[e["source"]] != cluster_map[e["target"]]]
+
+    cross.sort(key=lambda e: e.get("weight", 0), reverse=True)
+    kept = cross[:max_edges]
+
+    lines = []
+    for e in kept:
+        s, t = e["source"], e["target"]
+        si, ti = node_map.get(s, {}), node_map.get(t, {})
+        s_doms = si.get("domains", [])[:3]
+        t_doms = ti.get("domains", [])[:3]
+        s_str = " | ".join(s_doms) if s_doms else "(no domains)"
+        t_str = " | ".join(t_doms) if t_doms else "(no domains)"
+        rels = ", ".join(e.get("relationship_types", []))
+        c_s = cluster_map.get(s)
+        c_t = cluster_map.get(t)
+        lines.append(f"- [{c_s}→{c_t}] '{s}' [{s_str}] --({rels}, w={e['weight']})--> '{t}' [{t_str}]")
+    return "\n".join(lines), len(cross) - len(kept)
+
+
+def _flatten_cluster_roles(graph):
+    """Summarize what each cluster is functionally."""
+    clusters = graph.get("synergy_clusters", [])
+    nodes = {n["name"]: n for n in graph.get("interaction_nodes", [])}
+    lines = []
+    for i, cluster in enumerate(clusters):
+        mechs = {}
+        for name in cluster:
+            for m in nodes.get(name, {}).get("mechanisms", []):
+                mechs[m.lower()] = mechs.get(m.lower(), 0) + 1
+        top_mechs = sorted(mechs.items(), key=lambda x: -x[1])[:3]
+        mech_summary = ", ".join(f"{m}" for m, _ in top_mechs) if top_mechs else "misc"
+        lines.append(f"  Cluster {i} ({len(cluster)} cards) — dominant roles: {mech_summary}")
+    return "\n".join(lines)
+
+
 SYSTEM_PROMPT_TEMPLATE = """
 You are a competitive Magic: The Gathering combo architect specializing in EDH.
-Your job is to find actual win conditions and loops in the provided decklist, using the structural edges below.
+Your job is to find actual win conditions and loops in the provided decklist.
 
 CRITICAL DEFINITION OF A LOOP:
-A loop is a SPECIFIC 2-4 card cycle. It must physically regenerate the resources required to restart itself.
-If Card A draws cards but does not generate mana, and Card B costs mana, they do NOT loop.
-A "loop" containing 20+ cards is NOT a loop — it is a deck summary. Reject such groupings.
+A loop is a SPECIFIC 2-4 card cycle. It must regenerate the resources consumed
+to start the next iteration. If a resource is consumed and not regenerated, the
+sequence is a synergistic play, NOT a loop.
 
-REASONING PROTOCOL — follow this order:
+A "loop" containing 20+ cards is NOT a loop. Reject such groupings.
 
-STEP 1 — FOR EACH CANDIDATE CYCLE, CHECK FOR REGENERATION:
-An infinite loop requires that each iteration regenerates the resources consumed
-to start the next iteration. For every candidate (2-4 cards), ask:
+STEP 1 — LOOPS CROSS FUNCTIONAL BOUNDARIES:
+A loop is not a group of similar cards. Cards that share mechanisms (all
+buyback, all mana rocks) are synergistic but do not loop with each other,
+because they all consume or produce the SAME resources. A loop forms when a
+card in one functional group (e.g. "consumes mana") connects to a card in a
+different functional group (e.g. "produces mana"), and their combined cycle
+regenerates what each other consumes.
 
-  (a) What resource does each iteration CONSUME?
-      - Mana (to cast spells)
-      - Cards (to pitch, discard, exile)
-      - Life (to pay alternate costs)
-      - Tapped permanents (to activate abilities)
-      - Turn count (for extra-turn loops)
+Every loop must contain at least one CROSS-CLUSTER EDGE. If all cards in a
+candidate loop are in the same cluster, it is NOT a loop — it is an
+intra-cluster synergy that fails the regeneration test.
 
-  (b) How does the cycle REGENERATE that resource?
-      Examples of regeneration:
-      - A card returns itself to hand/library/graveyard so it can be recast
-      - An untap effect readies the same permanents each iteration
-      - A trigger produces a resource on each iteration (Storm-Kiln makes a treasure each cast)
-      - A replacement effect prevents the cost from being paid (e.g. cost reducers, free cast, effect preventing sacrifice)
-      - A static ability converts one resource into another indefinitely
-      - A card exiles and returns itself
+STEP 2 — ENUMERATE CROSS-CLUSTER EDGES:
+Read every edge in the CROSS-CLUSTER BRIDGES list. For each bridge, ask:
+"Does Card A consume a resource that Card B produces, AND does Card B
+consume a resource that Card A produces?"
+- Both directions → loop candidate.
+- One direction only → combo line, not a loop.
 
-  (c) If the cycle consumes a resource it does not regenerate, it is NOT a loop.
-      It is a sequence of synergistic plays. Reject it.
-
-STEP 2 — ENUMERATE PAIRS OF CARDS THAT COULD CYCLE:
-Read every edge in the DENSE GRAPH EDGES list. For each edge, ask:
-"Does Card A regenerate what Card B consumes, AND does Card B regenerate
-what Card A consumes?"
-If yes → loop candidate.
-If only one direction → the edge is a combo *line* (A feeds B, but B doesn't feed A) — not a loop.
-
-STEP 2b — EXPAND TO 3-4 CARDS WHEN A REGENERATION IS MISSING:
-If a pair consumes mana but neither card regenerates it, look for a third card
-that regenerates mana. Common regenerators:
-- Mana generators that trigger on cast (Storm-Kiln, Birgi, Runaway Steam-Kin)
-- Mana rocks that untap (rare, but exists)
-- Rituals that loop (rare)
-- Cost reducers that make the consumed mana zero (Vadrik, Goblin Electromancer, Mizzix)
-- Effects that convert life/cards to mana repeatedly (Treasonous Ogre, Skirge Familiar)
-If a pair consumes a resource (mana, cards, life, etc.) but neither card
-regenerates it, look for a third card that regenerates that specific resource.
-Do not assume mana is the only resource being consumed — a loop that burns
-cards needs a card-regenerator, a loop that burns life needs a life-regenerator,
-etc.
-A 3-4 card cycle only qualifies if ALL consumed resources are regenerated by
-SOME card in the cycle (or by required_assumptions naming an external enabler).
-
-STEP 2c — DO NOT ASSUME RECURSION IS THE ONLY MECHANISM:
-Recursion (buyback, flashback, return to hand) is ONE way to regenerate a
-resource. Reusable activated abilities, untap effects, cost reducers,
-replacement effects, and trigger loops are equally valid. Do not restrict your
-analysis to recursion-only loops.
+STEP 2b — EXPAND TO 3-4 CARDS:
+If a bridge pair consumes but does not fully regenerate, look for a third
+card (from any cluster) that regenerates the missing resource. Regeneration
+mechanisms are NOT limited to buyback/flashback — reusable activated
+abilities, untap effects, cost reducers, replacement effects, trigger loops,
+and static resource-conversion effects are all valid.
 
 STEP 3 — VALIDATE WITH MATH:
 For each surviving candidate, write out:
-  Step A (Input): mana/resources consumed per iteration.
-  Step B (Output): mana/resources produced or regenerated per iteration.
+  Step A (Input): resources consumed per iteration (mana, cards, life, tapped permanents).
+  Step B (Output): resources produced or regenerated per iteration.
   Step C (Net): Output - Input. Only Step C >= 0 qualifies as a Validated Infinite Loop.
-  
-REQUIRED ASSUMPTIONS:
-If the loop requires an external card (e.g. a cost reducer like Vadrik, or a mana doubler), name it explicitly in required_assumptions. Do not write "sufficient mana" or "a commander in play."
 
-WEIGHT INTERPRETATION:
-Each edge has (w=N) — the number of independent domain overlaps. w=1 is usually trivial (a mana rock powering a spell). w>=2 indicates multiple structural reasons to interact and is the signature of a combo piece.
+REQUIRED ASSUMPTIONS:
+If the loop requires an external enabler (cost reducer, mana doubler, etc.),
+name it explicitly in required_assumptions. Do not write "sufficient mana"
+or "a commander in play."
 
 STRICT DEAD WEIGHT RULE:
-Only list a card in dead_weight_candidates if it appears in CANDIDATE ISOLATED CARDS. If a card has any graph edge, it is FORBIDDEN from being called dead weight.
+Only list a card in dead_weight_candidates if it appears in CANDIDATE
+ISOLATED CARDS.
 """
 
 
-def _user_prompt(commander_name, edge_text, dropped, isolated, node_names):
+def _user_prompt(commander_name, edge_text, dropped, cross_text, cross_dropped,
+                 cluster_roles, isolated, node_names):
     return f"""
 Commander: {commander_name}
 
 ALL AVAILABLE CARDS:
 {json.dumps(sorted(node_names), indent=2)}
 
-DENSE GRAPH EDGES (ranked by weight and loop-relevance; {dropped} lower-priority edges omitted):
+CLUSTER ROLES (functional summary of each synergy cluster):
+{cluster_roles}
+
+CROSS-CLUSTER BRIDGES (edges connecting different clusters — THESE ARE WHERE LOOPS FORM; {cross_dropped} lower-weight bridges omitted):
+{cross_text}
+
+DENSE GRAPH EDGES (full ranked edge list; {dropped} lower-priority edges omitted):
 {edge_text}
 
 CANDIDATE ISOLATED CARDS (Only these can be dead weight):
@@ -171,6 +221,8 @@ def _enforce_dead_weight(parsed, isolated):
 
 def generate_layer2b_engines(graph, commander_name, archetype="", model="qwen2.5:32b"):
     edge_text, dropped = _flatten_edges(graph, max_edges=200)
+    cross_text, cross_dropped = _flatten_cross_cluster(graph, max_edges=100)
+    cluster_roles = _flatten_cluster_roles(graph)
     isolated = graph.get("candidate_isolated_cards", [])
     node_names = [n["name"] for n in graph.get("interaction_nodes", [])]
 
@@ -180,7 +232,10 @@ def generate_layer2b_engines(graph, commander_name, archetype="", model="qwen2.5
             options={"temperature": 0, "num_ctx": 32768},
             messages=[
                 {"role": "system", "content": SYSTEM_PROMPT_TEMPLATE},
-                {"role": "user", "content": _user_prompt(commander_name, edge_text, dropped, isolated, node_names)}
+                {"role": "user", "content": _user_prompt(
+                    commander_name, edge_text, dropped, cross_text,
+                    cross_dropped, cluster_roles, isolated, node_names
+                )}
             ]
         )
         parsed = json.loads(resp["message"]["content"])
@@ -202,6 +257,7 @@ def generate_layer2b_engines(graph, commander_name, archetype="", model="qwen2.5
     parsed["_cited_card_data"] = cited_data
     parsed["diagnostics"] = {
         "dropped_edges": dropped,
-        "clusters_provided": len(graph.get("synergy_clusters", []))
+        "cross_cluster_edges_dropped": cross_dropped,
+        "clusters_provided": len(graph.get("synergy_clusters", [])),
     }
     return _enforce_dead_weight(parsed, isolated)

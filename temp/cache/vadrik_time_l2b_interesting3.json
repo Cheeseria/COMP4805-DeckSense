@@ -1,0 +1,122 @@
+{
+  "__meta": {
+    "version": "v1",
+    "deck_id": "vadrik_time",
+    "deck_url": "https://archidekt.com/decks/6429634/vadrik_time",
+    "model": "qwen2.5:32b",
+    "written_at": 1794159952.025388
+  },
+  "analysis": {
+    "card_groups_and_intra_synergies": [
+      {
+        "group_name": "Card Draw and Mana Generation",
+        "cards": [
+          "The Celestus",
+          "Ashling, Flame Dancer",
+          "Inner Fire",
+          "Jeska's Will",
+          "Urabrask // The Great Work",
+          "Birgi, God of Storytelling // Harnfel, Horn of Bounty",
+          "Storm-Kiln Artist",
+          "Arcane Signet",
+          "Sol Ring",
+          "Talisman of Creativity",
+          "Izzet Signet"
+        ],
+        "intra_synergy_explanation": "These cards synergize by providing card draw and mana generation, which can be used to fuel each other."
+      },
+      {
+        "group_name": "Mana Production",
+        "cards": [
+          "Coalition Relic",
+          "Honored Heirloom",
+          "Mana Drain",
+          "Runaway Steam-Kin",
+          "Sudden Breakthrough",
+          "Mana Geyser",
+          "Fellwar Stone",
+          "Seething Song",
+          "Inspired Tinkering"
+        ],
+        "intra_synergy_explanation": "These cards synergize by providing various forms of mana production, which can be used to fuel each other."
+      }
+    ],
+    "cross_group_synergies": [
+      {
+        "bridged_groups": [
+          "Card Draw and Mana Generation",
+          "Mana Production"
+        ],
+        "bridge_mechanism": "Mana generation from one group can fuel mana production in the other group, creating a cycle."
+      }
+    ],
+    "validated_cycles": [],
+    "win_conditions_and_loops": [],
+    "dead_weight_candidates": [],
+    "_cited_card_data": {
+      "The Celestus": {
+        "oracle_text": "If it's neither day nor night, it becomes day as The Celestus enters.\n{T}: Add one mana of any color.\n{3}, {T}: If it's night, it becomes day. Otherwise, it becomes night. Activate only as a sorcery.\nWhenever day becomes night or night becomes day, you gain 1 life. You may draw a card. If you do, discard a card.",
+        "summary": "The Celestus provides mana of any color and can change the day/night cycle, granting life and card options.",
+        "mana_value": 3.0
+      },
+      "Ashling, Flame Dancer": {
+        "oracle_text": "You don't lose unspent red mana as steps and phases end.\nMagecraft \u2014 Whenever you cast or copy an instant or sorcery spell, discard a card, then draw a card. If this is the second time this ability has resolved this turn, Ashling deals 2 damage to each opponent and each creature they control. If it's the third time, add {R}{R}{R}{R}.",
+        "summary": "Ashling, Flame Dancer allows you to retain unspent red mana and provides card draw and discard, damage, and mana production based on the number of instants or sorceries cast or copied.",
+        "mana_value": 4.0
+      },
+      "Inner Fire": {
+        "oracle_text": "Add {R} for each card in your hand.",
+        "summary": "Add {R} for each card in your hand.",
+        "mana_value": 4.0
+      },
+      "Jeska's Will": {
+        "oracle_text": "Choose one. If you control a commander as you cast this spell, you may choose both instead.\n\u2022 Add {R} for each card in target opponent's hand.\n\u2022 Exile the top three cards of your library. You may play them this turn.",
+        "summary": "Choose to add {R} for each card in target opponent's hand or exile the top three cards of your library and play them this turn. If you control a commander, you can choose both.",
+        "mana_value": 3.0
+      }
+    },
+    "diagnostics": {
+      "dropped_edges": 2235,
+      "cross_cluster_edges_dropped": 0,
+      "clusters_provided": 1
+    },
+    "rejected_loops": [
+      {
+        "original_cycle": [
+          "The Celestus",
+          "Ashling, Flame Dancer",
+          "Inner Fire"
+        ],
+        "is_valid": false,
+        "hallucination_reason": "LLM rejected semantic logic."
+      },
+      {
+        "original_cycle": [
+          "Ashling, Flame Dancer",
+          "Inner Fire",
+          "Jeska's Will"
+        ],
+        "is_valid": false,
+        "hallucination_reason": "LLM rejected semantic logic."
+      },
+      {
+        "original_cycle": [
+          "The Celestus",
+          "Ashling, Flame Dancer",
+          "Inner Fire"
+        ],
+        "is_valid": false,
+        "hallucination_reason": "LLM rejected semantic logic."
+      },
+      {
+        "original_cycle": [
+          "Ashling, Flame Dancer",
+          "Inner Fire",
+          "Jeska's Will"
+        ],
+        "is_valid": false,
+        "hallucination_reason": "LLM rejected semantic logic."
+      }
+    ]
+  }
+}
