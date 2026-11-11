@@ -1,0 +1,129 @@
+{
+  "__meta": {
+    "version": "v1",
+    "deck_id": "vadrik_time",
+    "deck_url": "https://archidekt.com/decks/6429634/vadrik_time",
+    "model": "qwen2.5:32b",
+    "written_at": 1794328434.203141
+  },
+  "analysis": {
+    "deck_identity": "This deck focuses on card draw and mana generation to fuel a variety of synergies, including cost reduction, counterspelling, and damage output. The deck aims to overwhelm opponents with a combination of card advantage and efficient spellcasting.",
+    "functional_categories": [
+      {
+        "category_name": "Card Draw",
+        "key_cards": [
+          "The Celestus",
+          "Ashling, Flame Dancer",
+          "Finale of Revelation"
+        ],
+        "explanation": "This group provides a steady stream of card advantage, allowing the deck to maintain a high tempo and access to a wide range of cards."
+      },
+      {
+        "category_name": "Mana Generation",
+        "key_cards": [
+          "Coalition Relic",
+          "Inner Fire",
+          "Sol Ring"
+        ],
+        "explanation": "These cards ensure that the deck can cast its spells efficiently, providing the necessary mana to fuel card draw, cost reduction, and damage spells."
+      },
+      {
+        "category_name": "Cost Reduction",
+        "key_cards": [
+          "Goblin Electromancer",
+          "Vadrik, Astral Archmage",
+          "Mizzix of the Izmagnus"
+        ],
+        "explanation": "This group reduces the cost of spells, allowing the deck to cast powerful cards more efficiently and maintain a high tempo."
+      },
+      {
+        "category_name": "Counterspelling",
+        "key_cards": [
+          "Mana Drain",
+          "Mana Leak",
+          "Negate"
+        ],
+        "explanation": "These cards protect the deck from disruptive spells and allow it to maintain control over the game state."
+      },
+      {
+        "category_name": "Damage Output",
+        "key_cards": [
+          "Ashling, Flame Dancer",
+          "Urabrask // The Great Work",
+          "Searing Touch"
+        ],
+        "explanation": "This group provides direct damage and creature-based damage to finish off opponents or clear the board."
+      }
+    ],
+    "intercategorial_synergy": [
+      {
+        "groups_involved": [
+          "Card Draw",
+          "Mana Generation"
+        ],
+        "explanation": "Card draw provides the necessary cards to fuel mana generation, which in turn allows the deck to cast more card draw spells, creating a positive feedback loop."
+      },
+      {
+        "groups_involved": [
+          "Cost Reduction",
+          "Counterspelling"
+        ],
+        "explanation": "Cost reduction allows the deck to cast counterspells more efficiently, protecting the deck's resources and maintaining control over the game."
+      },
+      {
+        "groups_involved": [
+          "Card Draw",
+          "Cost Reduction"
+        ],
+        "explanation": "Card draw provides the necessary cards to fuel cost reduction, allowing the deck to cast powerful spells at a reduced cost and maintain a high tempo."
+      }
+    ],
+    "velocity_chains": [
+      {
+        "chain_name": "Card Draw and Mana Generation",
+        "key_cards": [
+          "The Celestus",
+          "Inner Fire",
+          "Ashling, Flame Dancer"
+        ],
+        "refueling_cards": [
+          "The Celestus",
+          "Ashling, Flame Dancer"
+        ],
+        "progression": "The Celestus provides card draw and mana, which is used to cast Inner Fire for additional mana. This mana is then used to cast Ashling, Flame Dancer, which provides more card draw and damage, allowing the deck to continue drawing cards and generating mana."
+      },
+      {
+        "chain_name": "Cost Reduction and Counterspelling",
+        "key_cards": [
+          "Goblin Electromancer",
+          "Mana Drain",
+          "Negate"
+        ],
+        "refueling_cards": [
+          "Goblin Electromancer"
+        ],
+        "progression": "Goblin Electromancer reduces the cost of spells, allowing the deck to cast Mana Drain and Negate more efficiently. These counterspells protect the deck's resources, allowing it to continue reducing costs and maintaining control over the game."
+      }
+    ],
+    "win_conditions": [
+      {
+        "win_type": "Card Advantage and Mana Efficiency",
+        "key_cards": [
+          "The Celestus",
+          "Inner Fire",
+          "Ashling, Flame Dancer"
+        ],
+        "explanation": "The deck overwhelms opponents with a combination of card advantage and efficient spellcasting, using card draw and mana generation to fuel powerful spells and maintain control over the game."
+      }
+    ],
+    "dead_weight_candidates": [],
+    "diagnostics": {
+      "groups_provided": 69,
+      "bridges_provided": 150,
+      "dead_weight_violations": [
+        "Treasonous Ogre",
+        "Chandra's Ignition"
+      ]
+    }
+  }
+}

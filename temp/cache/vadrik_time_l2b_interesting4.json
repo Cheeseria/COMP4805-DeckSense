@@ -1,0 +1,106 @@
+{
+  "__meta": {
+    "version": "v1",
+    "deck_id": "vadrik_time",
+    "deck_url": "https://archidekt.com/decks/6429634/vadrik_time",
+    "model": "qwen2.5:32b",
+    "written_at": 1794230273.5631592
+  },
+  "analysis": {
+    "deck_identity": "This deck is a fast-paced, Izzet-based Commander deck centered around Vadrik, Astral Archmage. It focuses on generating mana and drawing cards to fuel a variety of velocity chains, often ending with a powerful board state or a direct damage win condition.",
+    "synergy_engines": [
+      {
+        "engine_name": "Mana and Card Draw Engine",
+        "key_cards": [
+          "Ashling, Flame Dancer",
+          "Mana Drain",
+          "Mana Geyser",
+          "Sudden Breakthrough",
+          "Inner Fire",
+          "Storm-Kiln Artist",
+          "Talisman of Creativity",
+          "Seething Song",
+          "Izzet Signet",
+          "Inspired Tinkering"
+        ],
+        "explanation": "These cards work together to generate mana and draw cards, creating a snowball effect where each card played fuels the next, leading to a rapid accumulation of resources."
+      },
+      {
+        "engine_name": "Card Return and Spell Copy Engine",
+        "key_cards": [
+          "Haze of Rage",
+          "Searing Touch",
+          "Whispers of the Muse",
+          "Deep Analysis",
+          "Reiterate",
+          "Mystic Retrieval"
+        ],
+        "explanation": "Haze of Rage and Searing Touch return cards to hand, which can be used to fuel card draw and spell copying effects like Whispers of the Muse and Reiterate, creating a loop that can quickly build up card advantage."
+      }
+    ],
+    "velocity_chains": [
+      {
+        "chain_name": "Mana and Card Draw Chain",
+        "key_cards": [
+          "Ashling, Flame Dancer",
+          "Mana Drain",
+          "Mana Geyser",
+          "Sudden Breakthrough",
+          "Inner Fire",
+          "Storm-Kiln Artist",
+          "Talisman of Creativity",
+          "Seething Song",
+          "Izzet Signet",
+          "Inspired Tinkering"
+        ],
+        "progression": "Start with early mana production from artifacts and lands, then use Ashling, Flame Dancer to draw cards and generate mana. Mana Drain and Mana Geyser provide additional mana, which can be used to cast Sudden Breakthrough and Inner Fire for more mana and card draw. Storm-Kiln Artist and Inspired Tinkering can generate additional mana and treasure tokens, further fueling the chain."
+      },
+      {
+        "chain_name": "Card Return and Spell Copy Chain",
+        "key_cards": [
+          "Haze of Rage",
+          "Searing Touch",
+          "Whispers of the Muse",
+          "Deep Analysis",
+          "Reiterate",
+          "Mystic Retrieval"
+        ],
+        "progression": "Begin with Haze of Rage to return cards to hand and buff creatures. Use Searing Touch to return more cards and fuel Whispers of the Muse and Deep Analysis for card draw. Reiterate and Mystic Retrieval can copy and return spells, creating a loop that can quickly build up card advantage and set up powerful plays."
+      }
+    ],
+    "win_conditions": [
+      {
+        "win_type": "Velocity Chain",
+        "key_cards": [
+          "Ashling, Flame Dancer",
+          "Mana Drain",
+          "Mana Geyser",
+          "Sudden Breakthrough",
+          "Inner Fire",
+          "Storm-Kiln Artist",
+          "Talisman of Creativity",
+          "Seething Song",
+          "Izzet Signet",
+          "Inspired Tinkering"
+        ],
+        "explanation": "The deck can win through a rapid accumulation of mana and card draw, leading to a powerful board state or direct damage win condition. The mana and card draw chain can quickly build up resources to cast powerful spells or generate enough mana to overwhelm opponents with direct damage."
+      },
+      {
+        "win_type": "Combat Win",
+        "key_cards": [
+          "Ashling, Flame Dancer",
+          "Hero's Blade",
+          "Inner Fire",
+          "Storm-Kiln Artist",
+          "Runaway Steam-Kin"
+        ],
+        "explanation": "With enough mana and card draw, the deck can generate a powerful board state with creatures like Ashling, Flame Dancer and Runaway Steam-Kin, which can be buffed with Inner Fire and Storm-Kiln Artist to deal lethal damage through combat."
+      }
+    ],
+    "dead_weight_candidates": [],
+    "diagnostics": {
+      "dropped_edges": 2235,
+      "clusters_provided": 1
+    }
+  }
+}

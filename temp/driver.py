@@ -1,7 +1,7 @@
 # driver.py
 """
-Driver: run ingest -> L1 -> L2a -> L2b for one deck, with per-deck caches
-and provenance metadata. Safe to re-run; safe to run many decks.
+Driver: run ingest -> L1 -> L2a -> L2b -> L2c -> L3 -> L4 for one deck.
+Safe to re-run; safe to run many decks.
 
 Usage:
     python driver.py <archidekt_url> [archetype_hint]
@@ -17,6 +17,8 @@ import layer1
 import layer2a
 import layer2b
 import layer2c
+import layer3
+import layer4_primer
 
 CACHE_ROOT = "cache"
 os.makedirs(CACHE_ROOT, exist_ok=True)
@@ -33,6 +35,8 @@ def _paths(deck_id):
         "l1":    f"{base}_l1.json",
         "l2a":   f"{base}_l2a.json",
         "l2b":   f"{base}_l2b.json",
+        "l3":    f"{base}_l3.json",
+        "l4":    f"{base}_l4_primer.md",
     }
 
 
@@ -75,7 +79,6 @@ def run(url, archetype=""):
     # ---------- ingest ----------
     deck, commander_name, _ = ingest.parseArchiURL(url)
     if not commander_name:
-        # fall back to whatever card is flagged; else fail loudly
         for c in deck:
             if getattr(c, "is_commander", False):
                 commander_name = c.name
@@ -132,23 +135,56 @@ def run(url, archetype=""):
           f"cycles={len(graph['synergy_clusters'])} "
           f"isolated={len(graph['candidate_isolated_cards'])}")
 
-        # ---------- L2b ----------
+    # ---------- L2b & L2c ----------
     meta_l2b = _meta(deck_id, url, MODEL_L2B)
     l2b_cache = _load(paths["l2b"], meta_l2b)
     if l2b_cache:
         l2b = l2b_cache["analysis"]
         print("[driver] L2b: cache hit")
     else:
-        # Run Layer 2b (Generation)
         l2b_raw = layer2b.generate_layer2b_engines(
             graph, commander_name=commander_name,
             archetype=archetype, model=MODEL_L2B,
         )
-        # Run Layer 2c (Fact Checking)
         print("[driver] Running Layer 2c Fact Checker...")
         l2b = layer2c.fact_check_loops(l2b_raw, graph, model=MODEL_L2B)
-        
         _save(paths["l2b"], {"analysis": l2b}, meta_l2b)
+
+    # ---------- L3: Power Assessment ----------
+    meta_l3 = _meta(deck_id, url, MODEL_L1)
+    l3_cache = _load(paths["l3"], meta_l3)
+    if l3_cache:
+        l3 = l3_cache["assessment"]
+        print("[driver] L3: cache hit")
+    else:
+        print("[driver] Running Layer 3 Power Assessment...")
+        l3 = layer3.assess_power_level(graph, l2b, commander_name, model=MODEL_L1)
+        _save(paths["l3"], {"assessment": l3}, meta_l3)
+    print(f"[driver] L3: Bracket {l3.get('power_bracket')} | Win Turn: {l3.get('estimated_win_turn')}")
+
+    # ---------- L4: Primer Generation ----------
+    # The primer is text, so we check for file existence rather than JSON cache
+    primer_path = paths["l4"]
+    if os.path.exists(primer_path):
+        print(f"[driver] L4 Primer: cache hit at {primer_path}")
+        with open(primer_path, "r", encoding="utf-8") as f:
+            primer_text = f.read()
+    else:
+        print("[driver] Running Layer 4 Primer Generation...")
+        primer_text = layer4_primer.generate_primer(
+            l2b_analysis=l2b,
+            l3_assessment=l3,
+            l1_data=l1,
+            commander_name=commander_name
+        )
+        with open(primer_path, "w", encoding="utf-8") as f:
+            f.write(primer_text)
+        print(f"[driver] L4 Primer saved to {primer_path}")
+
+    print("\n" + "="*40)
+    print("PIPELINE COMPLETE")
+    print("="*40)
+
 
 if __name__ == "__main__":
     if len(sys.argv) < 2:

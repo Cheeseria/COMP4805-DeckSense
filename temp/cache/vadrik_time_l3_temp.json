@@ -1,0 +1,31 @@
+{
+  "__meta": {
+    "version": "v1",
+    "deck_id": "vadrik_time",
+    "deck_url": "https://archidekt.com/decks/6429634/vadrik_time",
+    "model": "qwen2.5:32b",
+    "written_at": 1794398766.6553044
+  },
+  "assessment": {
+    "power_bracket": "3",
+    "bracket_justification": "The deck has a solid focus on card draw and mana generation, with a decent number of fast mana sources and functional engines, which aligns well with the upgraded strategies of Bracket 3. The deck's strategic identity and win conditions suggest a mid-game control approach, aiming to outlast and outplay opponents with card advantage and efficient spellcasting.",
+    "estimated_win_turn": "Turn 6-7",
+    "playstyle_summary": "This deck plays a control-oriented game, leveraging card advantage and efficient mana generation to maintain control over the game. It aims to overwhelm opponents with a combination of powerful spells and sustained pressure, making it a mid-range control deck.",
+    "_stats_used": {
+      "total_cards": 101,
+      "mana_curve": {
+        "2": 33,
+        "5": 6,
+        "4": 18,
+        "1": 19,
+        "3": 17,
+        "7": 1,
+        "0": 7
+      },
+      "fast_mana_count": 6,
+      "interaction_count": 7,
+      "velocity_chain_count": 2,
+      "engine_count": 5
+    }
+  }
+}
