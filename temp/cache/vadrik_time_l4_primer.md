@@ -3,61 +3,60 @@
 **Commander:** Vadrik, Astral Archmage  
 **Power Bracket:** 4  
 **Estimated Win Turn:** Turn 4-5  
-**Playstyle:** This deck combines control and combo elements, using card advantage and mana acceleration to set up powerful storm and token-based win conditions that can quickly overwhelm opponents.
+**Playstyle:** This deck uses a lot of card draw and mana generation to create a strong advantage. It aims to overwhelm opponents with continuous card advantage and damage, using storm chains and token creation to win quickly.
 
 ### Key Card Categorization (The Engines)
 
-#### Card Draw and Mana Generation Loop
-- **The Celestus**: If it's neither day nor night, it becomes day as The Celestus enters. {T}: Add one mana of any color. {3}, {T}: If it's night, it becomes day. Otherwise, it becomes night. Activate only as a sorcery. Whenever day becomes night or night becomes day, you gain 1 life. You may draw a card. If you do, discard a card.
-- **Ashling, Flame Dancer**: You don't lose unspent red mana as steps and phases end. Magecraft — Whenever you cast or copy an instant or sorcery spell, discard a card, then draw a card. If this is the second time this ability has resolved this turn, Ashling deals 2 damage to each opponent and each creature they control. If it's the third time, add {R}{R}{R}{R}.
-- **Inner Fire**: Add {R} for each card in your hand.
-- **Sol Ring**: {T}: Add {C}{C}.
-- **Talisman of Creativity**: {T}: Add {C}. {T}: Add {U} or {R}. This artifact deals 1 damage to you.
+**Card Draw and Mana Generation Loop:**
+- **The Celestus:** This card can change the day/night cycle, giving you a mana source and potentially drawing a card. It also lets you gain life.
+- **Ashling, Flame Dancer:** This card helps you draw cards and discard cards, and it can deal damage or add red mana.
+- **Inner Fire:** Adds red mana based on the number of cards in your hand.
+- **Sol Ring:** Adds two colorless mana when tapped.
+- **Talisman of Creativity:** Adds colorless and blue or red mana when tapped, but it also deals 1 damage to you.
 
-#### Storm Chain
-- **Haze of Rage**: Buyback {2} (You may pay an additional {2} as you cast this spell. If you do, put this card into your hand as it resolves.) Creatures you control get +1/+0 until end of turn. Storm (When you cast this spell, copy it for each spell cast before it this turn.)
-- **Temporal Fissure**: Return target permanent to its owner's hand. Storm (When you cast this spell, copy it for each spell cast before it this turn. You may choose new targets for the copies.)
-- **Grapeshot**: Grapeshot deals 1 damage to any target. Storm (When you cast this spell, copy it for each spell cast before it this turn. You may choose new targets for the copies.)
-- **Brain Freeze**: Target player mills three cards. Storm (When you cast this spell, copy it for each spell cast before it this turn. You may choose new targets for the copies.)
+**Storm Chain:**
+- **Haze of Rage:** This card gives your creatures a +1/+0 boost and can create copies of itself for each spell cast before it, a mechanic called "Storm."
+- **Temporal Fissure:** Returns a permanent to its owner's hand and can create copies of itself for each spell cast before it, also using the "Storm" mechanic.
+- **Grapeshot:** Deals 1 damage to any target and can create copies of itself for each spell cast before it.
+- **Brain Freeze:** Mills three cards from a target player and can create copies of itself for each spell cast before it.
 
 ### Win Conditions & Line Execution
 
-#### Card Draw and Mana Generation Loop
-1. **Mana Generation:** Use cards like **Sol Ring** and **Talisman of Creativity** to generate mana.
-2. **Card Draw:** Use **The Celestus** and **Ashling, Flame Dancer** to draw cards and gain card advantage.
-3. **Mana Acceleration:** Use **Inner Fire** to add red mana based on the number of cards in your hand.
-
-#### Storm Chain
-1. **Initial Setup:** Cast **Haze of Rage** or **Temporal Fissure** to start the storm chain.
-2. **Storm Copies:** Each spell cast before the storm spell will create a copy, leading to multiple effects.
-3. **Damage and Card Draw:** Use **Grapeshot** and **Brain Freeze** to deal damage and mill cards, respectively, with multiple copies.
+The deck aims to create a loop where card draw and mana generation fuel each other, leading to a rapid increase in card advantage and storm count. The storm chain allows you to create multiple copies of spells, which can quickly overwhelm opponents with damage or card advantage.
 
 ### Turn by Turn Gameplan
 
 **Turn 1:**
-- Play **Sol Ring** and **Talisman of Creativity** to start generating mana.
-- Draw cards with **Serum Visions** or **Anticipate**.
+- Play a land and a card draw spell like **Serum Visions** or **Anticipate** to start building your hand.
 
 **Turn 2:**
-- Use **The Celestus** to gain mana and draw cards.
-- Cast **Ashling, Flame Dancer** to start drawing cards and dealing damage.
+- Play another land and a card draw spell like **Consider** or **Sleight of Hand** to continue building your hand.
+- Use **Sol Ring** or **Talisman of Creativity** to generate mana.
 
 **Turn 3:**
-- Use **Inner Fire** to add red mana based on the number of cards in your hand.
-- Cast **Haze of Rage** or **Temporal Fissure** to start the storm chain.
+- Play a land and a card draw spell like **Frantic Search** or **Pirate's Pillage** to draw more cards and create Treasure tokens.
+- Start setting up your storm chain with **Haze of Rage** or **Temporal Fissure**.
 
 **Turn 4-5:**
-- Use storm effects like **Grapeshot** and **Brain Freeze** to deal damage and mill cards.
-- Continue drawing cards and generating mana to fuel your storm chain.
+- Play a land and use your mana to cast **Haze of Rage** or **Temporal Fissure** to start the storm chain.
+- Use the storm copies to draw more cards and create more mana, leading to a rapid increase in card advantage and storm count.
+- Use **Grapeshot** or **Brain Freeze** to deal damage and create more storm copies.
 
 ### Sample Opening Hand
 
+**Hand:**
 - **Sol Ring**
 - **Talisman of Creativity**
 - **Serum Visions**
-- **The Celestus**
-- **Ashling, Flame Dancer**
-- **Inner Fire**
-- **Haze of Rage**
+- **Anticipate**
+- **Frantic Search**
+- **Pirate's Pillage**
+- **Island**
 
-This hand provides a strong start with mana generation and card draw, setting up the storm chain for later turns.
+**Explanation:**
+- **Sol Ring** and **Talisman of Creativity** provide early mana.
+- **Serum Visions** and **Anticipate** help you draw more cards.
+- **Frantic Search** and **Pirate's Pillage** provide card draw and create Treasure tokens.
+- **Island** provides a basic land to tap for blue mana.
+
+This hand is a **KEEP** because it has two lands and multiple card draw spells, setting you up to quickly build your hand and start the card draw and mana generation loop.

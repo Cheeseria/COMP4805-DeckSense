@@ -18,7 +18,7 @@ Follow this exact structure:
 2. Key Card Categorization (The Engines)
 3. Win Conditions & Line Execution (Explain the combo loop!)
 4. Turn by Turn Gameplan
-5. Sample Opening Hand
+5. Sample Opening Hand (Invent a realistic 7-card hand from the deck and explain why it's a KEEP. Ensure the hand includes at least 2-3 Lands and realistic mana sources!)
 
 Constraints:
 - Define jargon (explain what "Storm", "Buyback", and "Cost Reduction" mean).

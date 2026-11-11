@@ -4,13 +4,14 @@
     "deck_id": "vadrik_time",
     "deck_url": "https://archidekt.com/decks/6429634/vadrik_time",
     "model": "qwen2.5:32b",
-    "written_at": 1794401494.0835195
+    "written_at": 1794402401.657731
   },
   "assessment": {
+    "growth_model": "Exponential",
+    "growth_justification": "Vadrik, Astral Archmage's ability to reduce the cost of instant and sorcery spells by his power allows for exponential growth. As Vadrik gains +1/+1 counters, the cost reduction increases, enabling the player to cast more powerful spells for less mana. This, combined with the deck's storm chains and token creation, allows for rapid resource scaling and overwhelming board states.",
     "power_bracket": "4",
-    "bracket_justification": "The deck has a strong focus on card draw and mana generation, with functional engines and velocity chains that enable efficient storm and token-based strategies. The inclusion of fast mana sources and a reasonable number of interaction cards supports an optimized playstyle.",
     "estimated_win_turn": "Turn 4-5",
-    "playstyle_summary": "This deck plays a balanced mix of control and combo, leveraging card advantage and mana acceleration to set up powerful storm and token-based win conditions that can quickly overwhelm opponents.",
+    "playstyle_summary": "The deck leverages a high volume of card draw and mana generation to fuel storm chains and token creation, aiming to overwhelm opponents with continuous card advantage and damage. The exponential growth from Vadrik's cost reduction ability allows for rapid scaling of resources, leading to quick wins.",
     "_stats_used": {
       "total_cards": 101,
       "mana_curve": {

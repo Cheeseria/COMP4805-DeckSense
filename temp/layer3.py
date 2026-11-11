@@ -25,13 +25,11 @@ def _calculate_deck_stats(graph, l2b_analysis):
         mechs = [m.lower() for m in n.get("mechanisms", [])]
         oracle = n.get("text", "").lower()
         
-        # Count fast mana
         if cmc is not None and cmc <= 1 and any(x in mechs for x in ["mana generation", "mana addition"]):
             stats["fast_mana_count"] += 1
         if any(x in oracle for x in ["add {r}{r}{r}", "add {c}{c}", "add {r}{r}"]):
             stats["fast_mana_count"] += 1
             
-        # Count interaction
         if any(x in mechs for x in ["counter spell", "creature removal", "damage dealing"]):
             stats["interaction_count"] += 1
             
@@ -39,19 +37,21 @@ def _calculate_deck_stats(graph, l2b_analysis):
 
 SYSTEM_PROMPT = """
 You are an expert Magic: The Gathering Commander (EDH) power level assessor.
-You are given the statistical breakdown of a deck, its strategic analysis, and the Oracle Text of its Commander.
-Your job is to assign it a Power Bracket (1-5) and estimate its average win speed.
+Your job is to assign a deck a Power Bracket (1-5) and estimate its win speed based on its RESOURCE GROWTH MODEL.
 
-GENERAL RULE FOR COMMANDER EFFICIENCY:
-The Commander is always available from the Command Zone. If the Commander's Oracle Text provides a persistent, scalable resource advantage (e.g., generating mana, reducing costs, creating tokens, or drawing cards based on a scalable metric), the deck's effective power and speed are significantly higher than its base mana curve suggests. 
-Consider this when assigning the Bracket. Do not assume a deck is low power just because its average CMC is high if the Commander offsets that cost.
+RESOURCE GROWTH MODEL:
+EDH power levels correlate directly with how fast a deck's resources (mana, cards, board state) scale.
+Analyze the Commander's Oracle Text and the Velocity Chains:
+- LINEAR GROWTH (Bracket 2): Resources grow steadily. You play one land per turn, one spell per turn. Example: Playing a mana rock every turn.
+- QUADRATIC / POLYNOMIAL GROWTH (Bracket 3): Resources compound. Spending mana draws cards, which draws more mana. Example: A value engine that draws 2 cards whenever you cast a spell.
+- EXPONENTIAL GROWTH (Bracket 4-5): Resources multiply infinitely or near-infinitely in a single turn. Example: A Commander that reduces spell costs to {0}, allowing you to cast your entire deck in one turn, or an infinite combo loop.
 
-EDH POWER BRACKETS (Official):
-- Bracket 1 (Exhibition): Jank, theme decks, no fast mana, wins turn 10+.
-- Bracket 2 (Core/Precon): Average decks, some interaction, wins turn 8-9.
-- Bracket 3 (Upgraded): Focused strategies, good mana base, some fast mana, wins turn 6-7.
-- Bracket 4 (Optimized): High power, efficient combos, fast mana, wins turn 4-5.
-- Bracket 5 (cEDH): Competitive, max efficiency, wins turn 1-3.
+EDH POWER BRACKETS:
+- Bracket 1: Jank, theme decks. Wins turn 10+.
+- Bracket 2 (Precon): Linear growth. Wins turn 8-9.
+- Bracket 3 (Upgraded): Polynomial growth. Wins turn 6-7.
+- Bracket 4 (Optimized): Exponential growth. Wins turn 4-5.
+- Bracket 5 (cEDH): Immediate exponential growth. Wins turn 1-3.
 
 Return JSON format exactly matching the schema.
 """
@@ -64,7 +64,7 @@ Commander Oracle Text: {commander_text}
 DECK STATISTICS:
 - Total Cards: {stats['total_cards']}
 - Mana Curve: {dict(stats['mana_curve'])}
-- Fast Mana Sources (0-2 CMC or Rituals): {stats['fast_mana_count']}
+- Fast Mana Sources: {stats['fast_mana_count']}
 - Interaction: {stats['interaction_count']}
 - Velocity Chains Found: {stats['velocity_chain_count']}
 - Functional Engines Found: {stats['engine_count']}
@@ -77,8 +77,9 @@ WIN CONDITIONS:
 
 Return JSON matching this exact schema:
 {{
+  "growth_model": "Linear | Polynomial | Exponential",
+  "growth_justification": "Explain how the Commander's text and the synergy engines create this growth rate.",
   "power_bracket": "1-5",
-  "bracket_justification": "2-3 sentences explaining why this bracket, specifically referencing how the Commander's text and the stats interact.",
   "estimated_win_turn": "String (e.g. 'Turn 5-6')",
   "playstyle_summary": "2-3 sentences summarizing how the deck plays."
 }}
@@ -87,7 +88,6 @@ Return JSON matching this exact schema:
 def assess_power_level(graph, l2b_analysis, commander_name, model="qwen2.5:32b"):
     stats = _calculate_deck_stats(graph, l2b_analysis)
     
-    # Extract the Commander's text from the graph data
     commander_text = "Unknown"
     for n in graph.get("interaction_nodes", []):
         if n["name"] == commander_name:
@@ -108,9 +108,7 @@ def assess_power_level(graph, l2b_analysis, commander_name, model="qwen2.5:32b")
         return {
             "_error": str(e),
             "power_bracket": "Unknown",
-            "bracket_justification": "Failed to parse.",
-            "estimated_win_turn": "Unknown",
-            "playstyle_summary": "Unknown"
+            "estimated_win_turn": "Unknown"
         }
         
     parsed["_stats_used"] = stats
