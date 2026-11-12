@@ -1,10 +1,10 @@
 {
   "__meta": {
-    "version": "v1",
+    "version": "v2",
     "deck_id": "vadrik_time",
     "deck_url": "https://archidekt.com/decks/6429634/vadrik_time",
     "model": "qwen2.5:32b",
-    "written_at": 1794150327.633651
+    "written_at": 1794464127.0593238
   },
   "records": [
     {

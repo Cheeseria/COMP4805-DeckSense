@@ -1,17 +1,18 @@
 {
   "__meta": {
-    "version": "v1",
+    "version": "v2",
     "deck_id": "vadrik_time",
     "deck_url": "https://archidekt.com/decks/6429634/vadrik_time",
     "model": "qwen2.5:32b",
-    "written_at": 1794402401.657731
+    "written_at": 1794467875.6407816
   },
   "assessment": {
     "growth_model": "Exponential",
-    "growth_justification": "Vadrik, Astral Archmage's ability to reduce the cost of instant and sorcery spells by his power allows for exponential growth. As Vadrik gains +1/+1 counters, the cost reduction increases, enabling the player to cast more powerful spells for less mana. This, combined with the deck's storm chains and token creation, allows for rapid resource scaling and overwhelming board states.",
-    "power_bracket": "4",
-    "estimated_win_turn": "Turn 4-5",
-    "playstyle_summary": "The deck leverages a high volume of card draw and mana generation to fuel storm chains and token creation, aiming to overwhelm opponents with continuous card advantage and damage. The exponential growth from Vadrik's cost reduction ability allows for rapid scaling of resources, leading to quick wins.",
+    "estimated_bracket": "4",
+    "official_bracket": "4",
+    "bracket_justification": "The deck has 6 Game Changers, which places it in Bracket 4 by official rules. The deck's exponential growth through card draw and mana generation supports this high power level, making the estimated bracket also 4.",
+    "estimated_win_turn": "Turn 5-6",
+    "playstyle_summary": "The deck leverages a high volume of card draw and mana generation to fuel storm chains and token creation, aiming to overwhelm opponents with continuous card advantage and damage. The synergy between card draw and mana acceleration allows for rapid deployment of powerful effects.",
     "_stats_used": {
       "total_cards": 101,
       "mana_curve": {
@@ -26,7 +27,16 @@
       "fast_mana_count": 6,
       "interaction_count": 7,
       "velocity_chain_count": 2,
-      "engine_count": 6
+      "engine_count": 6,
+      "game_changer_count": 6,
+      "game_changer_list": [
+        "Jeska's Will",
+        "Rhystic Study",
+        "Mystical Tutor",
+        "Intuition",
+        "Gifts Ungiven",
+        "Underworld Breach"
+      ]
     }
   }
 }

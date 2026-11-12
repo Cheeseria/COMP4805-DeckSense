@@ -23,7 +23,7 @@ import layer4_primer
 CACHE_ROOT = "cache"
 os.makedirs(CACHE_ROOT, exist_ok=True)
 
-CACHE_VERSION = "v1"
+CACHE_VERSION = "v2"
 MODEL_L1 = "qwen2.5:32b"
 MODEL_L2B = "qwen2.5:32b"
 
@@ -73,8 +73,10 @@ def _save(path, payload, meta):
 
 
 def run(url, archetype=""):
+    # Defensive: strip whitespace/newlines that may come from web textareas or CLI
+    url = url.strip()
     print(f"[driver] deck URL: {url}")
-    deck_id = url.rstrip("/").split("/")[-1]
+    deck_id = url.rstrip("/").split("/")[-1].strip()
 
     # ---------- ingest ----------
     deck, commander_name, _ = ingest.parseArchiURL(url)
@@ -160,15 +162,14 @@ def run(url, archetype=""):
         print("[driver] Running Layer 3 Power Assessment...")
         l3 = layer3.assess_power_level(graph, l2b, commander_name, model=MODEL_L1)
         _save(paths["l3"], {"assessment": l3}, meta_l3)
-    print(f"[driver] L3: Bracket {l3.get('power_bracket')} | Win Turn: {l3.get('estimated_win_turn')}")
+    print(f"[driver] L3: Est Bracket {l3.get('estimated_bracket')} | "
+          f"Official Bracket {l3.get('official_bracket')} | "
+          f"Win Turn: {l3.get('estimated_win_turn')}")
 
     # ---------- L4: Primer Generation ----------
-    # The primer is text, so we check for file existence rather than JSON cache
     primer_path = paths["l4"]
     if os.path.exists(primer_path):
         print(f"[driver] L4 Primer: cache hit at {primer_path}")
-        with open(primer_path, "r", encoding="utf-8") as f:
-            primer_text = f.read()
     else:
         print("[driver] Running Layer 4 Primer Generation...")
         primer_text = layer4_primer.generate_primer(

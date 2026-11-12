@@ -1,10 +1,10 @@
 {
   "__meta": {
-    "version": "v1",
+    "version": "v2",
     "deck_id": "vadrik_time",
     "deck_url": "https://archidekt.com/decks/6429634/vadrik_time",
     "model": "qwen2.5:32b",
-    "written_at": 1794400546.2112994
+    "written_at": 1794467028.3492258
   },
   "analysis": {
     "deck_identity": "This deck leverages a high volume of card draw and mana generation to fuel a variety of synergistic plays, including storm chains and token creation, ultimately aiming to overwhelm opponents with continuous card advantage and damage.",

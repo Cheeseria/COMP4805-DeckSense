@@ -6,27 +6,25 @@ SYSTEM_PROMPT = """
 You are an expert Magic: The Gathering teacher explaining a Commander deck to a beginner.
 Your goal is to write a primer that uses short sentences, defines all jargon, and avoids overwhelming the reader.
 
-CRITICAL RULE FOR ACCURACY:
-You MUST use the exact ORACLE TEXT provided in the "Key Engines" section below. 
-DO NOT rely on your memory of these cards. 
-- If the provided text says "Buyback", explain Buyback.
-- If the provided text says "Create a Treasure token", explain Treasure tokens.
-- If you do not see "Draw a card" in the text, DO NOT claim it draws a card.
+CRITICAL RULES:
+1. You MUST read the exact ORACLE TEXT provided for each card. Do NOT invent abilities from memory.
+2. Clearly differentiate between the "Estimated Bracket" (based on strategy) and "Official Bracket" (based on Game Changers).
+3. Mention if any Game Changers are present in the deck.
 
 Follow this exact structure:
-1. Executive Summary & Deck Profile (Include the Power Bracket and Win Turn)
+1. Executive Summary & Deck Profile (Include both brackets and Win Turn)
 2. Key Card Categorization (The Engines)
-3. Win Conditions & Line Execution (Explain the combo loop!)
-4. Turn by Turn Gameplan
-5. Sample Opening Hand (Invent a realistic 7-card hand from the deck and explain why it's a KEEP. Ensure the hand includes at least 2-3 Lands and realistic mana sources!)
+3. Win Conditions & Line Execution
+4. Turn by Turn Gameplan (Include playing Lands!)
+5. Sample Opening Hand (7 cards in hand, include 2-3 Lands and explain why it's a KEEP)
 
 Constraints:
-- Define jargon (explain what "Storm", "Buyback", and "Cost Reduction" mean).
-- Keep the reading level accessible.
+- Define jargon (explain what "Storm", "Buyback", "Ramp", and "Game Changer" mean).
+- Keep the reading level accessible (short sentences, avoid dense paragraphs).
 """
 
 def generate_primer(l2b_analysis, l3_assessment, l1_data, commander_name):
-    # 1. Find all cards mentioned in the Layer 2b analysis
+    # Extract exact text for mentioned key cards
     mentioned_cards = set()
     mentioned_cards.add(commander_name)
     
@@ -34,21 +32,25 @@ def generate_primer(l2b_analysis, l3_assessment, l1_data, commander_name):
         mentioned_cards.update(cat.get("key_cards", []))
     for chain in l2b_analysis.get("velocity_chains", []):
         mentioned_cards.update(chain.get("key_cards", []))
-        mentioned_cards.update(chain.get("refueling_cards", []))
     for win in l2b_analysis.get("win_conditions", []):
         mentioned_cards.update(win.get("key_cards", []))
 
-    # 2. Extract the exact oracle text for ONLY those cards
     key_cards_text = ""
     for card in l1_data:
         if card["name"] in mentioned_cards:
             text = card.get("oracle_text", "").replace("\n", " ")
             key_cards_text += f"- **{card['name']}**: {text}\n"
 
+    # Format Layer 3 Data
     l3_text = "Not provided."
     if l3_assessment:
+        gc_list = ", ".join(l3_assessment.get("_stats_used", {}).get("game_changer_list", []))
         l3_text = f"""
-        Power Bracket: {l3_assessment.get('power_bracket')}
+        Estimated Power Bracket: {l3_assessment.get('estimated_bracket')}
+        Official WOTC Bracket: {l3_assessment.get('official_bracket')}
+        Growth Model: {l3_assessment.get('growth_model')}
+        Game Changers Found: {gc_list if gc_list else 'None'}
+        Bracket Justification: {l3_assessment.get('bracket_justification')}
         Estimated Win Turn: {l3_assessment.get('estimated_win_turn')}
         Playstyle: {l3_assessment.get('playstyle_summary')}
         """
@@ -66,7 +68,7 @@ def generate_primer(l2b_analysis, l3_assessment, l1_data, commander_name):
     - Deck Identity: {l2b_analysis.get('deck_identity', '')}
     - Velocity Chains: {json.dumps(l2b_analysis.get('velocity_chains', []), indent=2)}
     
-    Write the primer.
+    Write the primer. Ensure the Sample Opening Hand includes lands.
     """
     
     response = ollama.chat(
@@ -78,30 +80,3 @@ def generate_primer(l2b_analysis, l3_assessment, l1_data, commander_name):
         ]
     )
     return response["message"]["content"]
-
-# You can leave the __main__ block as is for testing
-
-if __name__ == "__main__":
-    with open("cache/vadrik_time_l2b.json", "r") as f:
-        l2b_data = json.load(f)["analysis"]
-        
-    with open("cache/vadrik_time_l1.json", "r") as f:
-        l1_data = json.load(f)["records"]
-        
-    # Try to load L3
-    try:
-        with open("cache/vadrik_time_l3.json", "r") as f:
-            l3_data = json.load(f)["assessment"]
-    except FileNotFoundError:
-        print("Layer 3 cache not found. Running without power assessment.")
-        l3_data = None
-        
-    primer_text = generate_primer(
-        l2b_data, 
-        l3_data,
-        l1_data, 
-        "Vadrik, Astral Archmage"
-    )
-    
-    print("\n--- PRIMER OUTPUT ---\n")
-    print(primer_text)

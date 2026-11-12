@@ -1,11 +1,47 @@
 # layer3.py
 import json
 import ollama
+import requests
+import time
 from collections import Counter
 
+_GAMECHANGER_CACHE = {"data": None, "timestamp": 0}
+
+def get_gamechangers():
+    """Fetches the official Game Changers list from Scryfall dynamically."""
+    global _GAMECHANGER_CACHE
+    
+    if _GAMECHANGER_CACHE["data"] and (time.time() - _GAMECHANGER_CACHE["timestamp"] < 3600):
+        return _GAMECHANGER_CACHE["data"]
+
+    headers = {"User-Agent": "DeckSense/1.0 (Educational Project)"}
+    url = "https://api.scryfall.com/cards/search?q=is%3Agamechanger&order=name"
+    
+    try:
+        response = requests.get(url, headers=headers, timeout=10)
+        response.raise_for_status()
+        data = response.json()
+        
+        all_cards = [card["name"] for card in data.get("data", [])]
+        
+        while data.get("has_more"):
+            next_page = data.get("next_page")
+            response = requests.get(next_page, headers=headers, timeout=10)
+            data = response.json()
+            all_cards.extend([card["name"] for card in data.get("data", [])])
+            
+        _GAMECHANGER_CACHE["data"] = set(all_cards)
+        _GAMECHANGER_CACHE["timestamp"] = time.time()
+        print(f"[layer3] Fetched {len(all_cards)} Game Changers from Scryfall.")
+        return _GAMECHANGER_CACHE["data"]
+        
+    except Exception as e:
+        print(f"[layer3] Failed to fetch Game Changers: {e}. Using empty fallback.")
+        return set()
+
 def _calculate_deck_stats(graph, l2b_analysis):
-    """Calculate deterministic stats from the graph and Layer 2b analysis."""
     nodes = graph.get("interaction_nodes", [])
+    gamechangers = get_gamechangers()
     
     stats = {
         "total_cards": len(nodes),
@@ -13,10 +49,17 @@ def _calculate_deck_stats(graph, l2b_analysis):
         "fast_mana_count": 0,
         "interaction_count": 0,
         "velocity_chain_count": len(l2b_analysis.get("velocity_chains", [])),
-        "engine_count": len(l2b_analysis.get("functional_categories", []))
+        "engine_count": len(l2b_analysis.get("functional_categories", [])),
+        "game_changer_count": 0,
+        "game_changer_list": []
     }
     
     for n in nodes:
+        name = n.get("name")
+        if name in gamechangers:
+            stats["game_changer_count"] += 1
+            stats["game_changer_list"].append(name)
+
         cmc = n.get("cmc")
         if cmc is not None:
             bucket = str(min(int(cmc), 7))
@@ -37,21 +80,21 @@ def _calculate_deck_stats(graph, l2b_analysis):
 
 SYSTEM_PROMPT = """
 You are an expert Magic: The Gathering Commander (EDH) power level assessor.
-Your job is to assign a deck a Power Bracket (1-5) and estimate its win speed based on its RESOURCE GROWTH MODEL.
+You must output TWO brackets based on the data provided:
+1. ESTIMATED BRACKET: Based on your analysis of the deck's synergy, resource growth, and velocity chains.
+2. OFFICIAL BRACKET: Based strictly on Wizards of the Coast's hard rules regarding Game Changers.
 
-RESOURCE GROWTH MODEL:
-EDH power levels correlate directly with how fast a deck's resources (mana, cards, board state) scale.
-Analyze the Commander's Oracle Text and the Velocity Chains:
-- LINEAR GROWTH (Bracket 2): Resources grow steadily. You play one land per turn, one spell per turn. Example: Playing a mana rock every turn.
-- QUADRATIC / POLYNOMIAL GROWTH (Bracket 3): Resources compound. Spending mana draws cards, which draws more mana. Example: A value engine that draws 2 cards whenever you cast a spell.
-- EXPONENTIAL GROWTH (Bracket 4-5): Resources multiply infinitely or near-infinitely in a single turn. Example: A Commander that reduces spell costs to {0}, allowing you to cast your entire deck in one turn, or an infinite combo loop.
+WOTC OFFICIAL BRACKET RULES:
+- Bracket 1 & 2: 0 Game Changers.
+- Bracket 3: Maximum 3 Game Changers.
+- Bracket 4: 4+ Game Changers (No limit).
+- Bracket 5: cEDH (Optimized, no limit).
+*Note: If the Game Changer count is > 3, the OFFICIAL bracket MUST be at least 4, regardless of how the deck plays.*
 
-EDH POWER BRACKETS:
-- Bracket 1: Jank, theme decks. Wins turn 10+.
-- Bracket 2 (Precon): Linear growth. Wins turn 8-9.
-- Bracket 3 (Upgraded): Polynomial growth. Wins turn 6-7.
-- Bracket 4 (Optimized): Exponential growth. Wins turn 4-5.
-- Bracket 5 (cEDH): Immediate exponential growth. Wins turn 1-3.
+RESOURCE GROWTH MODEL (For Estimated Bracket):
+- Linear Growth (Bracket 2)
+- Polynomial Growth (Bracket 3)
+- Exponential Growth (Bracket 4-5)
 
 Return JSON format exactly matching the schema.
 """
@@ -68,6 +111,7 @@ DECK STATISTICS:
 - Interaction: {stats['interaction_count']}
 - Velocity Chains Found: {stats['velocity_chain_count']}
 - Functional Engines Found: {stats['engine_count']}
+- GAME CHANGERS FOUND: {stats['game_changer_count']} (Cards: {', '.join(stats['game_changer_list']) if stats['game_changer_list'] else 'None'})
 
 STRATEGIC IDENTITY:
 {l2b_analysis.get('deck_identity', 'Unknown')}
@@ -78,8 +122,9 @@ WIN CONDITIONS:
 Return JSON matching this exact schema:
 {{
   "growth_model": "Linear | Polynomial | Exponential",
-  "growth_justification": "Explain how the Commander's text and the synergy engines create this growth rate.",
-  "power_bracket": "1-5",
+  "estimated_bracket": "1-5",
+  "official_bracket": "1-5",
+  "bracket_justification": "Explain the difference between the estimated and official brackets. Mention the Game Changer count.",
   "estimated_win_turn": "String (e.g. 'Turn 5-6')",
   "playstyle_summary": "2-3 sentences summarizing how the deck plays."
 }}
@@ -107,7 +152,8 @@ def assess_power_level(graph, l2b_analysis, commander_name, model="qwen2.5:32b")
     except Exception as e:
         return {
             "_error": str(e),
-            "power_bracket": "Unknown",
+            "estimated_bracket": "Unknown",
+            "official_bracket": "Unknown",
             "estimated_win_turn": "Unknown"
         }
         

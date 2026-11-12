@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DeckSense - Primer Generator</title>
+    <style>
+        body { font-family: sans-serif; max-width: 800px; margin: 2rem auto; padding: 0 1rem; line-height: 1.6; color: #333; }
+        textarea { width: 100%; padding: 10px; font-size: 16px; box-sizing: border-box; }
+        button { padding: 10px 20px; font-size: 16px; margin-top: 10px; cursor: pointer; background: #007bff; color: white; border: none; border-radius: 4px;}
+        button:hover { background: #0056b3; }
+        .error { color: red; margin-top: 10px; }
+        .controls { margin-top: 15px; display: flex; gap: 10px; }
+
+        /* Markdown Formatting Styles */
+        .primer { background: #f9f9f9; padding: 30px; border-radius: 8px; margin-top: 20px; border: 1px solid #ddd; }
+        .primer h1, .primer h2, .primer h3, .primer h4 { color: #111; margin-top: 1.5em; margin-bottom: 0.5em; }
+        .primer h1 { font-size: 1.8em; border-bottom: 2px solid #eee; padding-bottom: 10px; }
+        .primer h2 { font-size: 1.4em; border-bottom: 1px solid #eee; padding-bottom: 5px; }
+        .primer h3 { font-size: 1.2em; }
+        .primer ul { padding-left: 20px; margin-bottom: 15px; }
+        .primer li { margin-bottom: 5px; }
+        .primer p { margin-bottom: 15px; }
+        .primer strong { color: #000; }
+
+        /* PDF Print Styles */
+        @media print {
+            body { margin: 0; padding: 0; max-width: 100%; font-size: 12pt; }
+            form, .controls, .error, h1.page-title { display: none !important; }
+            .primer { background: transparent; border: none; padding: 0; }
+            .primer h1, .primer h2, .primer h3 { page-break-after: avoid; }
+            .primer ul, .primer p { page-break-inside: avoid; }
+        }
+    </style>
+</head>
+<body>
+    <h1 class="page-title">DeckSense</h1>
+    <p>Enter an Archidekt deck URL to generate a primer.</p>
+    
+    <form method="POST">
+        <textarea name="deck_url" rows="2" placeholder="https://archidekt.com/decks/..."></textarea>
+        <br>
+        <button type="submit">Generate Primer</button>
+    </form>
+
+    {% if error %}
+        <div class="error">{{ error }}</div>
+    {% endif %}
+
+    {% if primer %}
+        <div class="controls">
+            <button onclick="window.print()">Download as PDF</button>
+        </div>
+        <div class="primer">
+            {{ primer | safe }}
+        </div>
+    {% endif %}
+</body>
+</html>
