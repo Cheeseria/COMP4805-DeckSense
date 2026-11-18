@@ -73,12 +73,10 @@ def _save(path, payload, meta):
 
 
 def run(url, archetype=""):
-    # Defensive: strip whitespace/newlines that may come from web textareas or CLI
     url = url.strip()
     print(f"[driver] deck URL: {url}")
     deck_id = url.rstrip("/").split("/")[-1].strip()
 
-    # ---------- ingest ----------
     deck, commander_name, _ = ingest.parseArchiURL(url)
     if not commander_name:
         for c in deck:

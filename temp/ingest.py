@@ -45,7 +45,7 @@ def _fetch_scryfall_fuzzy(name: str, retries: int = 3) -> dict | None:
             with open(cache_path, "r", encoding="utf-8") as f:
                 return json.load(f)
         except json.JSONDecodeError:
-            pass  # fall through and re-fetch
+            pass
 
     delay = 1.0
     for attempt in range(retries):
@@ -93,14 +93,13 @@ def parseArchiURL(url):
     Returns (deck: list[Card], commander_name: str | None, deck_id: str)
     """
     parts = url.rstrip("/").split("/")
-    deck_id = parts[-2]  # yields "6429634", correct
+    deck_id = parts[-2]
     deckAPI = pyrchidekt.api.getDeckById(deck_id)
 
     # Scryfall enforces ~2 req/s per IP; we sleep 0.5s per unique card.
-    # A 100-card deck takes ~50s cold, instant warm from disk cache.
     deck = []
     commander_name = None
-    seen_oracle_ids = set()  # guard against multi-category duplicates
+    seen_oracle_ids = set()
 
     for category in deckAPI.categories:
         cat_name = getattr(category, "name", str(category))
@@ -111,7 +110,7 @@ def parseArchiURL(url):
             is_cmd = _is_commander_card(card_obj, [category])
 
             card_json = _fetch_scryfall_fuzzy(name)
-            sleep(0.5)  # rate limit AFTER the request, next iteration pays it
+            sleep(0.5)
             if card_json is None:
                 print(f"[ingest] skipping unresolved card: {name!r}")
                 continue
@@ -119,11 +118,8 @@ def parseArchiURL(url):
             layout = card_json.get("layout", "")
             faces = card_json.get("card_faces")
             is_dfc = layout in {"transform", "modal_dfc", "double_faced_token"} and faces
-            # 'adventure', 'split', 'flip', 'prepare' have combined oracle_text and NO faces
 
             if is_dfc:
-                # One Card for the whole DFC (do NOT double-count).
-                # Combine faces' oracle text; use front face for cost/type.
                 front, back = faces[0], faces[1] if len(faces) > 1 else faces[0]
                 combined_text = (front.get("oracle_text", "") or "") + "\n//\n" + (
                     back.get("oracle_text", "") or ""
@@ -151,7 +147,6 @@ def parseArchiURL(url):
                                             user_categories=[cat_name])
 
             if new_card.oracle_id and new_card.oracle_id in seen_oracle_ids:
-                # Merge categories into the existing Card instead of duplicating
                 for existing in deck:
                     if existing.oracle_id == new_card.oracle_id:
                         existing.user_categories |= new_card.user_categories

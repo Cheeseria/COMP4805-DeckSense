@@ -24,7 +24,6 @@ Constraints:
 """
 
 def generate_primer(l2b_analysis, l3_assessment, l1_data, commander_name):
-    # Extract exact text for mentioned key cards
     mentioned_cards = set()
     mentioned_cards.add(commander_name)
     
@@ -41,7 +40,6 @@ def generate_primer(l2b_analysis, l3_assessment, l1_data, commander_name):
             text = card.get("oracle_text", "").replace("\n", " ")
             key_cards_text += f"- **{card['name']}**: {text}\n"
 
-    # Format Layer 3 Data
     l3_text = "Not provided."
     if l3_assessment:
         gc_list = ", ".join(l3_assessment.get("_stats_used", {}).get("game_changer_list", []))

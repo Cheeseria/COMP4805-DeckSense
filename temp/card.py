@@ -15,19 +15,17 @@ class Card:
         self.card_type = card_type
         self.oracle_text = oracle_text
         self.statline = statline
-        self.role = role              # user tag(s) string (legacy); see user_categories
+        self.role = role 
         self.amount = amount
         self.keywords = list(keywords or [])
-        self.cmc = cmc                # mana value (float or None)
+        self.cmc = cmc 
         self.color_identity = list(color_identity or [])
         self.oracle_id = oracle_id
         self.is_commander = bool(is_commander)
         self.user_categories = set(user_categories or [])
-        # Keep role as first tag for backwards-compat with existing code paths.
         if not self.user_categories and role:
             self.user_categories = {role}
 
-    # --- getters (legacy) ---
     def getName(self):    return self.name
     def getCost(self):    return self.cost
     def getType(self):    return self.card_type

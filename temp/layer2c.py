@@ -2,7 +2,6 @@
 import json
 import ollama
 
-# We keep the LLM prompt to catch semantic errors (e.g., "this card doesn't do what you think it does")
 FACT_CHECK_SYSTEM_PROMPT = """
 You are a strict Magic: The Gathering Rules Judge.
 You are reviewing proposed combos. 
@@ -24,7 +23,6 @@ def _python_mana_check(loop_cards, cited_data, required_assumptions=None):
         if any(k in text for k in ("add {", "adds {", "treasure", "add one mana")):
             has_mana_generator = True
 
-    # If no card in the loop generates mana, check if a mana source is named in assumptions
     if total_cost > 0 and not has_mana_generator:
         assumption_text = " ".join(required_assumptions).lower()
         mana_keywords = ("mana", "seething song", "dark ritual", "sol ring", "lotus petal",
@@ -44,12 +42,11 @@ def fact_check_loops(analysis_output, graph, model="qwen2.5:32b"):
     cited_data = analysis_output.get("_cited_card_data", {})
     
     final_validated = []
-    final_rejected = analysis_output.get("rejected_loops", []) # Keep previous rejections
+    final_rejected = analysis_output.get("rejected_loops", [])
 
     for loop in proposed_loops:
         cards = loop.get("cards", loop.get("key_cards", []))
         
-        # 1. PYTHON CHECK: Fast, hard logic
         py_valid, py_reason = _python_mana_check(
             cards, cited_data,
             required_assumptions=loop.get("required_assumptions", [])
@@ -61,9 +58,8 @@ def fact_check_loops(analysis_output, graph, model="qwen2.5:32b"):
                 "is_valid": False,
                 "hallucination_reason": f"Python Arithmetic Check Failed: {py_reason}"
             })
-            continue # Skip the LLM check, we already know it's fake
+            continue 
 
-        # 2. LLM CHECK: Semantic logic (if Python passes)
         user_prompt = f"""
         PROPOSED LOOP: {json.dumps(cards)}
         MATH: {loop.get('mechanical_validation')}
@@ -88,7 +84,6 @@ def fact_check_loops(analysis_output, graph, model="qwen2.5:32b"):
                     "hallucination_reason": checked.get("hallucination_reason", "LLM rejected semantic logic.")
                 })
         except Exception as e:
-            # If LLM fails, default to rejecting
             final_rejected.append({"original_cycle": cards, "is_valid": False, "hallucination_reason": str(e)})
 
     analysis_output["validated_cycles"] = final_validated

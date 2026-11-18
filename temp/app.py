@@ -13,7 +13,6 @@ def index():
     error = None
     
     if request.method == 'POST':
-        # .strip() removes trailing newlines/whitespace that come from the textarea
         deck_url = request.form.get('deck_url', '').strip()
         
         if deck_url:
@@ -27,7 +26,6 @@ def index():
                     with open(primer_path, "r", encoding="utf-8") as f:
                         raw_md = f.read()
                         
-                    # Convert Markdown to HTML so the PDF looks clean
                     primer_html = markdown.markdown(raw_md, extensions=['tables', 'fenced_code'])
                 else:
                     error = "Pipeline ran but could not find the primer file."

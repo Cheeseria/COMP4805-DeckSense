@@ -13,7 +13,6 @@ def _edge_rules(a, b):
 
     rules = []
     
-    # Check for specific overlaps (excluding generic 'mana')
     a_prod_spec = a_produces - {"mana"}
     a_req_spec = a_requires - {"mana"}
     b_prod_spec = b_produces - {"mana"}
@@ -24,7 +23,6 @@ def _edge_rules(a, b):
     if b_prod_spec & a_req_spec:
         rules.append("specific_link")
 
-    # Check for mana-only overlaps
     if not rules:
         if a_produces & b_requires or b_produces & a_requires:
             rules.append("mana_link")
@@ -40,7 +38,6 @@ def build_layer2a_graph(layer1_records):
         if not name or name in seen: continue
         seen.add(name)
         
-        # Augment domains deterministically (ensure spells require mana)
         domains = list(rec.get("domains", []))
         if rec.get("mana_value") and rec.get("mana_value") > 0:
             if not any(d.lower() == "requires: mana" for d in domains):
@@ -80,13 +77,10 @@ def build_layer2a_graph(layer1_records):
                 "weight": len(rules),
             })
             
-            # CRITICAL FIX: Do NOT cluster cards if their only link is mana.
-            # Mana is universal; clustering on it collapses the graph.
             if "specific_link" in rules:
                 adj[a["name"]].add(b["name"])
                 adj[b["name"]].add(a["name"])
 
-    # Cluster based ONLY on specific overlaps
     visited = set()
     clusters = []
     def dfs(node, current_cluster):
@@ -105,7 +99,6 @@ def build_layer2a_graph(layer1_records):
 
     clusters.sort(key=len, reverse=True)
     
-    # Isolated cards: cards with NO edges at all (not even mana links)
     all_connected = set()
     for e in edges:
         all_connected.add(e["source"])
