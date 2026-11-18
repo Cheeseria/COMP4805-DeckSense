@@ -95,6 +95,11 @@ RESOURCE GROWTH MODEL (For Estimated Bracket):
 - Linear Growth (Bracket 2)
 - Polynomial Growth (Bracket 3)
 - Exponential Growth (Bracket 4-5)
+*Note: The Resource Growth should purely be based on the amount of producers in the deck, a large amount of strong producers correlate to fast resource growth.*
+*Note: Scalable Resource Producers increase growth rate*
+*Note: Synergy (correlation to the commander and other cards) increases growth rate*
+
+Faster Resource correlates to a faster win turn, i.e. Bracket 1 & 2 win late (Turn 8+), Bracket 3 wins at a middle speed (Turn 6-10), Bracket 4 and 5 wins quickly (Turn 2-5)
 
 Return JSON format exactly matching the schema.
 """
@@ -125,7 +130,7 @@ Return JSON matching this exact schema:
   "estimated_bracket": "1-5",
   "official_bracket": "1-5",
   "bracket_justification": "Explain the difference between the estimated and official brackets. Mention the Game Changer count.",
-  "estimated_win_turn": "String (e.g. 'Turn 5-6')",
+  "estimated_win_turn": "String (e.g. 'Turn x - y', where x and y are integers that correlate to the turn a player can either win or create an overwhelming board state)",
   "playstyle_summary": "2-3 sentences summarizing how the deck plays."
 }}
 """
