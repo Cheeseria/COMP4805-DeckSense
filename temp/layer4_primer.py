@@ -16,7 +16,8 @@ Follow this exact structure:
 2. Key Card Categorization (The Engines)
 3. Win Conditions & Line Execution
 4. Turn by Turn Gameplan (Include playing Lands!)
-5. Sample Opening Hand (7 cards in hand, include 2-3 Lands and explain why it's a KEEP)
+5. Sample Opening Hand (EXACTLY 7 cards in hand, include 2-3 Lands and explain why it's a KEEP)
+6. Appendix with relevant jargon and term explanations (explain ONLY the relevant keywords and jargon used in the above primer, such as Ramp, Card Advantage, Velocity Chain)
 
 Constraints:
 - Define jargon (explain what "Storm", "Buyback", "Ramp", and "Game Changer" mean).

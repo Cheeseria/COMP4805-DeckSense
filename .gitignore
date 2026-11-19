@@ -9,6 +9,7 @@ env/
 # Project caches (specific to a run, not source code)
 cache/
 *.md
+*json
 !README.md
 
 # IDE / OS

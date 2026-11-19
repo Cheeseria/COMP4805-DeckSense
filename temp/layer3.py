@@ -130,7 +130,7 @@ Return JSON matching this exact schema:
   "estimated_bracket": "1-5",
   "official_bracket": "1-5",
   "bracket_justification": "Explain the difference between the estimated and official brackets. Mention the Game Changer count.",
-  "estimated_win_turn": "String (e.g. 'Turn x - y', where x and y are integers that correlate to the turn a player can either win or create an overwhelming board state)",
+  "estimated_win_turn": "String (e.g. 'Turn x - y', Ideally state a small range (the turn range should be a range of 1-2 turns, calculated by the total mana cost (and other resource costs) of the winning states in relation to the resources generatable by said turn (based on the resource growth model)))",
   "playstyle_summary": "2-3 sentences summarizing how the deck plays."
 }}
 """
