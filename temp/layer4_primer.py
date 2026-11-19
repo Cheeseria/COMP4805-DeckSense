@@ -67,7 +67,8 @@ Then write:
 ## 6. Threat Assessment & Strategic Context
 
 - **Window Opportunities:** When is this deck vulnerable? When should it strike? Base your answer on the deck's speed (from Layer 3's estimated win turn) and the shape of its combo. Explain WHY those windows exist.
-- **Silver Bullets & Hard Counters:** Identify 2-3 opposing strategies or specific card types that would shut down this deck's primary line, and describe how the deck can play around them. Use the interaction package to ground your answer.
+- **Silver Bullets & Hard Counters:** Identify 2-3 opposing general strategies or specific card roles that would shut down this deck's primary line, and describe how the deck can play around them. Use the interaction package to ground your answer.
+    - When describing Hard Counters, describe specifically opposing archetypes, rather than specific cards. Then, if useful, consider cards from the broader MTG card database, NOT only from this deck.
 """
 
 
@@ -86,7 +87,10 @@ def _build_context(l2b_analysis, l3_assessment, l1_data, commander_name):
     for card in l1_data:
         if card["name"] in mentioned_cards:
             text = card.get("oracle_text", "").replace("\n", " ")
-            key_cards_text += f"- **{card['name']}**: {text}\n"
+            if card["name"] == commander_name:
+                key_cards_text += f"- **COMMANDER - {card['name']}**: {text}\n"
+            else:
+                key_cards_text += f"- **{card['name']}**: {text}\n"
 
     # Include the FULL decklist so the LLM can pick a real sample hand
     full_decklist = ", ".join([card["name"] for card in l1_data])
@@ -106,6 +110,7 @@ def _build_context(l2b_analysis, l3_assessment, l1_data, commander_name):
 
     return f"""
     Commander: {commander_name}
+    MANDATORY: The Commander ({commander_name}) MUST be explicitly explained in Section 2 (usually as the primary Engine). Without the Commander on board, the deck's strategy typically does not function — make this dependency explicit to the reader.
 
     LAYER 3 ASSESSMENT (Power Level & Speed):
     {l3_text}
